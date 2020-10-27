@@ -52,7 +52,6 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
                     <NavLink to={"/"}><img src="/images/logo.png" className="logo_main" alt=""/></NavLink>
                 </div>
             </div>
-            }
         </header>
     )
 }

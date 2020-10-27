@@ -1,4 +1,5 @@
 import React from "react";
+import {FileUtils} from "../shared/Utils";
 
 const AboutPlace = () => {
     return (
@@ -9,7 +10,7 @@ const AboutPlace = () => {
                     <div className="wpb_wrapper">
                         <div className="sc_promo sc_promo_default sc_promo_size_large">
                             <div className="sc_promo_image"
-                                 style={{backgroundImage: 'url(images/image-21.jpg)', width: '50%', left: 0}}/>
+                                 style={{backgroundImage: `url(${FileUtils.getImage("image-21.jpg")})`, width: '50%', left: 0}}/>
                             <div className="sc_promo_text trx_addons_stretch_height"
                                  style={{width: '50%', float: 'right'}}>
                                 <div className="sc_promo_text_inner sc_align_center">

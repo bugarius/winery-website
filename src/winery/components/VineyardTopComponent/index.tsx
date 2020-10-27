@@ -1,5 +1,6 @@
 import React from "react";
 import DotComponent from "./DotComponent";
+import {FileUtils} from "../shared/Utils";
 
 const VineyardTopComponent: React.FC<{showDots?: boolean}> = ({showDots}) => {
     return (
@@ -27,7 +28,7 @@ const VineyardTopComponent: React.FC<{showDots?: boolean}> = ({showDots}) => {
                                 <div className="vc_single_image-wrapper vc_box_border_grey">
                                     <img width={520}
                                          height={120}
-                                         src="/images/bugara.png"
+                                         src={FileUtils.getImage("bugara.png")}
                                          className="vc_single_image-img attachment-full"
                                          alt="bugara"/></div>
                             </figure>

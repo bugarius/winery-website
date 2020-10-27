@@ -5,6 +5,7 @@ import {ProductInList} from "./ProductInList";
 import {Wine} from "../../model/Wine";
 import {useWineConcat, WineInList} from "../shared/useWineConcat";
 import {useTranslation} from "react-i18next";
+import {FileUtils} from "../shared/Utils";
 
 export type WineList =
 {
@@ -23,7 +24,7 @@ export const WineList = () => {
         <>
             {
                 wineInLists?.map(wine => {
-                    return <ProductInList imgUrl={wine.imgUrl}
+                    return <ProductInList imgUrl={FileUtils.getImage(wine.imgUrl)}
                                           year={wine.year}
                                           variety={wine.variety}
                                           description={wine.description}

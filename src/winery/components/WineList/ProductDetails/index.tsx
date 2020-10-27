@@ -5,6 +5,7 @@ import {ProductDetailsSummaryWrapper} from "./ProductDetailsSummaryWrapper";
 import {Price} from "./Price";
 import {ProductDetailsDescription} from "./ProductDetailsDescription";
 import {WineColor} from "../../../model/Wine";
+import {FileUtils} from "../../shared/Utils";
 
 interface Props
 {
@@ -27,7 +28,7 @@ export const ProductDetails: React.FC<Props> = ({imgUrl, year, variety, descript
 
     return (
         <ProductDetailsWrapper>
-            <ProductDetailsImage src={imgUrl} alt={variety} />
+            <ProductDetailsImage src={FileUtils.getImage(imgUrl)} alt={variety} />
             <ProductDetailsSummaryWrapper>
                 <Price amount={price}/>
                 <ProductDetailsDescription description={description} />

@@ -1,4 +1,5 @@
 import React from "react";
+import {FileUtils} from "../shared/Utils";
 
 interface Props
 {
@@ -17,7 +18,7 @@ const AboutWine: React.FC<Props> = ({title, subTitle, text, imgSrc}) => {
                         <i id="sc_anchor_wine_essentials" className="sc_anchor" title="Wine Essentials"/>
                         <div className="sc_promo sc_promo_default sc_promo_size_large">
                             <div className="sc_promo_image"
-                                 style={{backgroundImage: `url(${imgSrc})`, width: '50%', right: 0}}/>
+                                 style={{backgroundImage: `url(${FileUtils.getImage(imgSrc)})`, width: '50%', right: 0}}/>
                             <div className="sc_promo_text trx_addons_stretch_height"
                                  style={{width: '50%', float: 'left'}}>
                                 <div className="sc_promo_text_inner sc_align_center">

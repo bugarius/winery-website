@@ -1,61 +1,61 @@
 [
   {
     "id": 1,
-    "imgUrl": "/images/Bugara_Riesling_2015_wytrawne.png",
+    "imgUrl": "Bugara_Riesling_2015_wytrawne.png",
     "badge": "SREBRNY MEDAL",
     "productLink": "/"
   },
   {
     "id": 2,
-    "imgUrl": "/images/Bugara_Solaris_2018.png",
+    "imgUrl": "Bugara_Solaris_2018.png",
     "badge": "",
     "productLink": ""
   },
   {
     "id": 3,
-    "imgUrl": "/images/Bugara_Regent_Rose_2018.png",
+    "imgUrl": "Bugara_Regent_Rose_2018.png",
     "badge": "",
     "productLink": ""
   },
   {
     "id": 4,
-    "imgUrl": "/images/Bugara_Riesling_2018.png",
+    "imgUrl": "Bugara_Riesling_2018.png",
     "badge": "",
     "productLink": ""
   },
   {
     "id": 5,
-    "imgUrl": "/images/Bugara_Riesling_2019.png",
+    "imgUrl": "Bugara_Riesling_2019.png",
     "badge": "SREBRNY MEDAL",
     "productLink": ""
   },
   {
     "id": 6,
-    "imgUrl": "/images/Bugara_Solaris_2019.png",
+    "imgUrl": "Bugara_Solaris_2019.png",
     "badge": "SREBRNY MEDAL",
     "productLink": ""
   },
   {
     "id": 7,
-    "imgUrl": "/images/Bugara_CabernetCortis_2019.png",
+    "imgUrl": "Bugara_CabernetCortis_2019.png",
     "badge": "",
     "productLink": ""
   },
   {
     "id": 8,
-    "imgUrl": "/images/Bugara_Regent_2019.png",
+    "imgUrl": "Bugara_Regent_2019.png",
     "badge": "",
     "productLink": ""
   },
   {
     "id": 9,
-    "imgUrl": "/images/Bugara_CabernetCortisRose_2019.png",
+    "imgUrl": "Bugara_CabernetCortisRose_2019.png",
     "badge": "",
     "productLink": ""
   },
   {
     "id": 10,
-    "imgUrl": "/images/Bugara_Solaris_pomaranczowy_2019.png",
+    "imgUrl": "Bugara_Solaris_pomaranczowy_2019.png",
     "badge": "",
     "productLink": ""
   }

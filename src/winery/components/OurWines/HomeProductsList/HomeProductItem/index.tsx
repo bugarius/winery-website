@@ -1,5 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+import {FileUtils} from "../../../shared/Utils";
 
 export interface HomeProductItem
 {
@@ -18,7 +19,7 @@ const HomeProductItem: React.FC<HomeProductItem> = ({imgUrl, name, productLink, 
                 <div className="post_featured hover_shop">
                     <a href="product.html">
                         <img width={360} height={480}
-                             src={imgUrl}
+                             src={FileUtils.getImage(imgUrl)}
                              alt={name}
                              title={name}/> </a>
                     <div className="mask"/>
