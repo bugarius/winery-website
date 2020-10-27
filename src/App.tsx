@@ -6,7 +6,7 @@ import AppRouting from "./platform/AppRouting";
 function App()
 {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <AppRouting/>
         </BrowserRouter>
     );
