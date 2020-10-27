@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Bugara_Riesling_2015_wytrawne",
+    "variety": "Riesling",
+    "type": "DRY",
+    "color": "WHITE",
+    "year": "2015",
+    "price": "49"
+  },
+  {
+    "id": 2,
+    "name": "Bugara_Solaris_2018",
+    "variety": "Solaris",
+    "type": "DRY",
+    "color": "WHITE",
+    "year": "2018",
+    "price": "39"
+  },
+  {
+    "id": 3,
+    "name": "Bugara_Regent_Rose_2018",
+    "variety": "Regent Rosē",
+    "type": "SEMI_DRY",
+    "color": "ROSE",
+    "year": "2018",
+    "price": "39"
+  },
+  {
+    "id": 4,
+    "name": "Bugara_Riesling_2018",
+    "variety": "Riesling",
+    "type": "DRY",
+    "color": "WHITE",
+    "year": "2018",
+    "price": "39"
+  },
+  {
+    "id": 5,
+    "name": "Bugara_Riesling_2019",
+    "variety": "Riesling",
+    "type": "DRY",
+    "color": "WHITE",
+    "year": "2019",
+    "price": "49"
+  },
+  {
+    "id": 6,
+    "name": "Bugara_Solaris_2019",
+    "variety": "Solaris",
+    "type": "SEMI_SWEET",
+    "color": "WHITE",
+    "year": "2019",
+    "price": "49"
+  },
+  {
+    "id": 7,
+    "name": "Bugara_CabernetCortis_2019",
+    "variety": "Cabernet Cortis",
+    "type": "DRY",
+    "color": "RED",
+    "year": "2019",
+    "price": "39"
+  },
+  {
+    "id": 8,
+    "name": "Bugara_Regent_2019",
+    "variety": "Regent",
+    "type": "DRY",
+    "color": "RED",
+    "year": "2019",
+    "price": "39"
+  },
+  {
+    "id": 9,
+    "name": "Bugara_CabernetCortisRose_2019",
+    "variety": "Cabernet Cortis Rosē",
+    "type": "DRY",
+    "color": "ROSE",
+    "year": "2019",
+    "price": "39"
+  },
+  {
+    "id": 10,
+    "name": "Bugara_Solaris_2019",
+    "variety": "Solaris",
+    "type": "DRY",
+    "color": "ORANGE",
+    "year": "2019",
+    "price": "55"
+  }
+]

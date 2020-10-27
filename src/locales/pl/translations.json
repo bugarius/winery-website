@@ -1,0 +1,14 @@
+{
+  "WINE.TASTE.DRY": "Wytrawne",
+  "WINE.TASTE.SEMI_DRY": "Półwytrawne",
+  "WINE.TASTE.SEMI_SWEET": "Półsłodkie",
+  "WINE.TASTE.SWEET": "Słodkie",
+
+  "WINE.COLOR.WHITE": "Białe",
+  "WINE.COLOR.RED": "Czerwone",
+  "WINE.COLOR.ROSE": "Różowe",
+  "WINE.COLOR.ORANGE": "Pomarańczowe",
+
+  "COMMON_WORDS.DESCRIPTION": "OPIS",
+  "COMMON_WORDS.QUANTITY": "Ilość"
+}

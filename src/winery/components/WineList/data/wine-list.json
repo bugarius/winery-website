@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "imgUrl": "/images/Riesling_2015_wytrawne_lista.jpg",
+    "description": "Wyjątkowy, mineralny smak z wyczuwalną morelą i cytrusami.\n\nNagradzane srebrnymi medalami na polskich i zagranicznych konkursach winiarskich."
+  },
+  {
+    "id": 2,
+    "imgUrl": "/images/Solaris_2018_wytrawne_lista.jpg",
+    "description": "Łagodne wino o owocowym, niezwykle wyrazistym aromacie gruszek, brzoskwiń, grapefruita i nut miodu."
+  },
+  {
+    "id": 3,
+    "imgUrl": "/images/Regent_Rose_2018_wytrawne_lista.jpg",
+    "description": "Delikatne, lekkie różowe wino z wyczuwalną nutą truskawek, poziomek i czereśni."
+  },
+  {
+    "id": 4,
+    "imgUrl": "/images/Riesling_2018_wytrawne_lista.jpg",
+    "description": "Wino charakteryzujące się wyraźnym aromatem mineralnym, zbalansowaną kwasowością i wyczuwalnymi owocami cyrusowymi."
+  },
+  {
+    "id": 5,
+    "imgUrl": "/images/Riesling_2019_wytrawne_lista.jpg",
+    "description": "Wino z nutą owoców cytrusowych, z wyraźnym akcentem mineralnym. W ustach świeże, czyste i z orzeźwiającą kwasowością.\n\nNagrodzone srebrnym medalem na VII Konkursie Polskich Win w Jaśle."
+  },
+  {
+    "id": 6,
+    "imgUrl": "/images/Solaris_2019_polslodkie_lista.jpg",
+    "description": "Aromatyczne i świeże wino o nutach ananasa, gruszki, marakui i liczi.\n\nNagrodzone srebrnym medalem na VII Konkursie Polskich Win w Jaśle."
+  },
+  {
+    "id": 7,
+    "imgUrl": "/images/Cabernet_Cortis_2019_wytrawne_lista.jpg",
+    "description": "Wino o ładnym smaku z wyczuwalną nutą owoców leśnych. W nosie dojrzała czarna porzeczka, jeżyny, śliwki i wiśnie."
+  },
+  {
+    "id": 8,
+    "imgUrl": "/images/Regent_2019_wytrawne_lista.jpg",
+    "description": "Bardzo przyjemne i łatwe w spożyciu wino. Umiarkowane, miękkie taniny. Wyczuwalne aromaty młodych, czerwonych owoców."
+  },
+  {
+    "id": 9,
+    "imgUrl": "/images/Cabernet_Cortis_Rose_2019_wytrawne_lista.jpg",
+    "description": "Wino o aromacie czerwonych owoców, poziomek, truskawek i czerwonych śliwek z wyczuwalną kwasowością."
+  },
+  {
+    "id": 10,
+    "imgUrl": "/images/Solaris_pomaranczowe_2019_wytrawne_lista.jpg",
+    "description": "Pomarańczowe wino produkowane z białej odmiany winorośli. Charakteryzuje się czystą, brzoskwiniową nutą, białymi porzeczkami i morelą."
+  }
+]
