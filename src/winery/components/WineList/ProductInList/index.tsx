@@ -18,7 +18,7 @@ export const ProductInList: React.FC<Props> = ({imgUrl, year, variety, descripti
         backgroundImage: `url(${imgUrl})`,
     }
     return (
-        <div className="row row-o-full-height row-o-columns-stretch row-o-equal-height">
+        <div className={"row row-o-columns-stretch row-o-equal-height" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height ")}>
             <div className="wpb_column vc_column_container column-12_12">
                 <div className="vc_column-inner ">
                     <div className="wpb_wrapper">
