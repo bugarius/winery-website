@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/winery-website/static/css/main.4dbf3c42.chunk.css",
-    "main.js": "/winery-website/static/js/main.e3e8dfda.chunk.js",
-    "main.js.map": "/winery-website/static/js/main.e3e8dfda.chunk.js.map",
+    "main.css": "/winery-website/static/css/main.da585a2f.chunk.css",
+    "main.js": "/winery-website/static/js/main.c812d9f8.chunk.js",
+    "main.js.map": "/winery-website/static/js/main.c812d9f8.chunk.js.map",
     "runtime-main.js": "/winery-website/static/js/runtime-main.551c2c99.js",
     "runtime-main.js.map": "/winery-website/static/js/runtime-main.551c2c99.js.map",
-    "static/js/2.79fa90b9.chunk.js": "/winery-website/static/js/2.79fa90b9.chunk.js",
-    "static/js/2.79fa90b9.chunk.js.map": "/winery-website/static/js/2.79fa90b9.chunk.js.map",
+    "static/js/2.6663e897.chunk.js": "/winery-website/static/js/2.6663e897.chunk.js",
+    "static/js/2.6663e897.chunk.js.map": "/winery-website/static/js/2.6663e897.chunk.js.map",
     "index.html": "/winery-website/index.html",
-    "precache-manifest.8a8baf2eceb78f8665c3804a0a609710.js": "/winery-website/precache-manifest.8a8baf2eceb78f8665c3804a0a609710.js",
+    "precache-manifest.1d559e68befba8bfda2d321db18d2a98.js": "/winery-website/precache-manifest.1d559e68befba8bfda2d321db18d2a98.js",
     "service-worker.js": "/winery-website/service-worker.js",
-    "static/css/main.4dbf3c42.chunk.css.map": "/winery-website/static/css/main.4dbf3c42.chunk.css.map",
-    "static/js/2.79fa90b9.chunk.js.LICENSE.txt": "/winery-website/static/js/2.79fa90b9.chunk.js.LICENSE.txt",
+    "static/css/main.da585a2f.chunk.css.map": "/winery-website/static/css/main.da585a2f.chunk.css.map",
+    "static/js/2.6663e897.chunk.js.LICENSE.txt": "/winery-website/static/js/2.6663e897.chunk.js.LICENSE.txt",
     "static/media/custom.css": "/winery-website/static/media/image-200701.988745fd.jpg",
     "static/media/fontello-embedded.css": "/winery-website/static/media/fontello26e8.ce12acc0.eot",
     "static/media/style.min.css": "/winery-website/static/media/preloader.ddb4547d.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.551c2c99.js",
-    "static/js/2.79fa90b9.chunk.js",
-    "static/css/main.4dbf3c42.chunk.css",
-    "static/js/main.e3e8dfda.chunk.js"
+    "static/js/2.6663e897.chunk.js",
+    "static/css/main.da585a2f.chunk.css",
+    "static/js/main.c812d9f8.chunk.js"
   ]
 }

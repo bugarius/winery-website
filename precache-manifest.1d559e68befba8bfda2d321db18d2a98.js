@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4101452568a400bc6887385db43cc6db",
+    "revision": "a60328287647f19a9d4fbdb27bda6f0a",
     "url": "/winery-website/index.html"
   },
   {
-    "revision": "54e0411e6bc26ac66a00",
-    "url": "/winery-website/static/css/main.4dbf3c42.chunk.css"
+    "revision": "32a448fc1e7141aae300",
+    "url": "/winery-website/static/css/main.da585a2f.chunk.css"
   },
   {
-    "revision": "84b6dab4fa1cf4682f6c",
-    "url": "/winery-website/static/js/2.79fa90b9.chunk.js"
+    "revision": "839971173cbd5da12b83",
+    "url": "/winery-website/static/js/2.6663e897.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/winery-website/static/js/2.79fa90b9.chunk.js.LICENSE.txt"
+    "url": "/winery-website/static/js/2.6663e897.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "54e0411e6bc26ac66a00",
-    "url": "/winery-website/static/js/main.e3e8dfda.chunk.js"
+    "revision": "32a448fc1e7141aae300",
+    "url": "/winery-website/static/js/main.c812d9f8.chunk.js"
   },
   {
     "revision": "48b61fd61ed52cc440fa",
