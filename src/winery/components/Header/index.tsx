@@ -17,9 +17,11 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
                     <div className="wrap">
                         <NavLink to={"/"} className={"logo google-drive-opener"}><img src={FileUtils.getImage("logo.png")} className="logo_main"
                                       alt=""/></NavLink>
-                        <div className="top_panel_navi scheme_default" style={{marginTop: '0px'}}>
-                            {children ? children : <nav className="menu_main_nav_area menu_hover_fade menu_show"></nav>}
-                        </div>
+                        {children &&
+                            <div className="top_panel_navi scheme_default" style={{marginTop: '0px'}}>
+                                <nav className="menu_main_nav_area menu_hover_fade menu_show">{children}</nav>
+                            </div>
+                        }
                     </div>
                 </div>
                 <div className="top_panel_title_wrap">
