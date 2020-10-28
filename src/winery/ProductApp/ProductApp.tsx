@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PageWrapper from "../components/PageWrapper";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
@@ -11,6 +11,7 @@ import wines from "../model/data/wines.json";
 import {Wine} from "../model/Wine";
 import wineList from "../components/WineList/data/wine-list.json";
 import {useTranslation} from "react-i18next";
+import {BodyClassNames, useResponsiveContext} from "../HomeApp/ResponsiveContext";
 
 export const ProductApp = () => {
     const {t} = useTranslation();
@@ -18,6 +19,22 @@ export const ProductApp = () => {
 
     const wineInLists = useWineConcat<WineInList>(wines as Wine[], wineList as WineList[]);
     const wine = wineInLists.find(w => w.id.toString() === id) as WineInList;
+
+
+    const {modifyBodyClassName} = useResponsiveContext();
+
+    useEffect(() => {
+        const wineClassConfig: BodyClassNames = {
+            blogMode: "blog_mode_shop",
+            headerPosition: "header_position_default",
+            headerTitle: "header_title_on",
+            site: "single single-product woocommerce woocommerce-page",
+            type: "is_stream blog_style_excerpt"
+        }
+
+        modifyBodyClassName(wineClassConfig);
+    }, [modifyBodyClassName])
+
     return (
         <PageWrapper>
             <Header title={`${wine.variety} ${wine.year}`}/>

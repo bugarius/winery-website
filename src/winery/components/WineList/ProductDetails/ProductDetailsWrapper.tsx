@@ -2,7 +2,7 @@ import React, {FC} from "react";
 
 export const ProductDetailsWrapper: FC<{}> = ({children}) => {
   return (
-      <div className="page_content_wrap scheme_default" style={{paddingBottom: "25px"}}>
+      <div className="page_content_wrap scheme_default">
           <div className="wrap">
               <div className="content">
                   <div className="post_item_single post_type_product">

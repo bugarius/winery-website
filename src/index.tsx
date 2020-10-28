@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './i18n';
+import './css/fontello/css/fontello-embedded.css'
+import './css/style.min.css'
+import './css/animation.css'
+import './css/__colors.css'
+import './css/__styles.css'
+import './css/custom.css'
+import './css/responsive.min.css'
 
 ReactDOM.render(
   <React.StrictMode>

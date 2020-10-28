@@ -1,10 +1,11 @@
 import React from "react";
 import DotComponent from "./DotComponent";
 import {FileUtils} from "../shared/Utils";
+import "../../../css/custom.css"
 
 const VineyardTopComponent: React.FC<{showDots?: boolean}> = ({showDots}) => {
     return (
-        <div className="row row-no-padding vc_custom_1469089433188 row-o-full-height row-o-columns-middle">
+        <div className="row row-no-padding vc_custom_1469089433188 row-o-full-height row-o-columns-middle" style={{minHeight: "100vh"}}>
             <div className="wpb_column vc_column_container column-3_12">
                 <div className="vc_column-inner ">
                     <div className="wpb_wrapper" style={{display: (showDots ? "block" : "none")}}>

@@ -1,23 +1,38 @@
-import React from "react";
-import useToggle from "../../shared/useToggle";
+import React, {useEffect, useRef} from "react";
 import {NavLink} from "react-router-dom";
+import {useResponsiveContext} from "../../../HomeApp/ResponsiveContext";
 
 const MenuSection: React.FC<{}> = ({children}) => {
-    const [opened, toggleOpen] = useToggle(false);
+
+    const {toggleOpenMenu, isMenuOpen, closeMenu} = useResponsiveContext();
+    const wrapperRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        document.addEventListener('mousedown', (e) => handleClickOutside(e));
+        return document.removeEventListener('mousedown', (e) => handleClickOutside(e));
+    });
+
+    const handleClickOutside = (event: any) => {
+        if (wrapperRef && wrapperRef.current && !wrapperRef.current.contains(event.target))
+        {
+            closeMenu();
+        }
+    };
+
     return (
         <>
             <div className="menu_side_wrap scheme_dark">
-                <div className="menu_side_inner" onClick={toggleOpen}>
+                <div className="menu_side_inner" onClick={toggleOpenMenu}>
                     <NavLink className="menu_mobile_button menu_mobile_button_text" to={""}
                              onClick={e => e.preventDefault()}>MENU</NavLink>
                 </div>
             </div>
             <div className="menu_mobile_overlay"/>
-            <div className={'menu_mobile scheme_dark ' + (opened && "opened")}>
+            <div className={'menu_mobile scheme_dark ' + (isMenuOpen && "opened")} ref={wrapperRef}>
                 <div className="menu_mobile_inner">
-                    <NavLink className="menu_mobile_close icon-cancel" onClick={e => {
+                    <NavLink className="menu_mobile_close" onClick={e => {
                         e.preventDefault();
-                        toggleOpen();
+                        toggleOpenMenu();
                     }}
                              to={""}/>
                     <nav className="menu_mobile_nav_area">

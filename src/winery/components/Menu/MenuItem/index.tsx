@@ -2,6 +2,7 @@ import React from "react";
 import useToggle from "../../shared/useToggle";
 import {Collapse} from "react-collapse";
 import {NavLink} from "react-router-dom";
+import {useResponsiveContext} from "../../../HomeApp/ResponsiveContext";
 
 interface Props
 {
@@ -13,11 +14,12 @@ interface Props
 const MenuItem: React.FC<Props> = ({title, hasChildren, children, link = ""}) => {
 
     const [opened, toggleOpen] = useToggle();
+    const {closeMenu} = useResponsiveContext();
 
     return (
         <li className={"menu-item " + (hasChildren && "menu-item-has-children ") + (opened && "opened")}
             style={{cursor: 'pointer'}}>
-            <NavLink to={link} className="nav-link">
+            <NavLink to={link} className="nav-link" onClick={closeMenu}>
                 <span className="open_child_menu" onClick={e => {
                     e.preventDefault();
                     toggleOpen();
