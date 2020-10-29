@@ -13,15 +13,18 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
             <header className="top_panel top_panel_style_1 without_bg_image with_featured_image scheme_default">
                 <i className="menu_mobile_button google-drive-opener" onClick={toggleOpenMenu}/>
                 <div className="top_panel_fixed_wrap"/>
-                <div className="menu_main_wrap clearfix">
-                    <div className="wrap">
-                        <NavLink to={"/"} className={"logo google-drive-opener"}><img src={FileUtils.getImage("logo.png")} className="logo_main"
-                                      alt=""/></NavLink>
-                        {children &&
+                <div className="top_panel_navi scheme_default">
+                    <div className="menu_main_wrap clearfix">
+                        <div className="wrap">
+                            <NavLink to={"/"} className={"logo google-drive-opener"}><img
+                                src={FileUtils.getImage("logo.png")} className="logo_main"
+                                alt=""/></NavLink>
+                            {children &&
                             <div className="top_panel_navi scheme_default" style={{marginTop: '0px'}}>
                                 <nav className="menu_main_nav_area menu_hover_fade menu_show">{children}</nav>
                             </div>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
                 <div className="top_panel_title_wrap">
@@ -56,7 +59,9 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
             {/*<div className="top_panel_navi scheme_dark">*/}
             <div className="menu_main_wrap clearfix">
                 <div className="wrap">
-                    <NavLink to={"/"} className={"logo google-drive-opener"}><img src={FileUtils.getImage("logo.png")} className="logo_main" alt=""/></NavLink>
+                    <NavLink to={"/"} className={"logo google-drive-opener"}><img src={FileUtils.getImage("logo.png")}
+                                                                                  className="logo_main"
+                                                                                  alt=""/></NavLink>
                 </div>
             </div>
         </header>
