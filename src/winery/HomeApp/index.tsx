@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import PageWrapper from "../components/PageWrapper";
 import AboutPlace from "../components/AboutPlace";
 import {BodyClassNames, useResponsiveContext} from "./ResponsiveContext";
+import Badges from "../components/Badges";
 
 const HomeApp = () => {
     const {modifyBodyClassName} = useResponsiveContext();
@@ -33,15 +34,15 @@ const HomeApp = () => {
             <Menu/>
             <ContentWrapper>
                 <VineyardTopComponent/>
-                <OurWines/>
+                <AboutPlace/>
                 <AboutWine title={"Najwyższa jakość wina"}
                            subTitle={"Produkujemy wino z myślą o naszych klientach, dlatego też dbamy o jakość na każdym etapie produkcji..."}
                            text={"Jednym z elementów, które mają duży wpływ na jakość naszych win jest produkcja wina z soku ociekowego, czyli takiego, który jest pozyskiwany poprzez lekkie zgniecenie winogron z pominięciem ich tłoczenia (prasowania)."}
                            imgSrc={"image-22.jpg"}
                 />
-                <AboutPlace/>
+                <OurWines/>
                 {/*<Events/>*/}
-                {/*<Badges/>*/}
+                <Badges/>
                 <Contact/>
             </ContentWrapper>
             <Footer/>
