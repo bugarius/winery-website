@@ -7,7 +7,7 @@ import {Description, OurWine} from "./OurWinesContainer";
 const OurWinesComponent: React.FC<{ randomWines: OurWine[], description: Description }> = ({randomWines, description}) => {
 
     return (
-        <div className="row row-no-padding row-o-full-height row-o-columns-middle">
+        <div className={"row row-no-padding row-o-columns-middle" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height")}>
             <div className="wpb_column vc_column_container column-6_12">
                 <HomeProductsList>
                     {

@@ -27,10 +27,12 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
                         </div>
                     </div>
                 </div>
-                <div className="top_panel_title_wrap">
+                <div className="top_panel_title_wrap" style={{width: "auto"}}>
                     <div className="content_wrap">
                         <div className="top_panel_title">
                             <div className="page_title">
+                                <div className="post_meta"><span className="post_meta_item post_categories">Wino</span>
+                                </div>
                                 <h1 className="page_caption">{title}</h1>
                             </div>
                             <div className="breadcrumbs">
