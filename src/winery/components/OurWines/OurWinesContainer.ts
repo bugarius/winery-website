@@ -1,9 +1,6 @@
-import React from "react";
-import ourWinesList from "./data/our-wines.json"
-import wines from "../../model/data/wines.json"
+import React, {useEffect, useState} from "react";
+import ourWines from "./data/our-wines.json"
 import winesDescription from "./data/our-wines-description.json"
-import {OurWineInList, useWineConcat} from "../shared/useWineConcat";
-import {Wine} from "../../model/Wine";
 
 export interface OurWine
 {
@@ -27,28 +24,35 @@ interface Props
 }
 
 const OurWinesContainer: React.FC<Props> = ({render}) => {
-    const ourWines: OurWineInList[] = useWineConcat<OurWineInList>(wines as Wine[], ourWinesList as OurWine[]);
     const description = winesDescription as Description;
 
-    const getRandomNumbers = (wines: OurWine[]) => {
-        const result: number[] = [];
-        while (result.length < 4)
+    const [randomWines, setRandomWines] = useState<OurWine[]>([]);
+
+    useEffect(() => {
+        if (!randomWines?.length)
         {
-            const newNumber = Math.floor(Math.random() * ourWines.length);
-            if (!result.some(number => number === wines[newNumber]?.id))
-            {
-                result.push(wines[newNumber]?.id);
+            const getRandomNumbers = (wines: OurWine[]) => {
+                const result: number[] = [];
+                while (result.length < 4)
+                {
+                    const newNumber = Math.floor(Math.random() * ourWines.length);
+                    if (!result.some(number => number === wines[newNumber]?.id))
+                    {
+                        result.push(wines[newNumber]?.id);
+                    }
+                }
+                return result;
             }
+
+            const getRandomWines = (wines: OurWine[]) => {
+                const randomNumbers = getRandomNumbers(wines);
+                return wines.filter(wine => randomNumbers.some(number => number === wine.id));
+            };
+
+            setRandomWines(getRandomWines(ourWines as OurWine[]));
         }
-        return result;
-    }
+    }, [setRandomWines, randomWines])
 
-    const getRandomWines = (wines: OurWine[]) => {
-        const randomNumbers = getRandomNumbers(wines);
-        return wines.filter(wine => randomNumbers.some(number => number === wine.id));
-    };
-
-    const randomWines = getRandomWines(ourWines);
 
     return render(randomWines, description)
 };
