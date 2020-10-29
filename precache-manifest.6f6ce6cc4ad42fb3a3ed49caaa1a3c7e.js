@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e95e91d21a4df036fc7e969a7e0bb053",
+    "revision": "348f2fa4997223f5a623df4a84790432",
     "url": "/winery-website/index.html"
   },
   {
-    "revision": "0c81768037ef13a867e2",
-    "url": "/winery-website/static/css/main.11f6b5f8.chunk.css"
+    "revision": "d8454170fdd73e9f401b",
+    "url": "/winery-website/static/css/main.a9adbb52.chunk.css"
   },
   {
     "revision": "13eb350fdd3d7582defe",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/winery-website/static/js/2.eb86c3f4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0c81768037ef13a867e2",
-    "url": "/winery-website/static/js/main.acf56d75.chunk.js"
+    "revision": "d8454170fdd73e9f401b",
+    "url": "/winery-website/static/js/main.efc6d03a.chunk.js"
   },
   {
     "revision": "48b61fd61ed52cc440fa",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/winery-website/static/media/bg-02.95221ef9.jpg"
   },
   {
-    "revision": "dc7cbc03aaa2257878ab9d8b5e475fa6",
-    "url": "/winery-website/static/media/bg-021793.dc7cbc03.jpg"
+    "revision": "fac5b600c94123ca7d1aa960d4e16fbd",
+    "url": "/winery-website/static/media/bg-021793.fac5b600.jpg"
   },
   {
     "revision": "74ee4a60d73254ecf46ca47b597f0baf",
