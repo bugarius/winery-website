@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/winery-website/static/css/main.abec3a41.chunk.css",
-    "main.js": "/winery-website/static/js/main.dadf051f.chunk.js",
-    "main.js.map": "/winery-website/static/js/main.dadf051f.chunk.js.map",
+    "main.js": "/winery-website/static/js/main.619e205c.chunk.js",
+    "main.js.map": "/winery-website/static/js/main.619e205c.chunk.js.map",
     "runtime-main.js": "/winery-website/static/js/runtime-main.551c2c99.js",
     "runtime-main.js.map": "/winery-website/static/js/runtime-main.551c2c99.js.map",
     "static/js/2.457b0486.chunk.js": "/winery-website/static/js/2.457b0486.chunk.js",
     "static/js/2.457b0486.chunk.js.map": "/winery-website/static/js/2.457b0486.chunk.js.map",
     "index.html": "/winery-website/index.html",
-    "precache-manifest.ca46378ae9f5dd1890d6662ab7fd6fe0.js": "/winery-website/precache-manifest.ca46378ae9f5dd1890d6662ab7fd6fe0.js",
+    "precache-manifest.ad8f6fccb463266b9edb3b41cd84910c.js": "/winery-website/precache-manifest.ad8f6fccb463266b9edb3b41cd84910c.js",
     "service-worker.js": "/winery-website/service-worker.js",
     "static/css/main.abec3a41.chunk.css.map": "/winery-website/static/css/main.abec3a41.chunk.css.map",
     "static/js/2.457b0486.chunk.js.LICENSE.txt": "/winery-website/static/js/2.457b0486.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.551c2c99.js",
     "static/js/2.457b0486.chunk.js",
     "static/css/main.abec3a41.chunk.css",
-    "static/js/main.dadf051f.chunk.js"
+    "static/js/main.619e205c.chunk.js"
   ]
 }
