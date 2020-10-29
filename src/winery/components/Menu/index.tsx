@@ -6,15 +6,14 @@ const Menu = () => {
     return (
         <MenuSection>
             <MenuItem title={"START"} link={"/"}/>
-            <MenuItem title={"NASZA FILOZOFIA"}/>
-            <MenuItem title={"CO TWORZYMY"}/>
             <MenuItem title={"WINA"} link={"/karta_win"}/>
+            <MenuItem title={"NASZA FILOZOFIA"} link={"/o_nas"}/>
             {/*<MenuItem title={"ZAMÓW WINA"} hasChildren link={"/karta_win"}>*/}
             {/*    <MenuItem title={"LISTA WIN"}/>*/}
             {/*    <MenuItem title={"KOSZYK"}/>*/}
             {/*</MenuItem>*/}
+            <MenuItem title={"WINNICA"} link={"/winnica"}/>
             <MenuItem title={"KONTAKT"}/>
-            <MenuItem title={"O NASZEJ WINNICY"}/>
         </MenuSection>
     )
 }
