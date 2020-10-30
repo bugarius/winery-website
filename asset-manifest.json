@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/winery-website/static/css/main.abec3a41.chunk.css",
-    "main.js": "/winery-website/static/js/main.328ed3b7.chunk.js",
-    "main.js.map": "/winery-website/static/js/main.328ed3b7.chunk.js.map",
+    "main.js": "/winery-website/static/js/main.767d7ff7.chunk.js",
+    "main.js.map": "/winery-website/static/js/main.767d7ff7.chunk.js.map",
     "runtime-main.js": "/winery-website/static/js/runtime-main.551c2c99.js",
     "runtime-main.js.map": "/winery-website/static/js/runtime-main.551c2c99.js.map",
-    "static/js/2.457b0486.chunk.js": "/winery-website/static/js/2.457b0486.chunk.js",
-    "static/js/2.457b0486.chunk.js.map": "/winery-website/static/js/2.457b0486.chunk.js.map",
+    "static/js/2.6f7e12c9.chunk.js": "/winery-website/static/js/2.6f7e12c9.chunk.js",
+    "static/js/2.6f7e12c9.chunk.js.map": "/winery-website/static/js/2.6f7e12c9.chunk.js.map",
     "index.html": "/winery-website/index.html",
-    "precache-manifest.1332d84b436238cf97cae2a6a82e9e17.js": "/winery-website/precache-manifest.1332d84b436238cf97cae2a6a82e9e17.js",
+    "precache-manifest.d4326922e93724472cca43a534bdb398.js": "/winery-website/precache-manifest.d4326922e93724472cca43a534bdb398.js",
     "service-worker.js": "/winery-website/service-worker.js",
     "static/css/main.abec3a41.chunk.css.map": "/winery-website/static/css/main.abec3a41.chunk.css.map",
-    "static/js/2.457b0486.chunk.js.LICENSE.txt": "/winery-website/static/js/2.457b0486.chunk.js.LICENSE.txt",
+    "static/js/2.6f7e12c9.chunk.js.LICENSE.txt": "/winery-website/static/js/2.6f7e12c9.chunk.js.LICENSE.txt",
     "static/media/custom.css": "/winery-website/static/media/image-200701.988745fd.jpg",
     "static/media/fontello-embedded.css": "/winery-website/static/media/fontello26e8.ce12acc0.eot",
     "static/media/style.min.css": "/winery-website/static/media/preloader.ddb4547d.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.551c2c99.js",
-    "static/js/2.457b0486.chunk.js",
+    "static/js/2.6f7e12c9.chunk.js",
     "static/css/main.abec3a41.chunk.css",
-    "static/js/main.328ed3b7.chunk.js"
+    "static/js/main.767d7ff7.chunk.js"
   ]
 }
