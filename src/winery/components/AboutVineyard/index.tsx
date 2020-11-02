@@ -2,6 +2,7 @@ import React from "react";
 import {FileUtils} from "../shared/Utils";
 import Badges from "../Badges";
 import {RowContent} from "../RowContent";
+import {FullWideImage} from "../FullWideImage";
 
 export const AboutVineyard = () => {
 
@@ -82,20 +83,7 @@ export const AboutVineyard = () => {
                 </div>
             </div>
             <Badges/>
-            <div className="row">
-                <div className="wpb_column vc_column_container column-12_12 vc_col-has-fill">
-                    <div className="vc_column-inner vc_custom_1464696736303">
-                        <div className="wpb_wrapper">
-                            <div className="vc_empty_space  height_huge" style={{height: 0}}/>
-                            <div className="vc_empty_space  height_huge" style={{height: 0}}/>
-                            <div className="vc_empty_space  height_huge" style={{height: 0}}/>
-                            <div className="vc_empty_space  height_large" style={{height: 0}}/>
-                            <div className="vc_empty_space  height_large" style={{height: 0}}/>
-                            <div className="vc_empty_space  height_large" style={{height: 0}}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <FullWideImage image={"image-194137.jpg"} />
         </div>
     )
 };

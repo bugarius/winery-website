@@ -64,7 +64,7 @@ const Header: React.FC<Props> = ({
                         </div>
                     </div>
                 </div>
-                { fullWideImage && <FullWideImage image={fullWideImage}/> }
+                { fullWideImage && <FullWideImage image={fullWideImage} header/> }
             </header>
         )
     }

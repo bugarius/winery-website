@@ -1,10 +1,10 @@
 import React, {FC} from "react";
 
 interface Props {
-    icon: string | "icon-grape-3";
+    icon: string | "icon-grape-3" | "icon-grape-leafs" | "icon-bottles" | "icon-barrel" | "icon-glass" | "icon-trophy" | "icon-winery";
     title: string;
     subtitle: string;
-    paragraphs: string[];
+    paragraphs?: string[];
 }
 
 export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {

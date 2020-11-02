@@ -4,6 +4,7 @@ import HomeApp from "./HomeApp";
 import {WineApp} from "./WineApp/WineApp";
 import {ProductApp} from "./ProductApp/ProductApp";
 import {VineyardApp} from "./VineyardApp";
+import {AboutUsApp} from "./AboutUsApp";
 
 const MainApp = () => {
 
@@ -14,6 +15,7 @@ const MainApp = () => {
 
     return (
         <Switch>
+            <Route path="/o_nas" component={AboutUsApp}/>
             <Route path="/winnica" component={VineyardApp}/>
             <Route path="/karta_win/:id" component={ProductApp}/>
             <Route path="/karta_win" component={WineApp}/>
