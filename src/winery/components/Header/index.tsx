@@ -2,8 +2,21 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import {FileUtils} from "../shared/Utils";
 import {useResponsiveContext} from "../../HomeApp/ResponsiveContext";
+import {FullWideImage} from "../FullWideImage";
 
-const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({children, title, endsBreadcrumbs}) => {
+interface Props
+{
+    title?: string;
+    endsBreadcrumbs?: boolean;
+    fullWideImage?: string;
+}
+
+const Header: React.FC<Props> = ({
+                                     children,
+                                     title,
+                                     endsBreadcrumbs,
+                                     fullWideImage
+                                 }) => {
 
     const {toggleOpenMenu} = useResponsiveContext();
 
@@ -51,6 +64,7 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
                         </div>
                     </div>
                 </div>
+                { fullWideImage && <FullWideImage image={fullWideImage}/> }
             </header>
         )
     }
@@ -59,13 +73,14 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
             <i className="menu_mobile_button google-drive-opener" onClick={toggleOpenMenu}/>
             <div className="top_panel_fixed_wrap"/>
             <div className="top_panel_navi scheme_dark">
-            <div className="menu_main_wrap clearfix">
-                <div className="wrap">
-                    <NavLink to={"/"} className={"logo google-drive-opener"}><img src={FileUtils.getImage("logo.png")}
-                                                                                  className="logo_main"
-                                                                                  alt=""/></NavLink>
+                <div className="menu_main_wrap clearfix">
+                    <div className="wrap">
+                        <NavLink to={"/"} className={"logo google-drive-opener"}><img
+                            src={FileUtils.getImage("logo.png")}
+                            className="logo_main"
+                            alt=""/></NavLink>
+                    </div>
                 </div>
-            </div>
             </div>
         </header>
     )

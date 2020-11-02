@@ -3,6 +3,7 @@ import {Route, Switch, useHistory} from "react-router-dom";
 import HomeApp from "./HomeApp";
 import {WineApp} from "./WineApp/WineApp";
 import {ProductApp} from "./ProductApp/ProductApp";
+import {VineyardApp} from "./VineyardApp";
 
 const MainApp = () => {
 
@@ -13,6 +14,7 @@ const MainApp = () => {
 
     return (
         <Switch>
+            <Route path="/winnica" component={VineyardApp}/>
             <Route path="/karta_win/:id" component={ProductApp}/>
             <Route path="/karta_win" component={WineApp}/>
             <Route exact path="/" component={HomeApp}/>
