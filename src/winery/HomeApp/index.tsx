@@ -33,7 +33,7 @@ const HomeApp = () => {
             <Header/>
             <Menu/>
             <ContentWrapper>
-                <VineyardTopComponent/>
+                <VineyardTopComponent showPopupDots />
                 <AboutPlace/>
                 <AboutWine title={"Najwyższa jakość wina"}
                            subTitle={"Produkujemy wino z myślą o naszych klientach, dlatego też dbamy o jakość na każdym etapie produkcji..."}

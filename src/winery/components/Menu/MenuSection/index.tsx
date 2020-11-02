@@ -1,23 +1,12 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import {NavLink} from "react-router-dom";
 import {useResponsiveContext} from "../../../HomeApp/ResponsiveContext";
+import useClickOutside from "../../shared/useClickOutside";
 
 const MenuSection: React.FC<{}> = ({children}) => {
 
     const {toggleOpenMenu, isMenuOpen, closeMenu} = useResponsiveContext();
-    const wrapperRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        document.addEventListener('mousedown', (e) => handleClickOutside(e));
-        return document.removeEventListener('mousedown', (e) => handleClickOutside(e));
-    });
-
-    const handleClickOutside = (event: any) => {
-        if (wrapperRef && wrapperRef.current && !wrapperRef.current.contains(event.target))
-        {
-            closeMenu();
-        }
-    };
+    const {wrapperRef} = useClickOutside(closeMenu)
 
     return (
         <>

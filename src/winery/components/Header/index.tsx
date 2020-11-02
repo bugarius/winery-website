@@ -42,9 +42,9 @@ const Header: React.FC<{ title?: string, endsBreadcrumbs?: boolean }> = ({childr
                                 {
                                     !endsBreadcrumbs &&
                                     [
-                                        <NavLink to={"/karta_win"}>Karta win</NavLink>,
-                                        <span className="breadcrumbs_delimiter"/>,
-                                        <span className="breadcrumbs_item current">{title}</span>
+                                        <NavLink to={"/karta_win"} key={1}>Karta win</NavLink>,
+                                        <span className="breadcrumbs_delimiter" key={2}/>,
+                                        <span className="breadcrumbs_item current" key={3}>{title}</span>
                                     ]
                                 }
                             </div>
