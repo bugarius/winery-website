@@ -81,6 +81,44 @@ export const AboutVineyard = () => {
                         </div>
                     </div>
                 </div>
+                <RowContent icon={"icon-grape-leafs"}
+                            title={"Riesling"}
+                            subtitle={"Nasza główna odmiana winorośli, która aktualnie zajmuje powierzchnię ok 1 ha."}
+                            paragraphs={[
+                                "Cechy charakterystyczne tej odmiany, to wysoka kwasowość, skłonność do aromatów cytrusowych i brzoskwiniowych oraz nut mineralnych.",
+                                "Wina z tej odmiany, przy zachowaniu swojego specyfcznego charakeru, potrafią smakować odmiennie. Duży wpływ ma tutaj m. in. gleba, na której rośnie.",
+                                "W naszej winnicy z tej odmiany dostępne bywają wina wytrawne oraz półsłodkie (prawie półwytrawne)."
+                            ]}
+                />
+                <FullWideImage image={"winorosl_riesling.jpg"} />
+                <RowContent icon={"icon-grape-leafs"}
+                            title={"Solaris"}
+                            subtitle={"Nasza druga biała odmiana winorośli."}
+                            paragraphs={[
+                                "Cechy charakterystyczne tej odmiany, to niska kwasowość, skłonność do aromatów ananasa i gruszek oraz nut kwiatowych.",
+                                "Ze względu na wysoki poziom cukru Solaris idealnie nadaje się do produkcji win deserowych.",
+                                "W naszej winnicy z tej odmiany dostępne bywają białe wina wytrawne i półsłodkie oraz pomarańczowe wina wytrawne."
+                            ]}
+                />
+                <FullWideImage image={"winorosl_solaris.jpg"} />
+                <RowContent icon={"icon-grape-leafs"}
+                            title={"Regent"}
+                            subtitle={"Nasza pierwsza czerwona odmiana winorośli."}
+                            paragraphs={[
+                                "Cechy charakterystyczne tej odmiany, to lekki owocowy aromat, ciemna barwa oraz mniejsza ilość tanin.",
+                                "W naszej winnicy z tej odmiany dostępne bywają czerwone wina wytrawne oraz różowe wina półwytrawne."
+                            ]}
+                />
+                <FullWideImage image={"winorosl_regent.jpg"} />
+                <RowContent icon={"icon-grape-leafs"}
+                            title={"Cabernet Cortis"}
+                            subtitle={"Nasza druga czerwona odmiana winorośli."}
+                            paragraphs={[
+                                "Cechy charakterystyczne tej odmiany, to zauważalny poziom garbników, intensywny kolor, bogate spektrum aromatyczne z silnie zaznaczonymi nutami owocowymi.",
+                                "W naszej winnicy z tej odmiany dostępne bywają czerwone oraz różowe wina wytrawne."
+                            ]}
+                />
+                <FullWideImage image={"winorosl_cabernet.jpg"} />
             </div>
             <Badges/>
             <FullWideImage image={"image-194137.jpg"} />
