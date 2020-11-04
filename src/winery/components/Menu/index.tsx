@@ -7,7 +7,7 @@ const Menu = () => {
         <MenuSection>
             <MenuItem title={"START"} link={"/"}/>
             <MenuItem title={"WINA"} link={"/karta_win"}/>
-            <MenuItem title={"NASZA FILOZOFIA"} link={"/o_nas"}/>
+            <MenuItem title={"JAK TWORZYMY"} link={"/o_nas"}/>
             {/*<MenuItem title={"ZAMÓW WINA"} hasChildren link={"/karta_win"}>*/}
             {/*    <MenuItem title={"LISTA WIN"}/>*/}
             {/*    <MenuItem title={"KOSZYK"}/>*/}

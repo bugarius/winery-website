@@ -1,7 +1,19 @@
 import React, {FC} from "react";
 import {FileUtils} from "../shared/Utils";
 
-export const FullWideImage: FC<{image: string, header?: boolean}> = ({image, header}) => {
+interface Props
+{
+    image: string;
+    header?: boolean;
+    padding?: {
+        paddingTop?: string;
+        paddingBottom?: string;
+        paddingRight?: string;
+        paddingLeft?: string;
+    }
+}
+
+export const FullWideImage: FC<Props> = ({image, header, padding = {paddingTop: "0", paddingBottom: "0", paddingRight: "0", paddingLeft: "0"}}) => {
 
     if (header)
     {
@@ -13,7 +25,7 @@ export const FullWideImage: FC<{image: string, header?: boolean}> = ({image, hea
         )
     }
     return (
-        <div className="row">
+        <div className="row" style={{...padding}}>
             <div className="wpb_column vc_column_container column-12_12 vc_col-has-fill">
                 <div className="vc_column-inner"
                      style={{

@@ -31,7 +31,7 @@ export const AboutVineyard = () => {
                                         <img
                                             width={1024}
                                             height={738}
-                                            src={FileUtils.getImage("winnica_bugara_2.jpg")}
+                                            src={FileUtils.getImage("winnica_bugara_6.jpg")}
                                             className="vc_single_image-img attachment-large"
                                             alt="winnica_bugara_2"
                                         />
@@ -53,7 +53,7 @@ export const AboutVineyard = () => {
                                         <img
                                             width={1024}
                                             height={683}
-                                            src={FileUtils.getImage("winnica_bugara_3.jpg")}
+                                            src={FileUtils.getImage("winnica_bugara_5.jpg")}
                                             className="vc_single_image-img attachment-large"
                                             alt="winnica_bugara_3"
                                         />
@@ -90,7 +90,7 @@ export const AboutVineyard = () => {
                                 "W naszej winnicy z tej odmiany dostępne bywają wina wytrawne oraz półsłodkie (prawie półwytrawne)."
                             ]}
                 />
-                <FullWideImage image={"winorosl_riesling.jpg"} />
+                <FullWideImage image={"winorosl_riesling.jpg"} padding={{paddingBottom: "50px"}}/>
                 <RowContent icon={"icon-grape-leafs"}
                             title={"Solaris"}
                             subtitle={"Nasza druga biała odmiana winorośli."}
@@ -100,7 +100,7 @@ export const AboutVineyard = () => {
                                 "W naszej winnicy z tej odmiany dostępne bywają białe wina wytrawne i półsłodkie oraz pomarańczowe wina wytrawne."
                             ]}
                 />
-                <FullWideImage image={"winorosl_solaris.jpg"} />
+                <FullWideImage image={"winorosl_solaris.jpg"} padding={{paddingBottom: "50px"}} />
                 <RowContent icon={"icon-grape-leafs"}
                             title={"Regent"}
                             subtitle={"Nasza pierwsza czerwona odmiana winorośli."}
@@ -109,7 +109,7 @@ export const AboutVineyard = () => {
                                 "W naszej winnicy z tej odmiany dostępne bywają czerwone wina wytrawne oraz różowe wina półwytrawne."
                             ]}
                 />
-                <FullWideImage image={"winorosl_regent.jpg"} />
+                <FullWideImage image={"winorosl_regent.jpg"} padding={{paddingBottom: "50px"}} />
                 <RowContent icon={"icon-grape-leafs"}
                             title={"Cabernet Cortis"}
                             subtitle={"Nasza druga czerwona odmiana winorośli."}
@@ -118,7 +118,7 @@ export const AboutVineyard = () => {
                                 "W naszej winnicy z tej odmiany dostępne bywają czerwone oraz różowe wina wytrawne."
                             ]}
                 />
-                <FullWideImage image={"winorosl_cabernet.jpg"} />
+                <FullWideImage image={"winorosl_cabernet.jpg"} padding={{paddingBottom: "50px"}} />
             </div>
             <Badges/>
             <FullWideImage image={"image-194137.jpg"} />

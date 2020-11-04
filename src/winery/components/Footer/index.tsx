@@ -32,7 +32,7 @@ const Footer: React.FC<PageElement> = () => {
                             <li className="menu-item menu-item-143"><NavLink to={"/"}><span>Start</span></NavLink></li>
                             <li className="menu-item menu-item-675"><NavLink to={"/karta_win"}><span>Wina</span></NavLink>
                             </li>
-                            <li className="menu-item menu-item-677"><NavLink to={"/o_nas"}><span>Nasza filozofia</span></NavLink>
+                            <li className="menu-item menu-item-677"><NavLink to={"/o_nas"}><span>Jak tworzymy</span></NavLink>
                             </li>
                             <li className="menu-item menu-item-147"><NavLink to={"/winnica"}><span>Winnica</span></NavLink></li>
                             <li className="menu-item menu-item-676"><NavLink to={"/"}><span>Kontakt</span></NavLink>

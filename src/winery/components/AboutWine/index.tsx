@@ -33,7 +33,7 @@ const AboutWine: React.FC<Props> = ({title, subTitle, text, imgSrc}) => {
                                             className="sc_button sc_button_simple sc_button_size_normal sc_button_icon_top" to={"/o_nas"}><span
                                             className="sc_button_icon"><span className="icon-down-big"/></span><span
                                             className="sc_button_text"><span
-                                            className="sc_button_title">Nasza filozofia</span></span> </NavLink>
+                                            className="sc_button_title">Jak tworzymy</span></span> </NavLink>
                                     </div>
                                 </div>
                             </div>

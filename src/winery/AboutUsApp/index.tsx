@@ -25,7 +25,7 @@ export const AboutUsApp = () => {
 
     return (
         <PageWrapper>
-            <Header title={"Nasza filozofia"} endsBreadcrumbs />
+            <Header title={"Jak tworzymy"} endsBreadcrumbs />
             <Menu/>
             <AboutUs/>
             <Footer/>
