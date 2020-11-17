@@ -1,5 +1,6 @@
 import React from "react";
 import DotComponent from "../VineyardTopComponent/DotComponent";
+import {FileUtils} from "../shared/Utils";
 
 const Contact = () => {
     return (
@@ -25,8 +26,8 @@ const Contact = () => {
                                     <div className="sc_promo_content sc_item_content">
                                         <div className="wpb_text_column wpb_content_element ">
                                             <div className="wpb_wrapper">
-                                                <p><em><strong>Adres:</strong></em><br/> Winnica Bugara, ul. Ludowa 79, 42-215 Częstochowa</p>
-                                                <p><em><strong>Telefon:</strong></em><br/> +48 602 267 889</p>
+                                                <p><em><strong>Adres:</strong></em><br/> ul. Ludowa 79, 42-215 Częstochowa</p>
+                                                <p><em><strong>Telefon:</strong></em><br/> +48 608 099 024<br/> +48 608 469 814<br/> +48 602 267 889</p>
                                                 <p><em><strong>E-mail:</strong></em><br/> mariusz.bugara@gmail.com
                                                 </p>
                                             </div>
@@ -47,7 +48,7 @@ const Contact = () => {
             <div className="wpb_column vc_column_container column-4_12">
                 <div className="vc_column-inner ">
                     <div className="wpb_wrapper">
-                        <div className="cqtooltip-wrapper "><img src="images/spacer.png" alt=""/>
+                        <div className="cqtooltip-wrapper "><img src={FileUtils.getImage("spacer.png")} alt=""/>
                             <div className="cq-hotspots">
                                 <DotComponent position={{top: 44, left: 25}} />
                             </div>
