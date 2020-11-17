@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "08c7d6176f6d27abb48df8e2a3cb781a",
+    "revision": "f89dc97b89459d784d032f148104fd96",
     "url": "/winery-website/index.html"
   },
   {
-    "revision": "1388f68b070a1410d84c",
+    "revision": "7b2732c07221b8ac39c2",
     "url": "/winery-website/static/css/main.b2aad2f6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/winery-website/static/js/2.a3d82fa9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1388f68b070a1410d84c",
-    "url": "/winery-website/static/js/main.7b068861.chunk.js"
+    "revision": "7b2732c07221b8ac39c2",
+    "url": "/winery-website/static/js/main.da0ba985.chunk.js"
   },
   {
     "revision": "48b61fd61ed52cc440fa",
