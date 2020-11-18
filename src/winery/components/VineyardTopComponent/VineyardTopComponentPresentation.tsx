@@ -5,6 +5,7 @@ import {PopupComponent, PopupProps} from "./PopupComponent";
 import {WineInList} from "../shared/useWineConcat";
 import {DotSection} from "./DotSection/DotSection";
 import {CenterSection} from "./CenterSection/CenterSection";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 export interface DotPopupsProps
 {
@@ -20,9 +21,10 @@ const VineyardTopComponentPresentation: React.FC<DotPopupsProps> = ({
                                                                         winesInDots,
                                                                         popupProps,
                                                                     }) => {
+    const {refs} = useScrollContext();
 
     return (
-        <div className={"row row-no-padding vc_custom_1469089433188 row-o-columns-middle" + (window.innerWidth < 768 ? "" : " row-o-full-height")}>
+        <div ref={refs.home} className={"row row-no-padding vc_custom_1469089433188 row-o-columns-middle" + (window.innerWidth < 768 ? "" : " row-o-full-height")}>
             <DotSection showPopupDots={showPopupDots}>
                 <DotComponent position={{top: 60, left: 20}}
                               onClick={(e) => onDotClick(e, winesInDots?.[0]?.id || 3)}
