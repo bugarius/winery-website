@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/winery-website/static/css/main.b2aad2f6.chunk.css",
-    "main.js": "/winery-website/static/js/main.409483c0.chunk.js",
-    "main.js.map": "/winery-website/static/js/main.409483c0.chunk.js.map",
-    "runtime-main.js": "/winery-website/static/js/runtime-main.551c2c99.js",
-    "runtime-main.js.map": "/winery-website/static/js/runtime-main.551c2c99.js.map",
-    "static/js/2.baeacfba.chunk.js": "/winery-website/static/js/2.baeacfba.chunk.js",
-    "static/js/2.baeacfba.chunk.js.map": "/winery-website/static/js/2.baeacfba.chunk.js.map",
-    "index.html": "/winery-website/index.html",
-    "precache-manifest.ab1ac3b2eff7d0e49c7021f1bf485ab2.js": "/winery-website/precache-manifest.ab1ac3b2eff7d0e49c7021f1bf485ab2.js",
-    "service-worker.js": "/winery-website/service-worker.js",
-    "static/css/main.b2aad2f6.chunk.css.map": "/winery-website/static/css/main.b2aad2f6.chunk.css.map",
-    "static/js/2.baeacfba.chunk.js.LICENSE.txt": "/winery-website/static/js/2.baeacfba.chunk.js.LICENSE.txt",
-    "static/media/custom.css": "/winery-website/static/media/image-200701.988745fd.jpg",
-    "static/media/fontello-embedded.css": "/winery-website/static/media/fontello26e8.ce12acc0.eot",
-    "static/media/style.min.css": "/winery-website/static/media/preloader.ddb4547d.gif"
+    "main.css": "/static/css/main.daaf3010.chunk.css",
+    "main.js": "/static/js/main.3952aa31.chunk.js",
+    "main.js.map": "/static/js/main.3952aa31.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e597883e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e597883e.js.map",
+    "static/js/2.baeacfba.chunk.js": "/static/js/2.baeacfba.chunk.js",
+    "static/js/2.baeacfba.chunk.js.map": "/static/js/2.baeacfba.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9f320d7faef5c7b3922cc1e9437a2ff4.js": "/precache-manifest.9f320d7faef5c7b3922cc1e9437a2ff4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.daaf3010.chunk.css.map": "/static/css/main.daaf3010.chunk.css.map",
+    "static/js/2.baeacfba.chunk.js.LICENSE.txt": "/static/js/2.baeacfba.chunk.js.LICENSE.txt",
+    "static/media/custom.css": "/static/media/image-200701.988745fd.jpg",
+    "static/media/fontello-embedded.css": "/static/media/fontello26e8.ce12acc0.eot",
+    "static/media/style.min.css": "/static/media/preloader.ddb4547d.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.551c2c99.js",
+    "static/js/runtime-main.e597883e.js",
     "static/js/2.baeacfba.chunk.js",
-    "static/css/main.b2aad2f6.chunk.css",
-    "static/js/main.409483c0.chunk.js"
+    "static/css/main.daaf3010.chunk.css",
+    "static/js/main.3952aa31.chunk.js"
   ]
 }
