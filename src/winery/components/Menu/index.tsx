@@ -1,19 +1,21 @@
 import React from "react";
 import MenuItem from "./MenuItem";
 import MenuSection from "./MenuSection";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 const Menu = () => {
+
+    const {scrollToRef, refs} = useScrollContext();
+
     return (
         <MenuSection>
-            <MenuItem title={"START"} link={"/"}/>
-            <MenuItem title={"WINA"} link={"/karta_win"}/>
-            <MenuItem title={"JAK TWORZYMY"} link={"/o_nas"}/>
-            {/*<MenuItem title={"ZAMÓW WINA"} hasChildren link={"/karta_win"}>*/}
-            {/*    <MenuItem title={"LISTA WIN"}/>*/}
-            {/*    <MenuItem title={"KOSZYK"}/>*/}
-            {/*</MenuItem>*/}
-            <MenuItem title={"WINNICA"} link={"/winnica"}/>
-            <MenuItem title={"KONTAKT"}/>
+            <MenuItem title={"START"} link={"/"} scrollToRef={() => scrollToRef(refs.home)}/>
+            <MenuItem title={"WINNICA"} scrollToRef={() => scrollToRef(refs.aboutPlace)}/>
+            <MenuItem title={"JAK TWORZYMY"} scrollToRef={() => scrollToRef(refs.aboutUs)}/>
+            <MenuItem title={"WINA"} scrollToRef={() => scrollToRef(refs.wines)} hasChildren>
+                <MenuItem title={"KARTA WIN"} link={"/karta_win"}/>
+            </MenuItem>
+            <MenuItem title={"KONTAKT"} scrollToRef={() => scrollToRef(refs.contact)}/>
         </MenuSection>
     )
 }
