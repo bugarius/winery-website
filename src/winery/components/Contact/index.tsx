@@ -1,10 +1,14 @@
 import React from "react";
 import DotComponent from "../VineyardTopComponent/DotComponent";
 import {FileUtils} from "../shared/Utils";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 const Contact = () => {
+
+    const {refs} = useScrollContext();
+
     return (
-        <div className="row vc_custom_1466154433105 row-o-full-height row-o-columns-stretch row-o-equal-height">
+        <div ref={refs.contact} className="row vc_custom_1466154433105 row-o-full-height row-o-columns-stretch row-o-equal-height">
             <div className="wpb_column vc_column_container column-4_12">
                 <div className="vc_column-inner ">
                     <div className="wpb_wrapper"/>

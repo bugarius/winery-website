@@ -1,10 +1,14 @@
 import React from "react";
 import {FileUtils} from "../shared/Utils";
 import {NavLink} from "react-router-dom";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 const AboutPlace = () => {
+
+    const {refs} = useScrollContext();
+
     return (
-        <div
+        <div ref={refs.aboutPlace}
             className={"row row-no-padding vc_custom_1466087475749 row-o-columns-stretch row-o-equal-height" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height")}>
             <div className="wpb_column vc_column_container column-12_12">
                 <div className="vc_column-inner ">

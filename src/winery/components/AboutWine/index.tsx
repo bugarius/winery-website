@@ -1,6 +1,7 @@
 import React from "react";
 import {FileUtils} from "../shared/Utils";
 import {NavLink} from "react-router-dom";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 interface Props
 {
@@ -11,8 +12,11 @@ interface Props
 }
 
 const AboutWine: React.FC<Props> = ({title, subTitle, text, imgSrc}) => {
+
+    const {refs} = useScrollContext();
+
     return (
-        <div className={"row row-no-padding row-o-columns-stretch row-o-equal-height" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height")}>
+        <div ref={refs.aboutUs} className={"row row-no-padding row-o-columns-stretch row-o-equal-height" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height")}>
             <div className="wpb_column vc_column_container column-12_12 vc_col-has-fill">
                 <div className="vc_column-inner vc_custom_1465806595697">
                     <div className="wpb_wrapper">

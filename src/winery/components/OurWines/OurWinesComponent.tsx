@@ -3,11 +3,14 @@ import HomeProductsDescription from "./HomeProductsDescription";
 import HomeProductsList from "./HomeProductsList";
 import HomeProductItem from "./HomeProductsList/HomeProductItem";
 import {Description, OurWine} from "./OurWinesContainer";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 const OurWinesComponent: React.FC<{ randomWines: OurWine[], description: Description }> = ({randomWines, description}) => {
 
+    const {refs} = useScrollContext();
+
     return (
-        <div className={"row row-no-padding row-o-columns-middle" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height")}>
+        <div ref={refs.wines} className={"row row-no-padding row-o-columns-middle" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height")}>
             <div className="wpb_column vc_column_container column-6_12">
                 <HomeProductsList>
                     {
