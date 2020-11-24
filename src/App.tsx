@@ -28,7 +28,7 @@ function App()
     });
 
     return (
-        <HashRouter>
+        <HashRouter basename={process.env.PUBLIC_URL}>
             <ScrollProvider>
                 <ResponsiveProvider>
                     <AppRouting/>
