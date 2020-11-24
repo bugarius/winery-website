@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/winery-website/precache-manifest.637f6fd89d2c552eb2b734faf6839a17.js"
+  "/winery-website/precache-manifest.3d4726495baa351ca3ea667292433cee.js"
 );
 
 self.addEventListener('message', (event) => {
