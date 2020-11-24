@@ -3,7 +3,6 @@ import useToggle from "../../shared/useToggle";
 import {Collapse} from "react-collapse";
 import {NavLink} from "react-router-dom";
 import {useResponsiveContext} from "../../../HomeApp/ResponsiveContext";
-import {useScrollContext} from "../../../HomeApp/ScrollContext";
 
 interface Props
 {
@@ -22,11 +21,12 @@ const MenuItem: React.FC<Props> = ({title, hasChildren, children, link = "", scr
         <li className={"menu-item " + (hasChildren && "menu-item-has-children ") + (opened && "opened")}
             style={{cursor: 'pointer'}}>
             <NavLink to={link} className="nav-link" onClick={() => {
-                !hasChildren && closeMenu();
+                closeMenu();
                 scrollToRef && scrollToRef()
             }}>
                 <span className="open_child_menu" onClick={e => {
                     e.preventDefault();
+                    e.stopPropagation();
                     toggleOpen();
                 }}
                       style={{cursor: 'pointer', display: (hasChildren ? "block" : "none")}}/>
