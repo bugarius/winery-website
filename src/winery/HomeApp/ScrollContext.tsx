@@ -1,9 +1,10 @@
-import React, {Ref, useCallback, useContext, useMemo, useReducer, useRef} from 'react';
+import React, {Ref, useCallback, useContext, useEffect, useMemo, useReducer} from 'react';
 
 interface ScrollContextInterface
 {
     refs: RefObject;
     scrollToRef: (ref: Ref<any>) => void;
+    currentRef: Ref<any>;
 }
 
 interface RefObject
@@ -24,7 +25,8 @@ const defaultState = {
         wines: React.createRef()
     },
     scrollToRef: () => {
-    }
+    },
+    currentRef: React.createRef()
 };
 
 const reducer = (state: any, action: any) => {
@@ -46,16 +48,19 @@ const ScrollProvider: React.FC = ({children}) => {
 
     const [state, dispatch] = useReducer(reducer, defaultState);
 
-    const scrollToRef = useCallback((ref: any) => {
-        console.log(state)
-        ref?.current?.scrollIntoView({behavior: 'smooth'})
-    }, [state]);
+    useEffect(() => {
+        state.currentRef?.current?.scrollIntoView({behavior: 'smooth'})
+    }, [state])
 
-    console.log(state)
+    const scrollToRef = useCallback((ref: any) => {
+        dispatch({type: "currentRef", value: ref})
+    }, []);
+
     const providerValue = useMemo(() => ({
         refs: state.refs,
-        scrollToRef
-    }), [state.refs, scrollToRef]);
+        scrollToRef,
+        currentRef: state.currentRef
+    }), [state.refs, scrollToRef, state.currentRef]);
 
     return (
         <ScrollContext.Provider value={providerValue}>
