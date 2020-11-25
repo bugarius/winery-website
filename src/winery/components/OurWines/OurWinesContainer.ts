@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import ourWines from "./data/our-wines.json"
 import winesDescription from "./data/our-wines-description.json"
+import {ListUtils} from "../shared/Utils";
 
 export interface OurWine
 {
@@ -46,7 +47,7 @@ const OurWinesContainer: React.FC<Props> = ({render}) => {
 
             const getRandomWines = (wines: OurWine[]) => {
                 const randomNumbers = getRandomNumbers(wines);
-                return wines.filter(wine => randomNumbers.some(number => number === wine.id));
+                return ListUtils.getListById(wines, randomNumbers) as OurWine[];
             };
 
             setRandomWines(getRandomWines(ourWines as OurWine[]));
