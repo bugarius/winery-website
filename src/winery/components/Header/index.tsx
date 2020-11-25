@@ -24,7 +24,10 @@ const Header: React.FC<Props> = ({
     {
         return (
             <header className="top_panel top_panel_style_1 without_bg_image with_featured_image scheme_default">
-                <NavLink to={""} className="menu_mobile_button google-drive-opener" onClick={toggleOpenMenu}/>
+                <NavLink to={""} className="menu_mobile_button google-drive-opener" onClick={e => {
+                    toggleOpenMenu();
+                    e.preventDefault()
+                }}/>
                 <div className="top_panel_fixed_wrap"/>
                 <div className="top_panel_navi scheme_default">
                     <div className="menu_main_wrap clearfix">
@@ -70,7 +73,10 @@ const Header: React.FC<Props> = ({
     }
     return (
         <header className="top_panel top_panel_style_1 without_bg_image scheme_default">
-            <NavLink to={""} className="menu_mobile_button google-drive-opener" onClick={toggleOpenMenu}/>
+            <NavLink to={""} className="menu_mobile_button google-drive-opener" onClick={e => {
+                toggleOpenMenu();
+                e.preventDefault()
+            }}/>
             <div className="top_panel_fixed_wrap"/>
             <div className="top_panel_navi scheme_dark">
                 <div className="menu_main_wrap clearfix">

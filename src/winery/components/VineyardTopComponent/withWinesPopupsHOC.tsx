@@ -7,10 +7,13 @@ import wineList from "../WineList/data/wine-list.json"
 import wines from "../../model/data/wines.json"
 import {WineList} from "../WineList";
 import {DotPopupsProps} from "./VineyardTopComponentPresentation";
+import {Event} from "../Tracking";
+import {ListUtils} from "../shared/Utils";
 
 export const withWinesPopupsHOC = <T extends DotPopupsProps>(WrappedComponent: React.ComponentType<T>) => (ownProps: Omit<T, keyof DotPopupsProps>) => {
     const {wrapperRef} = useClickOutside(() => closePopup())
     const wineInLists = useWineConcat<WineInList>(wines as Wine[], wineList as WineList[]);
+    const winesInDots = ListUtils.getListById(wineInLists, [3, 5, 7, 10]);
 
     const [position, setPosition] = useState<{ x: number, y: number }>();
 
@@ -27,6 +30,8 @@ export const withWinesPopupsHOC = <T extends DotPopupsProps>(WrappedComponent: R
     selectedWineRef.current = selectedWine;
 
     const onDotClick = (e: any, wineId: number) => {
+        Event("Exploring", `Click on DotComponent, wineId: #${wineId}`, "HOME_PAGE")
+
         if (prevWineId !== undefined && prevWineId !== selectedWineRef.current?.id)
         {
             return;
@@ -71,7 +76,12 @@ export const withWinesPopupsHOC = <T extends DotPopupsProps>(WrappedComponent: R
         onLoadImage: () => setImageLoaded(true)
     }
 
-    const props = { popupProps, ...ownProps, onDotClick};
+    const props = {
+        popupProps,
+        ...ownProps,
+        onDotClick,
+        winesInDots
+    };
 
     return <WrappedComponent {...props as T} />
 }

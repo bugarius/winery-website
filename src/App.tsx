@@ -3,32 +3,23 @@ import './App.css';
 import {HashRouter} from "react-router-dom";
 import AppRouting from "./platform/AppRouting";
 import ResponsiveProvider from "./winery/HomeApp/ResponsiveContext";
-import ReactGA from "react-ga";
-import {createBrowserHistory} from "history";
 import ScrollProvider from "./winery/HomeApp/ScrollContext";
+import {initGA, PageView} from "./winery/components/Tracking";
+import {createBrowserHistory} from "history";
 
 function App()
 {
     const history = createBrowserHistory();
 
     useEffect(() => {
-        ReactGA.initialize('UA-72516664-1');
-        ReactGA.pageview(window.location.pathname);
+        initGA('UA-72516664-1');
+        history.listen(location => {
+            PageView(location);
+        })
     })
 
-    const getPathFromHash = (hash: string) => {
-        return hash?.split("#")?.[1]
-    }
-
-    history.listen(location => {
-        ReactGA.initialize('UA-72516664-1');
-        ReactGA.set({page: getPathFromHash(location.hash) || location.pathname}); // Update the user's current page
-        ReactGA.pageview(getPathFromHash(location.hash) || location.pathname); // Record a pageview for the given page
-
-    });
-
     return (
-        <HashRouter>
+        <HashRouter basename={process.env.PUBLIC_URL}>
             <ScrollProvider>
                 <ResponsiveProvider>
                     <AppRouting/>
