@@ -2,10 +2,14 @@ import React from "react";
 import {PageElement} from "../PageWrapper";
 import {FileUtils} from "../shared/Utils";
 import {NavLink} from "react-router-dom";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 const Footer: React.FC<PageElement> = () => {
 
     const year = new Date().getFullYear();
+
+    const {scrollToRef, refs} = useScrollContext();
+
     return (
         <footer className="site_footer_wrap scheme_dark">
             <div className="logo_footer_wrap scheme_dark">
@@ -35,7 +39,7 @@ const Footer: React.FC<PageElement> = () => {
                             <li className="menu-item menu-item-677"><NavLink to={"/o_nas"}><span>Jak tworzymy</span></NavLink>
                             </li>
                             <li className="menu-item menu-item-147"><NavLink to={"/winnica"}><span>Winnica</span></NavLink></li>
-                            <li className="menu-item menu-item-676"><NavLink to={"/"}><span>Kontakt</span></NavLink>
+                            <li className="menu-item menu-item-676"><NavLink to={""} onClick={() => scrollToRef(refs.contact)}><span>Kontakt</span></NavLink>
                             </li>
                         </ul>
                     </nav>
