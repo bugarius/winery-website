@@ -10,5 +10,10 @@
   "WINE.COLOR.ORANGE": "Pomarańczowe",
 
   "COMMON_WORDS.DESCRIPTION": "OPIS",
-  "COMMON_WORDS.QUANTITY": "Ilość"
+  "COMMON_WORDS.QUANTITY": "Ilość",
+  "COMMON_WORDS.NAME": "Imię i nazwisko",
+  "COMMON_WORDS.EMAIL": "E-mail",
+  "COMMON_WORDS.MESSAGE": "Wiadomość",
+
+  "BUTTON.TEXT.SEND": "Wyślij wiadomość"
 }
