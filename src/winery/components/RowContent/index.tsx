@@ -1,4 +1,5 @@
 import React, {FC} from "react";
+import {RowWrapper} from "../wrappers/RowWrapper";
 
 interface Props {
     icon: string | "icon-grape-3" | "icon-grape-leafs" | "icon-bottles" | "icon-barrel" | "icon-glass" | "icon-trophy" | "icon-winery";
@@ -10,7 +11,7 @@ interface Props {
 export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {
 
     return (
-        <div className="row">
+        <RowWrapper>
             <div className="wpb_column vc_column_container column-2_12">
                 <div className="vc_column-inner ">
                     <div className="wpb_wrapper"/>
@@ -61,6 +62,6 @@ export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {
                     <div className="wpb_wrapper"/>
                 </div>
             </div>
-        </div>
+        </RowWrapper>
     )
 };

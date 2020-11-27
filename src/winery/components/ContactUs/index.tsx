@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import {GoogleMapContact} from "./GoogleMapContact";
 import {RowContent} from "../RowContent";
+import {CommonWrapper} from "../wrappers/CommonWrapper";
 
 export const ContactUs: FC<any> = () => {
 
@@ -8,7 +9,7 @@ export const ContactUs: FC<any> = () => {
         <div className="page_content_wrap scheme_default">
             <GoogleMapContact/>
 
-            <div className="wrap">
+            <CommonWrapper>
                 <RowContent icon={"icon-winery"}
                             title={"Skontaktuj się"}
                             subtitle={"Jeśli masz pytania odnoście naszych win, degustacji, zwiedzania, zakupów zapraszamy do kontaktu"}
@@ -48,15 +49,11 @@ export const ContactUs: FC<any> = () => {
                                         <div className="trx_addons_message_box sc_form_result"/>
                                     </form>
                                 </div>
-                                {/* /.sc_form */}
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* .entry-content */}
-                {/* </.content> */}
-            </div>
-            {/* </.content_wrap> */}
+            </CommonWrapper>
         </div>
     );
 };
