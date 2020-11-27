@@ -14,8 +14,8 @@ export const ContactDetails: FC<Props> = ({address, phones, email}) => {
                     <p><em><b>Adres:</b></em><br/>{address}</p>
                     <p><em><b>Telefony:</b></em><br/>
                         {
-                            phones.map(phone => {
-                                return <div>{phone}</div>
+                            phones.map((phone, index) => {
+                                return <React.Fragment key={index}>{phone}<br/></React.Fragment>
                             })
                         }
                     </p>
