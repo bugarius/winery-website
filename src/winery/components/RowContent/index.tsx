@@ -6,10 +6,14 @@ interface Props {
     title: string;
     subtitle: string;
     paragraphs?: string[];
+    paragraphAsDiv?: boolean;
 }
 
-export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {
+export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs, paragraphAsDiv}) => {
 
+    const createParagrapf = (text: string, index: number) => {
+        return paragraphAsDiv ? <div key={index}>{text}</div> : <p key={index}>{text}</p>
+    }
     return (
         <RowWrapper>
             <div className="wpb_column vc_column_container column-2_12">
@@ -39,7 +43,7 @@ export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {
                                             <div className="wpb_wrapper">
                                                 {paragraphs?.length &&
                                                     paragraphs.map((text, index) => {
-                                                        return <p key={index}>{text}</p>
+                                                        return createParagrapf(text, index);
                                                     })
                                                 }
 
