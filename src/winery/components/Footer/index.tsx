@@ -1,5 +1,5 @@
 import React from "react";
-import {PageElement} from "../PageWrapper";
+import {PageElement} from "../wrappers/PageWrapper";
 import {FileUtils} from "../shared/Utils";
 import {NavLink} from "react-router-dom";
 import {useScrollContext} from "../../HomeApp/ScrollContext";
