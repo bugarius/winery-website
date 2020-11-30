@@ -66,14 +66,7 @@ export const EmailFormPresentation: FC<EmailFormProps> = ({onChange, state, onSu
                                 <div className="sc_form_field sc_form_field_button">
                                     <button onClick={onSubmit}
                                             className="sc_button_hover_slide_top">{t('BUTTON.TEXT.SEND')}</button>
-                                    {state.submitMessage.message &&
-                                    <div style={{
-                                        paddingTop: "10px",
-                                        color: (state.submitMessage.isValid ? "orange" : "red")
-                                    }}>
-                                        {state.submitMessage.message}
-                                    </div>
-                                    }
+                                    <SimpleSubmitMessage submitMessage={state.submitMessage} show={state.submitMessage.message?.length > 0} />
                                 </div>
                                 <div className="trx_addons_message_box sc_form_result"/>
                             </form>
