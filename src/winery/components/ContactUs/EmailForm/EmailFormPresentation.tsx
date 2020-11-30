@@ -1,7 +1,8 @@
 import React, {ChangeEvent, FC} from "react";
 import {useTranslation} from "react-i18next";
 import {InputElement} from "../../forms/InputElement";
-import {SimpleSubmitMessage} from "./SimpleSubmitMessage";
+import {FormValidator} from "../../forms/validators/FormValidator";
+import {MessageBox} from "../../../commons/components/MessageBox";
 
 export interface EmailState
 {
@@ -37,7 +38,7 @@ export const EmailFormPresentation: FC<EmailFormProps> = ({onChange, state, onSu
                                                       label={t('COMMON_WORDS.NAME')}
                                                       onChange={onChange}
                                                       value={state.name}
-                                                      maxLength={20}
+                                                      maxLength={60}
                                                       showError={!state.name && state.triggerSend}
                                                       required
                                         />
@@ -48,8 +49,8 @@ export const EmailFormPresentation: FC<EmailFormProps> = ({onChange, state, onSu
                                                       label={t('COMMON_WORDS.EMAIL')}
                                                       onChange={onChange}
                                                       value={state.email}
-                                                      maxLength={20}
-                                                      showError={!state.email && state.triggerSend}
+                                                      maxLength={60}
+                                                      showError={state.triggerSend && (!state.email || !FormValidator.isEmailValid(state.email))}
                                                       required
                                         />
                                     </div>
@@ -63,10 +64,10 @@ export const EmailFormPresentation: FC<EmailFormProps> = ({onChange, state, onSu
                                               showError={!state.message && state.triggerSend}
                                               required
                                 />
+                                    <MessageBox text={state.submitMessage.message} status={state.submitMessage.isValid ? "success" : "warning"} />
                                 <div className="sc_form_field sc_form_field_button">
                                     <button onClick={onSubmit}
                                             className="sc_button_hover_slide_top">{t('BUTTON.TEXT.SEND')}</button>
-                                    <SimpleSubmitMessage submitMessage={state.submitMessage} show={state.submitMessage.message?.length > 0} />
                                 </div>
                                 <div className="trx_addons_message_box sc_form_result"/>
                             </form>
