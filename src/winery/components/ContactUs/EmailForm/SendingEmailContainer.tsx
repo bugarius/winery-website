@@ -1,6 +1,6 @@
-import React, {ChangeEvent, useReducer} from "react";
+import React, {ChangeEvent, FC, useCallback, useReducer} from "react";
 import {useEmailService} from "./useEmailService";
-import {EmailFormProps, EmailState} from "./EmailFormPresentation";
+import {EmailState} from "./EmailFormPresentation";
 
 const reducer = (state: EmailState, action: { type: string, value?: any }) => {
     if (action.type === "submitMessage")
@@ -21,7 +21,16 @@ const defaultState = {
     }
 };
 
-export const withSendingEmailHOC = <T extends EmailFormProps>(WrappedComponent: React.ComponentType<T>) => (ownProps: Omit<T, keyof EmailFormProps>) => {
+interface Props
+{
+    render: (
+        handleChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
+        handleSubmit: (event: React.MouseEvent<HTMLElement>) => void,
+        state: EmailState
+    ) => JSX.Element;
+}
+
+export const SendingEmailContainer: FC<Props> = ({render}) => {
 
     const [state, dispatch] = useReducer(reducer, defaultState);
 
@@ -31,12 +40,15 @@ export const withSendingEmailHOC = <T extends EmailFormProps>(WrappedComponent: 
         email: state.email
     })
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = useCallback((event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         dispatch({type: event.target.name, value: event.target.value});
-    };
+    }, []);
 
-    const handleSubmit = (e: React.MouseEvent<HTMLElement>) => {
+    const handleSubmit = useCallback((e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
+        const isFormValid = () => {
+            return ![state.name, state.email, state.message].some(text => !text?.length)
+        }
         dispatch({type: "triggerSend", value: true});
         if (isFormValid())
         {
@@ -44,7 +56,7 @@ export const withSendingEmailHOC = <T extends EmailFormProps>(WrappedComponent: 
                 .then(handleSendEmail)
                 .catch(handleError)
         }
-    };
+    }, [sendEmail, state]);
 
     const handleSendEmail = () => {
         dispatch({type: "triggerSend", value: false});
@@ -61,17 +73,6 @@ export const withSendingEmailHOC = <T extends EmailFormProps>(WrappedComponent: 
         });
     }
 
-    const isFormValid = () => {
-        return ![state.name, state.email, state.message].some(text => !text?.length)
-    }
-
-    const props = {
-        onChange: handleChange,
-        onSubmit: handleSubmit,
-        state,
-        ...ownProps
-    }
-
-    return <WrappedComponent {...props as T} />
+    return render(handleChange, handleSubmit, state)
 
 };

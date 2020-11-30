@@ -1,8 +1,11 @@
-import React, {FC} from "react";
-import {withSendingEmailHOC} from "./withSendingEmailHOC";
+import React from "react";
 import {EmailFormPresentation} from "./EmailFormPresentation";
+import {SendingEmailContainer} from "./SendingEmailContainer";
 
-export const EmailForm: FC<{}> = (props) => {
-    const EmailFormWithSendingEmail = withSendingEmailHOC(EmailFormPresentation)
-    return <EmailFormWithSendingEmail {...props} />
+export const EmailForm = () => {
+    return (
+        <SendingEmailContainer render={(onChange, onSubmit, state) => (
+            <EmailFormPresentation onChange={onChange} state={state} onSubmit={onSubmit}/>
+        )}/>
+    )
 };

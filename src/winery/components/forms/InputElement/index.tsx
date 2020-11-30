@@ -4,7 +4,7 @@ interface Props {
     name: string;
     value: string;
     label: string;
-    type: "text" | "email" | "number" | "textarea" | "password";
+    type?: "text" | "email" | "number" | "textarea" | "password";
     onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     maxLength?: number;
     required?: boolean;

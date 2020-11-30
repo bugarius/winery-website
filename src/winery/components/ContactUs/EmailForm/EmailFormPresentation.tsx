@@ -1,6 +1,7 @@
 import React, {ChangeEvent, FC} from "react";
 import {useTranslation} from "react-i18next";
 import {InputElement} from "../../forms/InputElement";
+import {SimpleSubmitMessage} from "./SimpleSubmitMessage";
 
 export interface EmailState
 {
@@ -15,7 +16,7 @@ export interface EmailFormProps
 {
     onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     state: EmailState;
-    onSubmit: () => void;
+    onSubmit: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 export const EmailFormPresentation: FC<EmailFormProps> = ({onChange, state, onSubmit}) => {
