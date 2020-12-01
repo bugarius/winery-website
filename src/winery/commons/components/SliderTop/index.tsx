@@ -8,7 +8,7 @@ export const SliderTop = () => {
     useEffect(() => {
         setHasTopMenu(document.body.classList.contains('menu_style_top'))
     }, [hasTopMenu])
-    console.log(window.location.hash)
+
     return (
         <div onClick={() => scrollToTop()}
              className={
