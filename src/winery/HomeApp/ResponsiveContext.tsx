@@ -82,6 +82,8 @@ const ResponsiveProvider: React.FC = ({children}) => {
         const classNameConfig = {...state.bodyClassNames, ...customClassNameConfig, layout: layout};
         const classNameString = Object.values(classNameConfig).join(" ");
         document.body.setAttribute("class", classNameString);
+        const root = document.getElementById("root");
+        if (root) root.className = classNameString;
     }, [state.bodyClassNames, state.isMobile]);
 
     const toggleOpenMenu = useCallback(() => {
