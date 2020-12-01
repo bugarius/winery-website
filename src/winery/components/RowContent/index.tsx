@@ -1,16 +1,21 @@
 import React, {FC} from "react";
+import {RowWrapper} from "../wrappers/RowWrapper";
 
 interface Props {
     icon: string | "icon-grape-3" | "icon-grape-leafs" | "icon-bottles" | "icon-barrel" | "icon-glass" | "icon-trophy" | "icon-winery";
     title: string;
     subtitle: string;
     paragraphs?: string[];
+    paragraphAsDiv?: boolean;
 }
 
-export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {
+export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs, paragraphAsDiv}) => {
 
+    const createParagrapf = (text: string, index: number) => {
+        return paragraphAsDiv ? <div key={index}>{text}</div> : <p key={index}>{text}</p>
+    }
     return (
-        <div className="row">
+        <RowWrapper>
             <div className="wpb_column vc_column_container column-2_12">
                 <div className="vc_column-inner ">
                     <div className="wpb_wrapper"/>
@@ -38,7 +43,7 @@ export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {
                                             <div className="wpb_wrapper">
                                                 {paragraphs?.length &&
                                                     paragraphs.map((text, index) => {
-                                                        return <p key={index}>{text}</p>
+                                                        return createParagrapf(text, index);
                                                     })
                                                 }
 
@@ -61,6 +66,6 @@ export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs}) => {
                     <div className="wpb_wrapper"/>
                 </div>
             </div>
-        </div>
+        </RowWrapper>
     )
 };
