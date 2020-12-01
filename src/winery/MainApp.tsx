@@ -5,6 +5,7 @@ import {WineApp} from "./WineApp/WineApp";
 import {ProductApp} from "./ProductApp/ProductApp";
 import {VineyardApp} from "./VineyardApp";
 import {AboutUsApp} from "./AboutUsApp";
+import {HowToBuyPage} from "./HowToBuyPage";
 
 const MainApp = () => {
 
@@ -17,6 +18,7 @@ const MainApp = () => {
         <Switch>
             <Route path="/o_nas" component={AboutUsApp}/>
             <Route path="/winnica" component={VineyardApp}/>
+            <Route path="/wina/gdzie_kupic" component={HowToBuyPage}/>
             <Route path="/karta_win/:id" component={ProductApp}/>
             <Route path="/karta_win" component={WineApp}/>
             <Route exact path="/" component={HomeApp}/>

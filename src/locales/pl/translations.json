@@ -10,5 +10,20 @@
   "WINE.COLOR.ORANGE": "Pomarańczowe",
 
   "COMMON_WORDS.DESCRIPTION": "OPIS",
-  "COMMON_WORDS.QUANTITY": "Ilość"
+  "COMMON_WORDS.QUANTITY": "Ilość",
+  "COMMON_WORDS.NAME": "Imię i nazwisko",
+  "COMMON_WORDS.EMAIL": "E-mail",
+  "COMMON_WORDS.MESSAGE": "Wiadomość",
+
+  "BUTTON.TEXT.SEND": "Wyślij wiadomość",
+
+  "CONTACT_US.RETAIL.T1": "Sprzedaż przy winnicy",
+  "CONTACT_US.RETAIL.SBT1": "Jeśli chcesz do nas przyjechać, to zapraszamy o każdej rozsądej godzinie. Godziny otwarcia są tylko poglądowe. Do nas można wpaść jak do dobrego znajomego :)",
+  "CONTACT_US.RETAIL.P1": "Jeśli przyjedziesz do nas a winiarnia będzie zamknięta, to jest wielce prawdopodobne, że ktoś właśnie jest na winnicy lub wypełnia inne obowiązki i w ciągu paru chwil może przyjść Ci z pomocą. Wystarczy, że zadzwonisz na jeden z naszych numerów.",
+  "CONTACT_US.RETAIL.T2": "Szybka sprzedaż",
+  "CONTACT_US.RETAIL.SBT2":"Jeżeli chcesz mieć 100% pewności, że od razu zastaniesz nas w punkcie sprzedaży, to zapraszamy do wcześniejszego kontaktu telefonicznego, lub bezpośredniej wiadomości na naszym facebooku.",
+  "CONTACT_US.RETAIL.P2.1": "Zachęcamy również, do zamawiania wina przez telefon, formularz kontaktowy lub facebook'a. Po potwierdzeniu przez nas zamówienia, zapakowane wino będzie czekało na Ciebie o ustalonej godzinie.",
+  "CONTACT_US.RETAIL.P2.2": "Aktualnie pracujemy nad możliwością zamawiania wina prosto z naszej strony internetowej.",
+  "CONTACT_US.RETAIL.T3": "Skontaktuj się",
+  "CONTACT_US.RETAIL.SBT3": "Jeśli masz pytania odnoście naszych win, degustacji, zwiedzania, zakupów zapraszamy do kontaktu"
 }

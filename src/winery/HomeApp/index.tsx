@@ -1,13 +1,13 @@
 import React, {useEffect} from "react";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
-import ContentWrapper from "../components/ContentWrapper";
+import ContentWrapper from "../components/wrappers/ContentWrapper";
 import VineyardTopComponent from "../components/VineyardTopComponent";
 import OurWines from "../components/OurWines";
 import AboutWine from "../components/AboutWine";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from "../components/wrappers/PageWrapper";
 import AboutPlace from "../components/AboutPlace";
 import {BodyClassNames, useResponsiveContext} from "./ResponsiveContext";
 import Badges from "../components/Badges";

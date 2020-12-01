@@ -2,11 +2,11 @@ import React, {useEffect} from "react";
 import PageWrapper from "../components/wrappers/PageWrapper";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
-import {WineList} from "../components/WineList";
 import Footer from "../components/Footer";
 import {BodyClassNames, useResponsiveContext} from "../HomeApp/ResponsiveContext";
+import {ContactUs} from "../components/ContactUs";
 
-export const WineApp = () => {
+export const HowToBuyPage = () => {
 
     const {modifyBodyClassName} = useResponsiveContext();
 
@@ -25,9 +25,9 @@ export const WineApp = () => {
 
     return (
         <PageWrapper>
-            <Header title={"Karta win"} endsBreadcrumbs/>
+            <Header title={"Gdzie kupisz nasze wina"} endsBreadcrumbs />
             <Menu/>
-            <WineList/>
+            <ContactUs/>
             <Footer/>
         </PageWrapper>
     )
