@@ -6,6 +6,7 @@ import ResponsiveProvider from "./winery/HomeApp/ResponsiveContext";
 import ScrollProvider from "./winery/HomeApp/ScrollContext";
 import {initGA, PageView} from "./winery/components/Tracking";
 import {createBrowserHistory} from "history";
+import {SliderTop} from "./winery/commons/components/SliderTop";
 
 function App()
 {
@@ -23,6 +24,7 @@ function App()
             <ScrollProvider>
                 <ResponsiveProvider>
                     <AppRouting/>
+                    <SliderTop/>
                 </ResponsiveProvider>
             </ScrollProvider>
         </HashRouter>
