@@ -9,7 +9,7 @@ const HorizontalMenu: FC<{show: boolean}> = ({show}) => {
 
     return show ? (
         <HorizontalMenuSection>
-                <HorizontalMenuItem link={"/"} text={"Start"}/>
+                <HorizontalMenuItem link={"/"} text={"Start"} onClick={() => scrollToRef(refs.home)}/>
                 <HorizontalMenuItem link={"/winnica"} text={"Winnica"}/>
                 <HorizontalMenuItem link={"/o_nas"} text={"Jak tworzymy"}/>
                 <HorizontalMenuItem link={"/wina"} text={"Wina"}>
