@@ -2,11 +2,16 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import {useResponsiveContext} from "../../../HomeApp/ResponsiveContext";
 import useClickOutside from "../../shared/useClickOutside";
+import {TocMenuSection} from "../TocMenu/TocMenuSection";
+import {TocMenuItem} from "../TocMenu/TocMenuItem";
+import {useScrollContext} from "../../../HomeApp/ScrollContext";
 
 const MenuSection: React.FC<{}> = ({children}) => {
 
     const {toggleOpenMenu, isMenuOpen, closeMenu} = useResponsiveContext();
     const {wrapperRef} = useClickOutside(closeMenu)
+    const {scrollToRef, refs, currentRef} = useScrollContext();
+    const isHomePage = window.location.hash === "#/";
 
     return (
         <>
@@ -14,6 +19,12 @@ const MenuSection: React.FC<{}> = ({children}) => {
                 <div className="menu_side_inner" onClick={toggleOpenMenu}>
                     <NavLink className="menu_mobile_button menu_mobile_button_text" to={""}
                              onClick={e => e.preventDefault()}>MENU</NavLink>
+                    <TocMenuSection show={isHomePage}>
+                        <TocMenuItem description={"Winnica"} scrollToRef={() => scrollToRef(refs.aboutPlace)} link={"/"} active={currentRef === refs.aboutPlace}/>
+                        <TocMenuItem description={"Jak tworzymy"} scrollToRef={() => scrollToRef(refs.aboutUs)} link={"/"} active={currentRef === refs.aboutUs}/>
+                        <TocMenuItem description={"Wina"} scrollToRef={() => scrollToRef(refs.wines)} link={"/"} active={currentRef === refs.wines}/>
+                        <TocMenuItem description={"Kontakt"} scrollToRef={() => scrollToRef(refs.contact)} link={"/"} active={currentRef === refs.contact}/>
+                    </TocMenuSection>
                 </div>
             </div>
             <div className="menu_mobile_overlay"/>

@@ -4,6 +4,7 @@ interface ScrollContextInterface
 {
     refs: RefObject;
     scrollToRef: (ref: Ref<any>) => void;
+    scrollToTop: () => void;
     currentRef: Ref<any>;
 }
 
@@ -25,6 +26,8 @@ const defaultState = {
         wines: React.createRef()
     },
     scrollToRef: () => {
+    },
+    scrollToTop: () => {
     },
     currentRef: React.createRef()
 };
@@ -56,11 +59,16 @@ const ScrollProvider: React.FC = ({children}) => {
         dispatch({type: "currentRef", value: ref})
     }, []);
 
+    const scrollToTop = useCallback(() => {
+        window.scrollTo({behavior: 'smooth', top: 0})
+    }, []);
+
     const providerValue = useMemo(() => ({
         refs: state.refs,
         scrollToRef,
+        scrollToTop,
         currentRef: state.currentRef
-    }), [state.refs, scrollToRef, state.currentRef]);
+    }), [state.refs, scrollToRef, scrollToTop, state.currentRef]);
 
     return (
         <ScrollContext.Provider value={providerValue}>

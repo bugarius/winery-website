@@ -23,18 +23,20 @@ export interface BodyClassNames
     headerPosition?: "header_position_over" | "header_position_default";
     headerTitle?: "header_title_off" | "header_title_on";
     site?: "home page page-template-default" | "page page-template-default" | "single single-product woocommerce woocommerce-page",
-    layout?: "desktop_layout" | "mobile_layout" | null
+    layout?: "desktop_layout" | "mobile_layout" | null,
+    menu_style?: "menu_style_side" | "menu_style_top"
 }
 
 const bodyClassNames: BodyClassNames = {
     site: "home page page-template-default",
-    common: "body_tag body_style_wide scheme_default sidebar_hide expand_content header_style_header-1 menu_style_side vc_responsive",
+    common: "body_tag body_style_wide scheme_default sidebar_hide expand_content header_style_header-1 vc_responsive",
     blogMode: null,
     type: null,
     margins: null,
     headerPosition: "header_position_over",
     headerTitle: "header_title_off",
-    layout: null
+    layout: null,
+    menu_style: "menu_style_side"
 }
 
 const defaultState = {
@@ -80,6 +82,8 @@ const ResponsiveProvider: React.FC = ({children}) => {
         const classNameConfig = {...state.bodyClassNames, ...customClassNameConfig, layout: layout};
         const classNameString = Object.values(classNameConfig).join(" ");
         document.body.setAttribute("class", classNameString);
+        const root = document.getElementById("root");
+        if (root) root.className = classNameString;
     }, [state.bodyClassNames, state.isMobile]);
 
     const toggleOpenMenu = useCallback(() => {

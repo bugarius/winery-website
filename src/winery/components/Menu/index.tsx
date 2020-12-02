@@ -14,7 +14,7 @@ const Menu = () => {
             <MenuItem title={"JAK TWORZYMY"} scrollToRef={() => scrollToRef(refs.aboutUs)}/>
             <MenuItem title={"WINA"} scrollToRef={() => scrollToRef(refs.wines)} hasChildren>
                 <MenuItem title={"KARTA WIN"} link={"/karta_win"}/>
-                <MenuItem title={"GDZIE KUPIĆ"} link={"/wina/gdzie_kupic"}/>
+                <MenuItem title={"SPRZEDAŻ"} link={"/sprzedaz"}/>
             </MenuItem>
             <MenuItem title={"KONTAKT"} scrollToRef={() => scrollToRef(refs.contact)}/>
         </MenuSection>
