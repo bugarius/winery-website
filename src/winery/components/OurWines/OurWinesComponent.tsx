@@ -17,7 +17,7 @@ const OurWinesComponent: React.FC<{ randomWines: OurWine[], description: Descrip
                         randomWines.map(wine => {
                             return <HomeProductItem imgUrl={wine.imgUrl || "/images/bottle.png"}
                                                     name={wine.name}
-                                                    productLink={`/karta_win/${wine.id}`}
+                                                    productLink={`/wina/karta_win/${wine.id}`}
                                                     addToCardLink={""}
                                                     key={wine.id}
                                                     badge={wine.badge}

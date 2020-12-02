@@ -36,7 +36,7 @@ export const PopupComponent: FC<PopupProps> = ({wrapperRef, showPopup, position,
                     <p style={{textAlign: 'center'}}>
                         <span className="trx_addons_dark">{selectedWine?.variety}</span><br />
                         <span className="trx_addons_accent trx_addons_tiny_text">{selectedWine?.year}</span><br />
-                        <span className="trx_addons_dark trx_addons_tiny_text"><NavLink to={`/karta_win/${selectedWine?.id}`}>Zobacz szczegóły</NavLink></span>
+                        <span className="trx_addons_dark trx_addons_tiny_text"><NavLink to={`/wina/karta_win/${selectedWine?.id}`}>Zobacz szczegóły</NavLink></span>
                     </p>
                 </div>
             </div>
