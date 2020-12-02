@@ -74,6 +74,7 @@ const ScrollProvider: React.FC = ({children}) => {
     }, []);
 
     const scrollToTop = useCallback(() => {
+        dispatch({type: "currentRef", value: null})
         window.scrollTo({behavior: 'smooth', top: 0})
     }, []);
 
