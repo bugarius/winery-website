@@ -12,6 +12,7 @@ import {Wine} from "../model/Wine";
 import wineList from "../components/WineList/data/wine-list.json";
 import {useTranslation} from "react-i18next";
 import {BodyClassNames, useResponsiveContext} from "../HomeApp/ResponsiveContext";
+import HorizontalMenu from "../components/HorizontalMenu";
 
 export const ProductApp = () => {
     const {t} = useTranslation();
@@ -21,7 +22,7 @@ export const ProductApp = () => {
     const wine = wineInLists.find(w => w.id.toString() === id) as WineInList;
 
 
-    const {modifyBodyClassName} = useResponsiveContext();
+    const {modifyBodyClassName, isMobile} = useResponsiveContext();
 
     useEffect(() => {
         const wineClassConfig: BodyClassNames = {
@@ -29,16 +30,19 @@ export const ProductApp = () => {
             headerPosition: "header_position_default",
             headerTitle: "header_title_on",
             site: "single single-product woocommerce woocommerce-page",
-            type: "is_stream blog_style_excerpt"
+            type: "is_stream blog_style_excerpt",
+            menu_style: (isMobile ? "menu_style_side" : "menu_style_top")
         }
 
         modifyBodyClassName(wineClassConfig);
-    }, [modifyBodyClassName])
+    }, [modifyBodyClassName, isMobile])
 
     return (
         <PageWrapper>
-            <Header title={`${wine.variety} ${wine.year}`}/>
-            <Menu/>
+            <Header title={`${wine.variety} ${wine.year}`}>
+                <HorizontalMenu show={!isMobile}/>
+            </Header>
+            <Menu show={isMobile}/>
             <ProductDetails imgUrl={wine.imgUrl}
                             year={wine.year}
                             variety={wine.variety}

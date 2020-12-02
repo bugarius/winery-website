@@ -5,10 +5,11 @@ import Menu from "../components/Menu";
 import {WineList} from "../components/WineList";
 import Footer from "../components/Footer";
 import {BodyClassNames, useResponsiveContext} from "../HomeApp/ResponsiveContext";
+import HorizontalMenu from "../components/HorizontalMenu";
 
 export const WineApp = () => {
 
-    const {modifyBodyClassName} = useResponsiveContext();
+    const {modifyBodyClassName, isMobile} = useResponsiveContext();
 
     useEffect(() => {
         const wineClassConfig: BodyClassNames = {
@@ -17,16 +18,19 @@ export const WineApp = () => {
             headerTitle: "header_title_on",
             margins: "remove_margins",
             site: "page page-template-default",
-            type: "is_single"
+            type: "is_single",
+            menu_style: (isMobile ? "menu_style_side" : "menu_style_top")
         }
 
         modifyBodyClassName(wineClassConfig);
-    }, [modifyBodyClassName])
+    }, [modifyBodyClassName, isMobile])
 
     return (
         <PageWrapper>
-            <Header title={"Karta win"} endsBreadcrumbs/>
-            <Menu/>
+            <Header title={"Karta win"} endsBreadcrumbs>
+                <HorizontalMenu show={!isMobile}/>
+            </Header>
+            <Menu show={isMobile}/>
             <WineList/>
             <Footer/>
         </PageWrapper>

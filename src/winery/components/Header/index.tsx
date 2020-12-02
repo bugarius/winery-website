@@ -35,11 +35,7 @@ const Header: React.FC<Props> = ({
                             <NavLink to={"/"} className={"logo google-drive-opener"}><img
                                 src={FileUtils.getImage("logo.png")} className="logo_main"
                                 alt=""/></NavLink>
-                            {children &&
-                            <div className="top_panel_navi scheme_default" style={{marginTop: '0px'}}>
-                                <nav className="menu_main_nav_area menu_hover_fade menu_show">{children}</nav>
-                            </div>
-                            }
+                            {children}
                         </div>
                     </div>
                 </div>

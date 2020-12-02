@@ -1,13 +1,13 @@
-import React from "react";
+import React, {FC} from "react";
 import MenuItem from "./MenuItem";
 import MenuSection from "./MenuSection";
 import {useScrollContext} from "../../HomeApp/ScrollContext";
 
-const Menu = () => {
+const Menu: FC<{show?: boolean}> = ({show = true}) => {
 
     const {scrollToRef, refs} = useScrollContext();
 
-    return (
+    return show ? (
         <MenuSection>
             <MenuItem title={"START"} link={"/"} scrollToRef={() => scrollToRef(refs.home)}/>
             <MenuItem title={"WINNICA"} scrollToRef={() => scrollToRef(refs.aboutPlace)}/>
@@ -18,7 +18,7 @@ const Menu = () => {
             </MenuItem>
             <MenuItem title={"KONTAKT"} scrollToRef={() => scrollToRef(refs.contact)}/>
         </MenuSection>
-    )
+    ) : null;
 }
 
 export default Menu;
