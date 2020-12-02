@@ -63,3 +63,14 @@ code {
     transform: rotate(360deg);
   }
 }
+
+.fade_in {
+  display: block;
+}
+
+.fade_out {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  transition: visibility 0s 2s, opacity 2s linear;
+}

@@ -26,7 +26,7 @@ const HomeProductsDescription: React.FC<Props> = ({title, subtitle, text}) => {
                                     <div className="sc_item_button sc_promo_button sc_button_wrap">
                                         <NavLink
                                             className="sc_button sc_button_simple sc_button_size_normal sc_button_icon_top"
-                                            to={"/karta_win"}><span
+                                            to={"/wina/karta_win"}><span
                                             className="sc_button_icon"><span className="icon-down-big"/></span><span
                                             className="sc_button_text"><span
                                             className="sc_button_title">Karta win</span></span> </NavLink>
@@ -36,7 +36,7 @@ const HomeProductsDescription: React.FC<Props> = ({title, subtitle, text}) => {
                                     <div className="sc_item_button sc_promo_button sc_button_wrap">
                                         <NavLink
                                             className="sc_button sc_button_simple sc_button_size_normal sc_button_icon_top"
-                                            to={"/sprzedaz"}><span
+                                            to={"/wina/sprzedaz"}><span
                                             className="sc_button_icon"><span className="icon-down-big"/></span><span
                                             className="sc_button_text"><span
                                             className="sc_button_title">Sprzedaż</span></span> </NavLink>

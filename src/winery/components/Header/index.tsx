@@ -54,7 +54,7 @@ const Header: React.FC<Props> = ({
                                 {
                                     !endsBreadcrumbs &&
                                     [
-                                        <NavLink to={"/karta_win"} key={1}>Karta win</NavLink>,
+                                        <NavLink to={"/wina/karta_win"} key={1}>Karta win</NavLink>,
                                         <span className="breadcrumbs_delimiter" key={2}/>,
                                         <span className="breadcrumbs_item current" key={3}>{title}</span>
                                     ]
