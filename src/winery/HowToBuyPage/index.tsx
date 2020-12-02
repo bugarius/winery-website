@@ -25,7 +25,7 @@ export const HowToBuyPage = () => {
 
     return (
         <PageWrapper>
-            <Header title={"Gdzie kupisz nasze wina"} endsBreadcrumbs />
+            <Header title={"Sprzedaż"} endsBreadcrumbs />
             <Menu/>
             <ContactUs/>
             <Footer/>

@@ -8,7 +8,7 @@ const Footer: React.FC<PageElement> = () => {
 
     const year = new Date().getFullYear();
 
-    const {scrollToRef, refs} = useScrollContext();
+    const {scrollToRef, refs, scrollToTop} = useScrollContext();
 
     return (
         <footer className="site_footer_wrap scheme_dark">
@@ -33,14 +33,12 @@ const Footer: React.FC<PageElement> = () => {
                 <div className="menu_footer_wrap_inner">
                     <nav className="menu_footer_nav_area">
                         <ul id="menu_footer" className="menu_footer_nav">
-                            <li className="menu-item menu-item-143"><NavLink to={"/"}><span>Start</span></NavLink></li>
-                            <li className="menu-item menu-item-675"><NavLink to={"/karta_win"}><span>Wina</span></NavLink>
-                            </li>
-                            <li className="menu-item menu-item-677"><NavLink to={"/o_nas"}><span>Jak tworzymy</span></NavLink>
-                            </li>
-                            <li className="menu-item menu-item-147"><NavLink to={"/winnica"}><span>Winnica</span></NavLink></li>
-                            <li className="menu-item menu-item-676"><NavLink to={""} onClick={() => scrollToRef(refs.contact)}><span>Kontakt</span></NavLink>
-                            </li>
+                            <li><NavLink to={"/"} onClick={() => scrollToRef(refs.home)}><span>Start</span></NavLink></li>
+                            <li><NavLink to={"/winnica"} onClick={() => scrollToTop()}><span>Winnica</span></NavLink></li>
+                            <li><NavLink to={"/o_nas"} onClick={() => scrollToTop()}><span>Jak tworzymy</span></NavLink></li>
+                            <li><NavLink to={"/karta_win"} onClick={() => scrollToTop()}><span>Wina</span></NavLink></li>
+                            <li><NavLink to={"/sprzedaz"} onClick={() => scrollToTop()}><span>Sprzedaż</span></NavLink></li>
+                            <li><NavLink to={"/"} onClick={() => scrollToRef(refs.contact)}><span>Kontakt</span></NavLink></li>
                         </ul>
                     </nav>
                 </div>
