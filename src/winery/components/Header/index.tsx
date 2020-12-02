@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import {FileUtils} from "../shared/Utils";
 import {useResponsiveContext} from "../../HomeApp/ResponsiveContext";
 import {FullWideImage} from "../FullWideImage";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 interface Props
 {
@@ -19,6 +20,7 @@ const Header: React.FC<Props> = ({
                                  }) => {
 
     const {toggleOpenMenu} = useResponsiveContext();
+    const {showElementsOnScroll} = useScrollContext();
 
     if (title !== undefined)
     {
@@ -28,18 +30,14 @@ const Header: React.FC<Props> = ({
                     toggleOpenMenu();
                     e.preventDefault()
                 }}/>
-                <div className="top_panel_fixed_wrap"/>
-                <div className="top_panel_navi scheme_default">
+                <div className="top_panel_fixed_wrap" style={{height: "288px"}}/>
+                <div className={"top_panel_navi scheme_default " + (showElementsOnScroll ? "state_fixed fixed_menu_slide_in" : "fixed_menu_slide_out")}>
                     <div className="menu_main_wrap clearfix">
                         <div className="wrap">
                             <NavLink to={"/"} className={"logo google-drive-opener"}><img
                                 src={FileUtils.getImage("logo.png")} className="logo_main"
                                 alt=""/></NavLink>
-                            {children &&
-                            <div className="top_panel_navi scheme_default" style={{marginTop: '0px'}}>
-                                <nav className="menu_main_nav_area menu_hover_fade menu_show">{children}</nav>
-                            </div>
-                            }
+                            {children}
                         </div>
                     </div>
                 </div>
@@ -58,7 +56,7 @@ const Header: React.FC<Props> = ({
                                 {
                                     !endsBreadcrumbs &&
                                     [
-                                        <NavLink to={"/karta_win"} key={1}>Karta win</NavLink>,
+                                        <NavLink to={"/wina/karta_win"} key={1}>Karta win</NavLink>,
                                         <span className="breadcrumbs_delimiter" key={2}/>,
                                         <span className="breadcrumbs_item current" key={3}>{title}</span>
                                     ]

@@ -63,3 +63,23 @@ code {
     transform: rotate(360deg);
   }
 }
+
+.fade_in {
+  display: block;
+}
+
+.fade_out {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.fixed_menu_slide_in {
+  margin-top: 0;
+  transition: margin-top 0.1s linear;
+}
+
+.fixed_menu_slide_out {
+  margin-top: -50px;
+}

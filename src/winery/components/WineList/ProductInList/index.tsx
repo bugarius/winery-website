@@ -44,7 +44,7 @@ export const ProductInList: React.FC<Props> = ({imgUrl, year, variety, descripti
                                     </div>
                                     <div
                                         className="sc_item_button sc_promo_button sc_button_wrap">
-                                        <NavLink to={`/karta_win/${id}`}
+                                        <NavLink to={`/wina/karta_win/${id}`}
                                             className="sc_button sc_button_simple sc_button_size_normal
                                             sc_button_icon_top"><span
                                             className="sc_button_icon"><span

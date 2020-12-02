@@ -18,9 +18,9 @@ const MainApp = () => {
         <Switch>
             <Route path="/o_nas" component={AboutUsApp}/>
             <Route path="/winnica" component={VineyardApp}/>
-            <Route path="/sprzedaz" component={HowToBuyPage}/>
-            <Route path="/karta_win/:id" component={ProductApp}/>
-            <Route path="/karta_win" component={WineApp}/>
+            <Route path="/wina/sprzedaz" component={HowToBuyPage}/>
+            <Route path="/wina/karta_win/:id" component={ProductApp}/>
+            <Route path="/wina/karta_win" component={WineApp}/>
             <Route exact path="/" component={HomeApp}/>
         </Switch>
     )
