@@ -6,6 +6,7 @@ interface ScrollContextInterface
     scrollToRef: (ref: Ref<any>) => void;
     scrollToTop: () => void;
     currentRef: Ref<any>;
+    showElementsOnScroll: boolean;
 }
 
 interface RefObject
@@ -29,7 +30,8 @@ const defaultState = {
     },
     scrollToTop: () => {
     },
-    currentRef: React.createRef()
+    currentRef: React.createRef(),
+    showElementsOnScroll: false
 };
 
 const reducer = (state: any, action: any) => {
@@ -53,7 +55,19 @@ const ScrollProvider: React.FC = ({children}) => {
 
     useEffect(() => {
         state.currentRef?.current?.scrollIntoView({behavior: 'smooth'})
-    }, [state])
+    }, [state.currentRef])
+
+    useEffect(() => {
+        const setShowElementsOnScroll = () => {
+            window.scrollY > 250 ?
+            dispatch({type: "showElementsOnScroll", value: true})
+                :
+            dispatch({type: "showElementsOnScroll", value: false});
+        }
+
+        window.addEventListener("scroll", () => setShowElementsOnScroll());
+        return window.removeEventListener("scroll", () => setShowElementsOnScroll());
+    }, [state.showElementsOnScroll])
 
     const scrollToRef = useCallback((ref: any) => {
         dispatch({type: "currentRef", value: ref})
@@ -67,8 +81,9 @@ const ScrollProvider: React.FC = ({children}) => {
         refs: state.refs,
         scrollToRef,
         scrollToTop,
-        currentRef: state.currentRef
-    }), [state.refs, scrollToRef, scrollToTop, state.currentRef]);
+        currentRef: state.currentRef,
+        showElementsOnScroll: state.showElementsOnScroll
+    }), [state.refs, scrollToRef, scrollToTop, state.currentRef, state.showElementsOnScroll]);
 
     return (
         <ScrollContext.Provider value={providerValue}>

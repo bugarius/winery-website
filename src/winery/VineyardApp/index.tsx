@@ -6,10 +6,12 @@ import Footer from "../components/Footer";
 import {BodyClassNames, useResponsiveContext} from "../HomeApp/ResponsiveContext";
 import {AboutVineyard} from "../components/AboutVineyard";
 import HorizontalMenu from "../components/HorizontalMenu";
+import {useScrollContext} from "../HomeApp/ScrollContext";
 
 export const VineyardApp = () => {
 
     const {modifyBodyClassName, isMobile} = useResponsiveContext();
+    const {showElementsOnScroll} = useScrollContext();
 
     useEffect(() => {
         const wineClassConfig: BodyClassNames = {
@@ -19,11 +21,12 @@ export const VineyardApp = () => {
             margins: "remove_margins",
             site: "page page-template-default",
             type: "is_single",
-            menu_style: (isMobile ? "menu_style_side" : "menu_style_top")
+            menu_style: (isMobile ? "menu_style_side" : "menu_style_top"),
+            topPanelFix: (showElementsOnScroll ? "top_panel_fixed" : "")
         }
 
         modifyBodyClassName(wineClassConfig);
-    }, [modifyBodyClassName, isMobile])
+    }, [modifyBodyClassName, isMobile, showElementsOnScroll])
 
     return (
         <PageWrapper>

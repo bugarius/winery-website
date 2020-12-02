@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import {FileUtils} from "../shared/Utils";
 import {useResponsiveContext} from "../../HomeApp/ResponsiveContext";
 import {FullWideImage} from "../FullWideImage";
+import {useScrollContext} from "../../HomeApp/ScrollContext";
 
 interface Props
 {
@@ -19,6 +20,7 @@ const Header: React.FC<Props> = ({
                                  }) => {
 
     const {toggleOpenMenu} = useResponsiveContext();
+    const {showElementsOnScroll} = useScrollContext();
 
     if (title !== undefined)
     {
@@ -28,8 +30,8 @@ const Header: React.FC<Props> = ({
                     toggleOpenMenu();
                     e.preventDefault()
                 }}/>
-                <div className="top_panel_fixed_wrap"/>
-                <div className="top_panel_navi scheme_default">
+                <div className="top_panel_fixed_wrap" style={{height: "288px"}}/>
+                <div className={"top_panel_navi scheme_default " + (showElementsOnScroll ? "state_fixed fixed_menu_slide_in" : "fixed_menu_slide_out")}>
                     <div className="menu_main_wrap clearfix">
                         <div className="wrap">
                             <NavLink to={"/"} className={"logo google-drive-opener"}><img
