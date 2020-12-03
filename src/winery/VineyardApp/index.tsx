@@ -21,8 +21,8 @@ export const VineyardApp = () => {
             margins: "remove_margins",
             site: "page page-template-default",
             type: "is_single",
-            menu_style: (isMobile ? "menu_style_side" : "menu_style_top"),
-            topPanelFix: (showElementsOnScroll ? "top_panel_fixed" : "")
+            menu_style: "menu_style_top",
+            topPanelFix: (showElementsOnScroll && !isMobile ? "top_panel_fixed" : "")
         }
 
         modifyBodyClassName(wineClassConfig);

@@ -8,29 +8,35 @@ import {useScrollContext} from "../../../HomeApp/ScrollContext";
 
 const MenuSection: React.FC<{}> = ({children}) => {
 
-    const {toggleOpenMenu, isMenuOpen, closeMenu} = useResponsiveContext();
+    const {toggleOpenMenu, isMenuOpen, closeMenu, isMobile, bodyClassNames} = useResponsiveContext();
     const {wrapperRef} = useClickOutside(closeMenu)
-    const {scrollToRef, refs, currentRef} = useScrollContext();
+    const {scrollToRef, refs, activeRef} = useScrollContext();
     const isHomePage = window.location.hash === "#/";
 
     return (
         <>
-            <div className="menu_side_wrap scheme_dark">
-                <div className="menu_side_inner" onClick={toggleOpenMenu}>
-                    <NavLink className="menu_mobile_button menu_mobile_button_text" to={""}
-                             onClick={e => e.preventDefault()}>MENU</NavLink>
-                    <TocMenuSection show={isHomePage}>
-                        <TocMenuItem description={"Winnica"} scrollToRef={() => scrollToRef(refs.aboutPlace)} link={"/"} active={currentRef === refs.aboutPlace}/>
-                        <TocMenuItem description={"Jak tworzymy"} scrollToRef={() => scrollToRef(refs.aboutUs)} link={"/"} active={currentRef === refs.aboutUs}/>
-                        <TocMenuItem description={"Wina"} scrollToRef={() => scrollToRef(refs.wines)} link={"/"} active={currentRef === refs.wines}/>
-                        <TocMenuItem description={"Kontakt"} scrollToRef={() => scrollToRef(refs.contact)} link={"/"} active={currentRef === refs.contact}/>
-                    </TocMenuSection>
+            {(!isMobile && bodyClassNames.menu_style === "menu_style_side") &&
+                <div className="menu_side_wrap scheme_dark">
+                    <div className="menu_side_inner" onClick={toggleOpenMenu}>
+                        <NavLink className="menu_mobile_button menu_mobile_button_text" to={""}
+                                 onClick={e => e.preventDefault()}>MENU</NavLink>
+                        <TocMenuSection show={isHomePage}>
+                            <TocMenuItem description={"Winnica"} scrollToRef={() => scrollToRef(refs.aboutPlace)}
+                                         link={"/"} active={activeRef === refs.aboutPlace}/>
+                            <TocMenuItem description={"Jak tworzymy"} scrollToRef={() => scrollToRef(refs.aboutUs)}
+                                         link={"/"} active={activeRef === refs.aboutUs}/>
+                            <TocMenuItem description={"Wina"} scrollToRef={() => scrollToRef(refs.wines)} link={"/"}
+                                         active={activeRef === refs.wines}/>
+                            <TocMenuItem description={"Kontakt"} scrollToRef={() => scrollToRef(refs.contact)}
+                                         link={"/"} active={activeRef === refs.contact}/>
+                        </TocMenuSection>
+                    </div>
                 </div>
-            </div>
+            }
             <div className="menu_mobile_overlay"/>
             <div className={'menu_mobile scheme_dark ' + (isMenuOpen && "opened")} ref={wrapperRef}>
                 <div className="menu_mobile_inner">
-                    <NavLink className="menu_mobile_close" onClick={e => {
+                    <NavLink className="menu_mobile_close icon-cancel google-drive-opener" onClick={e => {
                         e.preventDefault();
                         toggleOpenMenu();
                     }}
