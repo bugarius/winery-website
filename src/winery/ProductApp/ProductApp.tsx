@@ -34,7 +34,7 @@ export const ProductApp = () => {
             site: "single single-product woocommerce woocommerce-page",
             type: "is_stream blog_style_excerpt",
             menu_style: (isMobile ? "menu_style_side" : "menu_style_top"),
-            topPanelFix: (showElementsOnScroll ? "top_panel_fixed" : "")
+            topPanelFix: (showElementsOnScroll && !isMobile ? "top_panel_fixed" : "")
         }
 
         modifyBodyClassName(wineClassConfig);
