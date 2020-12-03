@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import {useScrollContext} from "../../../HomeApp/ScrollContext";
+import {useScrollContext} from "../../../MainApp/HomeApp/ScrollContext";
 
 export const SliderTop: FC<{}> = () => {
     const {scrollToTop, showElementsOnScroll} = useScrollContext();
