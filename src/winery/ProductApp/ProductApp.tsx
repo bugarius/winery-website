@@ -33,7 +33,7 @@ export const ProductApp = () => {
             headerTitle: "header_title_on",
             site: "single single-product woocommerce woocommerce-page",
             type: "is_stream blog_style_excerpt",
-            menu_style: (isMobile ? "menu_style_side" : "menu_style_top"),
+            menu_style: "menu_style_top",
             topPanelFix: (showElementsOnScroll && !isMobile ? "top_panel_fixed" : "")
         }
 

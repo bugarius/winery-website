@@ -21,7 +21,7 @@ export const WineApp = () => {
             margins: "remove_margins",
             site: "page page-template-default",
             type: "is_single",
-            menu_style: (isMobile ? "menu_style_side" : "menu_style_top"),
+            menu_style: "menu_style_top",
             topPanelFix: (showElementsOnScroll && !isMobile ? "top_panel_fixed" : "")
         }
 

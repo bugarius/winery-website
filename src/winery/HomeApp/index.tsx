@@ -22,7 +22,8 @@ const HomeApp = () => {
             headerTitle: "header_title_off",
             margins: "remove_margins",
             site: "home page page-template-default",
-            type: "is_stream blog_style_excerpt"
+            type: "is_stream blog_style_excerpt",
+            menu_style: "menu_style_side",
         }
 
         modifyBodyClassName(homeClassConfig);

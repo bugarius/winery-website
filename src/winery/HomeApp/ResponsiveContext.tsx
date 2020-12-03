@@ -24,7 +24,7 @@ export interface BodyClassNames
     headerTitle?: "header_title_off" | "header_title_on";
     site?: "home page page-template-default" | "page page-template-default" | "single single-product woocommerce woocommerce-page",
     layout?: "desktop_layout" | "mobile_layout" | null,
-    menu_style?: "menu_style_side" | "menu_style_top",
+    menu_style?: "" | "menu_style_side" | "menu_style_top",
     topPanelFix?: "top_panel_fixed" | ""
 }
 
