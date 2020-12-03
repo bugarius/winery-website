@@ -2,9 +2,9 @@ import React, {useEffect} from 'react';
 import './App.css';
 import {HashRouter} from "react-router-dom";
 import AppRouting from "./platform/AppRouting";
-import ResponsiveProvider from "./winery/HomeApp/ResponsiveContext";
-import ScrollProvider from "./winery/HomeApp/ScrollContext";
-import {initGA, PageView} from "./winery/components/Tracking";
+import ResponsiveProvider from "./winery/MainApp/HomeApp/ResponsiveContext";
+import ScrollProvider from "./winery/MainApp/HomeApp/ScrollContext";
+import {initGA, PageView} from "./winery/commons/Tracking";
 import {createBrowserHistory} from "history";
 import {SliderTop} from "./winery/commons/components/SliderTop";
 
