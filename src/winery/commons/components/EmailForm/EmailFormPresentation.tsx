@@ -30,7 +30,7 @@ export const EmailFormPresentation: FC<EmailFormProps> = ({onChange, state, onSu
                 <div className="vc_column-inner ">
                     <div className="content">
                         <div className="sc_form sc_form_default sc_align_center">
-                            <form className="sc_form_form sc_input_hover_underline inited">
+                            <form className="sc_form_form sc_input_hover_underline inited" style={{marginTop: "4em"}}>
                                 <div className="sc_form_details trx_addons_columns_wrap">
                                     <div className="trx_addons_column-1_2">
                                         <InputElement type={"text"}

@@ -16,8 +16,9 @@ export const ContactPage: FC<{}> = () => {
                 <RowContent icon={"icon-grape-leafs"}
                             title={t('CONTACT_US.RETAIL.T3')}
                             subtitle={t('CONTACT_US.RETAIL.SBT3')}
-                />
-                <EmailForm/>
+                >
+                    <EmailForm/>
+                </RowContent>
             </CommonWrapper>
         </div>
     );

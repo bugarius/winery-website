@@ -1,7 +1,8 @@
 import React, {FC} from "react";
 import {RowWrapper} from "../wrappers/RowWrapper";
 
-interface Props {
+interface Props
+{
     icon: string | "icon-grape-3" | "icon-grape-leafs" | "icon-bottles" | "icon-barrel" | "icon-glass" | "icon-trophy" | "icon-winery";
     title: string;
     subtitle: string;
@@ -9,7 +10,7 @@ interface Props {
     paragraphAsDiv?: boolean;
 }
 
-export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs, paragraphAsDiv}) => {
+export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs, paragraphAsDiv, children}) => {
 
     const createParagrapf = (text: string, index: number) => {
         return paragraphAsDiv ? <div key={index}>{text}</div> : <p key={index}>{text}</p>
@@ -50,6 +51,7 @@ export const RowContent: FC<Props> = ({icon, title, subtitle, paragraphs, paragr
                                             </div>
                                         </div>
                                     </div>
+                                    {children}
                                 </div>
                             </div>
                         </div>
