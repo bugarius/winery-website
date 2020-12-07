@@ -8,6 +8,7 @@ import {useScrollContext} from "../../../MainApp/HomeApp/ScrollContext";
 interface Props
 {
     title?: string;
+    category?: string;
     endsBreadcrumbs?: boolean;
     fullWideImage?: string;
 }
@@ -15,12 +16,14 @@ interface Props
 const Header: React.FC<Props> = ({
                                      children,
                                      title,
+                                     category,
                                      endsBreadcrumbs,
                                      fullWideImage
                                  }) => {
 
     const {toggleOpenMenu} = useResponsiveContext();
     const {showElementsOnScroll} = useScrollContext();
+    const {isMobile} = useResponsiveContext();
 
     if (title !== undefined)
     {
@@ -31,7 +34,7 @@ const Header: React.FC<Props> = ({
                     e.preventDefault()
                 }}/>
                 <div className="top_panel_fixed_wrap" style={{height: "288px"}}/>
-                <div className={"top_panel_navi scheme_default " + (showElementsOnScroll ? "state_fixed fixed_menu_slide_in" : "fixed_menu_slide_out")}>
+                <div className={"top_panel_navi scheme_default " + (!isMobile && (showElementsOnScroll ? "state_fixed fixed_menu_slide_in" : "fixed_menu_slide_out"))}>
                     <div className="menu_main_wrap clearfix">
                         <div className="wrap">
                             <NavLink to={"/"} className={"logo google-drive-opener"}><img
@@ -45,7 +48,7 @@ const Header: React.FC<Props> = ({
                     <div className="content_wrap">
                         <div className="top_panel_title">
                             <div className="page_title">
-                                <div className="post_meta"><span className="post_meta_item post_categories">Wino</span>
+                                <div className="post_meta"><span className="post_meta_item post_categories">{category}</span>
                                 </div>
                                 <h1 className="page_caption">{title}</h1>
                             </div>

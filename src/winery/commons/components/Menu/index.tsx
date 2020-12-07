@@ -6,7 +6,7 @@ import {useScrollContext} from "../../../MainApp/HomeApp/ScrollContext";
 const Menu: FC<{show?: boolean}> = ({show = true}) => {
 
     const {scrollToRef, refs} = useScrollContext();
-// console.log(refs)
+
     return show ? (
         <MenuSection>
             <MenuItem title={"START"} link={"/"} scrollToRef={() => scrollToRef(refs.home)}/>

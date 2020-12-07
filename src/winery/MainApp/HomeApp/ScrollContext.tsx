@@ -56,12 +56,10 @@ const ScrollProvider: React.FC = ({children}) => {
     const [state, dispatch] = useReducer(reducer, defaultState);
 
     useEffect(() => {
-        console.log("scrolling to current", state.currentRef)
         state.currentRef?.current?.scrollIntoView({behavior: 'smooth'})
     }, [state.currentRef])
 
     useEffect(() => {
-        console.log("####SCROLLING####")
         const setShowElementsOnScroll = () => {
             window.scrollY > 250 ?
             dispatch({type: "showElementsOnScroll", value: true})

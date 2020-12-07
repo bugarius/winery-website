@@ -9,10 +9,11 @@ import Footer from "../../Footer";
 
 interface Props {
     title: string;
+    category?: string;
     fullWideImage?: string;
 }
 
-export const CommonAppWrapper: FC<Props> = ({children, title, fullWideImage}) => {
+export const CommonAppWrapper: FC<Props> = ({children, title, category, fullWideImage}) => {
 
     const {modifyBodyClassName, isMobile} = useResponsiveContext();
     const {showElementsOnScroll} = useScrollContext();
@@ -34,7 +35,12 @@ export const CommonAppWrapper: FC<Props> = ({children, title, fullWideImage}) =>
 
     return (
         <PageWrapper>
-            <Header title={title} endsBreadcrumbs fullWideImage={fullWideImage}>
+            <Header title={title}
+                    category={category}
+                    fullWideImage={fullWideImage}
+
+                    endsBreadcrumbs
+            >
                 <HorizontalMenu show={!isMobile}/>
             </Header>
             <Menu show={isMobile}/>
