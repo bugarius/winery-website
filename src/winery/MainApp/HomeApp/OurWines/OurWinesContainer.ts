@@ -1,15 +1,20 @@
 import React, {useEffect, useState} from "react";
-import ourWines from "./data/our-wines.json"
 import winesDescription from "./data/our-wines-description.json"
 import {ListUtils} from "../../../commons/shared/Utils";
+import {Wine} from "../../../model/Wine";
+import allWines from "../../../model/data/wines.json"
 
-export interface OurWine
+export interface ShopWine
 {
     id: number;
     name: string;
+    alt: string;
     productLink: string;
     badge?: string;
-    imgUrl: string;
+    shopImage: string;
+    variety: string;
+    year: string;
+    price: string;
 }
 
 export interface Description
@@ -21,22 +26,22 @@ export interface Description
 
 interface Props
 {
-    render: (wines: OurWine[], description: Description) => JSX.Element;
+    render: (wines: Wine[], description: Description) => JSX.Element;
 }
 
 const OurWinesContainer: React.FC<Props> = ({render}) => {
     const description = winesDescription as Description;
 
-    const [randomWines, setRandomWines] = useState<OurWine[]>([]);
+    const [randomWines, setRandomWines] = useState<Wine[]>([]);
 
     useEffect(() => {
         if (!randomWines?.length)
         {
-            const getRandomNumbers = (wines: OurWine[]) => {
+            const getRandomNumbers = (wines: Wine[]) => {
                 const result: number[] = [];
                 while (result.length < 4)
                 {
-                    const newNumber = Math.floor(Math.random() * ourWines.length);
+                    const newNumber = Math.floor(Math.random() * allWines.length);
                     if (!result.some(number => number === wines[newNumber]?.id))
                     {
                         result.push(wines[newNumber]?.id);
@@ -45,12 +50,12 @@ const OurWinesContainer: React.FC<Props> = ({render}) => {
                 return result;
             }
 
-            const getRandomWines = (wines: OurWine[]) => {
+            const getRandomWines = (wines: Wine[]) => {
                 const randomNumbers = getRandomNumbers(wines);
-                return ListUtils.getListById(wines, randomNumbers) as OurWine[];
+                return ListUtils.getListById(wines, randomNumbers) as Wine[];
             };
 
-            setRandomWines(getRandomWines(ourWines as OurWine[]));
+            setRandomWines(getRandomWines(allWines as Wine[]));
         }
     }, [setRandomWines, randomWines])
 
