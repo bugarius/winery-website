@@ -31,7 +31,7 @@ const Header: React.FC<Props> = ({
     {
         return (
             <header className="top_panel top_panel_style_1 without_bg_image with_featured_image scheme_default"
-            style={{paddingTop: "2.5em"}}>
+            style={{paddingTop: (isMobile ? "" : "2.5em")}}>
                 <NavLink to={""} className="menu_mobile_button google-drive-opener" onClick={e => {
                     toggleOpenMenu();
                     e.preventDefault()
