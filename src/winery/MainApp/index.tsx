@@ -7,6 +7,7 @@ import {VineyardApp} from "./VineyardApp";
 import {AboutUsApp} from "./AboutUsApp";
 import {HowToBuyApp} from "./HowToBuyApp";
 import {ContactApp} from "./ContactApp";
+import {ErrorApp} from "./ErrorApp";
 
 const MainApp = () => {
 
@@ -24,6 +25,7 @@ const MainApp = () => {
             <Route path="/wina/karta_win/:id" component={ProductDetailsPage}/>
             <Route path="/wina/karta_win" component={WineApp}/>
             <Route exact path="/" component={HomeApp}/>
+            <Route component={ErrorApp}/>
         </Switch>
     )
 };

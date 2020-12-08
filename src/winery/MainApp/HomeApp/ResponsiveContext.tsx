@@ -22,14 +22,14 @@ export interface BodyClassNames
     margins?: "remove_margins" | null;
     headerPosition?: "header_position_over" | "header_position_default";
     headerTitle?: "header_title_off" | "header_title_on";
-    site?: "home page page-template-default" | "page page-template-default" | "single single-product woocommerce woocommerce-page",
+    site?: "home page page-template-default" | "page page-template-default" | "single single-product woocommerce woocommerce-page" | null,
     layout?: "desktop_layout" | "mobile_layout" | null,
     menu_style?: "" | "menu_style_side" | "menu_style_top",
     topPanelFix?: "top_panel_fixed" | ""
 }
 
 const bodyClassNames: BodyClassNames = {
-    site: "home page page-template-default",
+    site: null,
     common: "body_tag body_style_wide scheme_default sidebar_hide expand_content header_style_header-1 vc_responsive",
     blogMode: null,
     type: null,
@@ -64,7 +64,7 @@ const reducer = (state: any, action: any) => {
       case "closeMenu":
           return {...state, isMenuOpen: false};
       case "bodyClassNames":
-          return {...state, bodyClassNames: {...state.bodyClassNames, [action.type]: action.value}};
+          return {...state, bodyClassNames: {...state.bodyClassNames, ...action.value}};
       default:
           return {...state,  [action.type]: action.value};
   }
@@ -80,13 +80,12 @@ const ResponsiveProvider: React.FC = ({children}) => {
     const [state, dispatch] = useReducer(reducer, defaultState);
 
     const modifyBodyClassName = useCallback((customClassNameConfig: BodyClassNames) => {
-        const layout = state.isMobile ? "mobile_layout" : "desktop_layout";
-        const classNameConfig = {...state.bodyClassNames, ...customClassNameConfig, layout: layout};
-        const classNameString = Object.values(classNameConfig).join(" ");
-        document.body.setAttribute("class", classNameString);
-        const root = document.getElementById("root");
-        if (root) root.className = classNameString;
-    }, [state.bodyClassNames, state.isMobile]);
+        setBodyClassNames(customClassNameConfig);
+    }, []);
+
+    const setBodyClassNames = (customClassNameConfig: BodyClassNames) => {
+        dispatch({type: "bodyClassNames", value: customClassNameConfig});
+    };
 
     const toggleOpenMenu = useCallback(() => {
         dispatch({type: "toggleOpenMenu"});
@@ -114,6 +113,16 @@ const ResponsiveProvider: React.FC = ({children}) => {
         window.addEventListener("resize", () => updateDimensions());
         return window.removeEventListener("resize", () => updateDimensions());
     }, [setIsMobile, setState]);
+
+    useEffect(() => {
+        const layout = state.isMobile ? "mobile_layout" : "desktop_layout";
+        const classNameConfig = {...state.bodyClassNames, layout: layout};
+        const classNameString = Object.values(classNameConfig).join(" ");
+
+        document.body.setAttribute("class", classNameString);
+        const root = document.getElementById("root");
+        if (root) root.className = classNameString;
+    }, [state.isMobile, state.bodyClassNames])
 
     const providerValue = useMemo(() => ({
         isMobile: state.isMobile,
