@@ -7,6 +7,8 @@ import ScrollProvider from "./winery/MainApp/HomeApp/ScrollContext";
 import {initGA, PageView} from "./winery/commons/Tracking";
 import {createBrowserHistory} from "history";
 import {SliderTop} from "./winery/commons/components/SliderTop";
+import {ErrorBoundary} from "react-error-boundary";
+import {ErrorApp} from "./winery/MainApp/ErrorApp";
 
 function App()
 {
@@ -21,12 +23,14 @@ function App()
 
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
-            <ScrollProvider>
-                <ResponsiveProvider>
-                    <AppRouting/>
-                    <SliderTop/>
-                </ResponsiveProvider>
-            </ScrollProvider>
+            <ErrorBoundary FallbackComponent={ErrorApp}>
+                <ScrollProvider>
+                    <ResponsiveProvider>
+                        <AppRouting/>
+                        <SliderTop/>
+                    </ResponsiveProvider>
+                </ScrollProvider>
+            </ErrorBoundary>
         </HashRouter>
     );
 }
