@@ -24,6 +24,7 @@ const HomeApp = () => {
             site: "home page page-template-default",
             type: "is_stream blog_style_excerpt",
             menu_style: "menu_style_side",
+            topPanelFix: ""
         }
 
         modifyBodyClassName(homeClassConfig);
