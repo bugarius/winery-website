@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Route, Switch, useHistory} from "react-router-dom";
+import {Redirect, Route, Switch, useHistory} from "react-router-dom";
 import HomeApp from "./HomeApp";
 import {WineApp} from "./WineApp";
 import {ProductDetailsPage} from "./WineApp/ProductDetailsPage";
@@ -7,6 +7,7 @@ import {VineyardApp} from "./VineyardApp";
 import {AboutUsApp} from "./AboutUsApp";
 import {HowToBuyApp} from "./HowToBuyApp";
 import {ContactApp} from "./ContactApp";
+import {ErrorApp} from "./ErrorApp";
 
 const MainApp = () => {
 
@@ -24,6 +25,8 @@ const MainApp = () => {
             <Route path="/wina/karta_win/:id" component={ProductDetailsPage}/>
             <Route path="/wina/karta_win" component={WineApp}/>
             <Route exact path="/" component={HomeApp}/>
+            <Route path={"/404"} component={ErrorApp}/>
+            <Redirect to={"/404"}/>
         </Switch>
     )
 };

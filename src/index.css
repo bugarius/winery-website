@@ -77,9 +77,9 @@ code {
 
 .fixed_menu_slide_in {
   margin-top: 0;
-  transition: margin-top 0.1s linear;
+  transition: margin-top 0.1s ease;
 }
 
 .fixed_menu_slide_out {
-  margin-top: -50px;
+  margin-top: -2.5em;
 }
