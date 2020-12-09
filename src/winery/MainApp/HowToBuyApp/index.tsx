@@ -5,7 +5,7 @@ import {CommonAppWrapper} from "../../commons/components/wrappers/CommonAppWrapp
 export const HowToBuyApp = () => {
 
     return (
-        <CommonAppWrapper title={"Sprzedaż"}>
+        <CommonAppWrapper title={"Sprzedaż"} fullWideImage={"shop-winnica-bugara.jpg"}>
             <HowToBuyWinePage/>
         </CommonAppWrapper>
     )
