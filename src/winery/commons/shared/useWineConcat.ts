@@ -1,10 +1,10 @@
 import {Wine} from "../../model/Wine";
 import {WineList} from "../../MainApp/WineApp/WineList";
-import {OurWine} from "../../MainApp/HomeApp/OurWines/OurWinesContainer";
+import {ShopWine} from "../../MainApp/HomeApp/OurWines/OurWinesContainer";
 
-type WineInArray = Wine | WineList | OurWine
+type WineInArray = Wine | WineList | ShopWine
 export type WineInList = Wine & WineList;
-export type OurWineInList = Wine & OurWine;
+export type OurWineInList = Wine & ShopWine;
 type ResultList = WineInList | OurWineInList
 
 export const useWineConcat = <T extends ResultList>(firstArray: Wine[], secondArray: WineInArray[]): T[] => {

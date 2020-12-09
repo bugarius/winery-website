@@ -2,10 +2,10 @@ import React from "react";
 import HomeProductsDescription from "./HomeProductsDescription";
 import HomeProductsList from "./HomeProductsList";
 import HomeProductItem from "./HomeProductsList/HomeProductItem";
-import {Description, OurWine} from "./OurWinesContainer";
+import {Description, ShopWine} from "./OurWinesContainer";
 import {useScrollContext} from "../ScrollContext";
 
-const OurWinesComponent: React.FC<{ randomWines: OurWine[], description: Description }> = ({randomWines, description}) => {
+const OurWinesComponent: React.FC<{ randomWines: ShopWine[], description: Description }> = ({randomWines, description}) => {
 
     const {refs} = useScrollContext();
 
@@ -15,12 +15,15 @@ const OurWinesComponent: React.FC<{ randomWines: OurWine[], description: Descrip
                 <HomeProductsList>
                     {
                         randomWines.map(wine => {
-                            return <HomeProductItem imgUrl={wine.imgUrl || "/images/bottle.png"}
-                                                    name={wine.name}
+                            return <HomeProductItem imgUrl={wine.shopImage || "/images/bottle.png"}
+                                                    name={wine.variety}
                                                     productLink={`/wina/karta_win/${wine.id}`}
                                                     addToCardLink={""}
                                                     key={wine.id}
                                                     badge={wine.badge}
+                                                    price={wine.price}
+                                                    alt={wine.alt}
+                                                    year={wine.year}
                             />
                         })
                     }

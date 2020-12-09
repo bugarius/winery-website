@@ -23,4 +23,10 @@ export interface Wine
     type: WineType;
     color: WineColor;
     price: string;
+    shopImage: string;
+    alt: string;
+    productLink: string;
+    badge: string;
+    detailsImage: string;
+    description: string;
 }

@@ -42,7 +42,7 @@ export const ProductDetailsPage = () => {
 
     return (
         <PageWrapper>
-            <Header title={`${wine.variety} ${wine.year}`}>
+            <Header title={`${wine.variety} ${wine.year}`} category={`${t(`WINE.COLOR.${wine.color}`)} ${t(`WINE.TASTE.${wine.type}`)}`}>
                 <HorizontalMenu show={!isMobile}/>
             </Header>
             <Menu show={isMobile}/>

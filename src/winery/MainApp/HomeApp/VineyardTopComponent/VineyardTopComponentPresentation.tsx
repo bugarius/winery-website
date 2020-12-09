@@ -1,6 +1,5 @@
 import React from "react";
 import DotComponent from "./DotComponent";
-import "../../../../css/custom.css"
 import {PopupComponent, PopupProps} from "./PopupComponent";
 import {WineInList} from "../../../commons/shared/useWineConcat";
 import {DotSection} from "./DotSection/DotSection";

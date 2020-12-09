@@ -8,30 +8,37 @@ import {useScrollContext} from "../../../MainApp/HomeApp/ScrollContext";
 interface Props
 {
     title?: string;
+    category?: string;
     endsBreadcrumbs?: boolean;
+    disableBreadcrumbs?: boolean;
     fullWideImage?: string;
 }
 
 const Header: React.FC<Props> = ({
                                      children,
                                      title,
+                                     category,
                                      endsBreadcrumbs,
+                                     disableBreadcrumbs,
                                      fullWideImage
                                  }) => {
 
-    const {toggleOpenMenu} = useResponsiveContext();
+    const {toggleOpenMenu, bodyClassNames} = useResponsiveContext();
     const {showElementsOnScroll} = useScrollContext();
+    const {isMobile} = useResponsiveContext();
 
-    if (title !== undefined)
+    if (bodyClassNames.site !== "home page page-template-default")
     {
         return (
-            <header className="top_panel top_panel_style_1 without_bg_image with_featured_image scheme_default">
+            <header className="top_panel top_panel_style_1 without_bg_image with_featured_image scheme_default"
+            style={{paddingTop: (isMobile ? "" : "2.5em")}}>
                 <NavLink to={""} className="menu_mobile_button google-drive-opener" onClick={e => {
                     toggleOpenMenu();
                     e.preventDefault()
                 }}/>
                 <div className="top_panel_fixed_wrap" style={{height: "288px"}}/>
-                <div className={"top_panel_navi scheme_default " + (showElementsOnScroll ? "state_fixed fixed_menu_slide_in" : "fixed_menu_slide_out")}>
+                <div
+                    className={"top_panel_navi scheme_default " + (!isMobile && (showElementsOnScroll ? "state_fixed fixed_menu_slide_in" : "fixed_menu_slide_out"))}>
                     <div className="menu_main_wrap clearfix">
                         <div className="wrap">
                             <NavLink to={"/"} className={"logo google-drive-opener"}><img
@@ -43,12 +50,15 @@ const Header: React.FC<Props> = ({
                 </div>
                 <div className="top_panel_title_wrap" style={{width: "auto"}}>
                     <div className="content_wrap">
+                        {title &&
                         <div className="top_panel_title">
                             <div className="page_title">
-                                <div className="post_meta"><span className="post_meta_item post_categories">Wino</span>
+                                <div className="post_meta"><span
+                                    className="post_meta_item post_categories">{category}</span>
                                 </div>
                                 <h1 className="page_caption">{title}</h1>
                             </div>
+                            {!disableBreadcrumbs &&
                             <div className="breadcrumbs">
                                 <NavLink to={"/"}>Start</NavLink>
                                 <span className="breadcrumbs_delimiter"/>
@@ -62,10 +72,12 @@ const Header: React.FC<Props> = ({
                                     ]
                                 }
                             </div>
+                            }
                         </div>
+                        }
                     </div>
                 </div>
-                { fullWideImage && <FullWideImage image={fullWideImage} header/> }
+                {fullWideImage && <FullWideImage image={fullWideImage} header/>}
             </header>
         )
     }

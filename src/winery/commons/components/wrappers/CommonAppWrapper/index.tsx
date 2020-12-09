@@ -8,11 +8,19 @@ import Menu from "../../Menu";
 import Footer from "../../Footer";
 
 interface Props {
-    title: string;
+    title?: string;
+    category?: string;
     fullWideImage?: string;
+    disableBreadcrumbs?: boolean;
 }
 
-export const CommonAppWrapper: FC<Props> = ({children, title, fullWideImage}) => {
+export const CommonAppWrapper: FC<Props> = ({
+                                                children,
+                                                title,
+                                                category,
+                                                fullWideImage,
+                                                disableBreadcrumbs
+}) => {
 
     const {modifyBodyClassName, isMobile} = useResponsiveContext();
     const {showElementsOnScroll} = useScrollContext();
@@ -34,7 +42,12 @@ export const CommonAppWrapper: FC<Props> = ({children, title, fullWideImage}) =>
 
     return (
         <PageWrapper>
-            <Header title={title} endsBreadcrumbs fullWideImage={fullWideImage}>
+            <Header title={title}
+                    category={category}
+                    fullWideImage={fullWideImage}
+                    disableBreadcrumbs={disableBreadcrumbs}
+                    endsBreadcrumbs
+            >
                 <HorizontalMenu show={!isMobile}/>
             </Header>
             <Menu show={isMobile}/>

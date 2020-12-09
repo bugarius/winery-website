@@ -20,8 +20,10 @@ const MenuItem: React.FC<Props> = ({title, hasChildren, children, link = "", scr
     return (
         <li className={"menu-item " + (hasChildren && "menu-item-has-children ") + (opened && "opened")}
             style={{cursor: 'pointer'}}>
-            <NavLink to={link} className="nav-link" onClick={() => {
-                closeMenu();
+            <NavLink to={link} className="nav-link" onClick={(e) => {
+                !hasChildren && closeMenu();
+                hasChildren && e.preventDefault();
+                hasChildren && !scrollToRef && toggleOpen();
                 scrollToRef && scrollToRef()
             }}>
                 <span className="open_child_menu" onClick={e => {

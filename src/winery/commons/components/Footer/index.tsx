@@ -8,7 +8,7 @@ const Footer: React.FC<PageElement> = () => {
 
     const year = new Date().getFullYear();
 
-    const {scrollToRef, refs, scrollToTop} = useScrollContext();
+    const {scrollToTop} = useScrollContext();
 
     return (
         <footer className="site_footer_wrap scheme_dark">
@@ -33,7 +33,7 @@ const Footer: React.FC<PageElement> = () => {
                 <div className="menu_footer_wrap_inner">
                     <nav className="menu_footer_nav_area">
                         <ul id="menu_footer" className="menu_footer_nav">
-                            <li><NavLink to={"/"} onClick={() => scrollToRef(refs.home)}><span>Start</span></NavLink></li>
+                            <li><NavLink to={"/"} onClick={() =>scrollToTop()}><span>Start</span></NavLink></li>
                             <li><NavLink to={"/winnica"} onClick={() => scrollToTop()}><span>Winnica</span></NavLink></li>
                             <li><NavLink to={"/o_nas"} onClick={() => scrollToTop()}><span>Jak tworzymy</span></NavLink></li>
                             <li><NavLink to={"/wina/karta_win"} onClick={() => scrollToTop()}><span>Wina</span></NavLink></li>
