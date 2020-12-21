@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e82ea6f590cd851abd30154d2b1bc533",
+    "revision": "7ed50f363267a3cd70f66a2b18318c38",
     "url": "/index.html"
   },
   {
-    "revision": "57996392deb692e8a626",
-    "url": "/static/css/main.a769683f.chunk.css"
+    "revision": "abd50eff6cb37741464d",
+    "url": "/static/css/main.4bccf0af.chunk.css"
   },
   {
     "revision": "c1cbeef91cdbe24aeab5",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.816771ee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "57996392deb692e8a626",
+    "revision": "abd50eff6cb37741464d",
     "url": "/static/js/main.247c07ac.chunk.js"
   },
   {
@@ -72,7 +72,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/preloader.ddb4547d.gif"
   },
   {
-    "revision": "e40bff0fb4631d108a0d263ea747c74e",
-    "url": "/static/media/shop-bundles.e40bff0f.jpg"
+    "revision": "51bb5ce10874b2bd89aaadca36c88b4b",
+    "url": "/static/media/shop-bundles.51bb5ce1.jpg"
   }
 ]);
