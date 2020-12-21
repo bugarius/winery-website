@@ -83,3 +83,13 @@ code {
 .fixed_menu_slide_out {
   margin-top: -2.5em;
 }
+
+.custom-home-image {
+  background-image: url('./images/shop-bundles.jpg')!important;
+}
+
+.text-with-background {
+  text-shadow: 2px 2px 2px #222222; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 2px 2px 2px #222222;
+  -webkit-text-shadow: 2px 2px 2px #222222;
+}

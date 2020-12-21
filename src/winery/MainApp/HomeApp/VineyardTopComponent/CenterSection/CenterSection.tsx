@@ -5,9 +5,10 @@ interface Props
 {
     image?: string;
     text?: string;
+    textColor?: "lightgray" | "darkgray" | "white"
 }
 
-export const CenterSection: React.FC<Props> = ({image, text}) => {
+export const CenterSection: React.FC<Props> = ({image, text, textColor = "white"}) => {
 
     return (
         <div className="wpb_column vc_column_container column-6_12">
@@ -36,7 +37,7 @@ export const CenterSection: React.FC<Props> = ({image, text}) => {
                                 fontSize: '1.6em',
                                 letterSpacing: '2px',
                                 lineHeight: '1.75em'
-                            }}><strong><span style={{color: '#ffffff'}}>{text}</span></strong>
+                            }}><strong><span className="text-with-background" style={{color: textColor}}>{text}</span></strong>
                             </p>
                         </div>
                     </div>
