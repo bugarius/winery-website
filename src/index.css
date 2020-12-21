@@ -93,3 +93,7 @@ code {
   -moz-text-shadow: 2px 2px 2px #222222;
   -webkit-text-shadow: 2px 2px 2px #222222;
 }
+
+.scheme_default .menu_mobile_close:before, .light_colors, .scheme_default .menu_mobile_close:after, .scheme_default .menu_mobile_button, .scheme_default .menu_mobile_button:before {
+  border-color: grey;
+}
