@@ -1,23 +1,24 @@
 import {useEffect, useState} from "react";
 
-const usePriceDecimalSeparator = (value: string) => {
+const usePriceDecimalSeparator = (value: number) => {
 
+    const stringValue = value.toString();
     const [number, setNumber] = useState("");
     const [decimal, setDecimal] = useState("");
 
     useEffect(() => {
-        if (value.includes(",") || value.includes("."))
+        if (stringValue.includes(",") || stringValue.includes("."))
         {
-            const priceArray: string[] = value.split(new RegExp("[,.]"));
+            const priceArray: string[] = stringValue.split(new RegExp("[,.]"));
             setNumber(priceArray[0]);
             setDecimal(priceArray[1])
         }
         else
         {
-            setNumber(value);
+            setNumber(stringValue);
         }
 
-    }, [value])
+    }, [stringValue])
 
     return [number, decimal];
 };

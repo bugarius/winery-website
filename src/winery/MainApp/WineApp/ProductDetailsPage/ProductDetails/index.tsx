@@ -16,7 +16,7 @@ interface Props
     type: string;
     invert: boolean;
     id: number;
-    price: string;
+    price: number;
     color: WineColor;
 }
 

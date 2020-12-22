@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Medalowe Trio",
+    "years": "",
+    "image": "bundle-silver-medals.png",
+    "alt": "Medalowe Trio",
+    "wines": [1, 5, 6],
+    "boxPrice": 5,
+    "price": 152,
+    "productLink": "/"
+  },
+  {
+    "id": 2,
+    "name": "Dwie twarze Solarisa",
+    "years": "",
+    "image": "bundle-solaris.png",
+    "alt": "Dwie twarze Solarisa",
+    "wines": [2, 6],
+    "boxPrice": 3,
+    "price": 91,
+    "productLink": "/"
+  },
+  {
+    "id": 3,
+    "name": "5-letni Riesling",
+    "years": "",
+    "image": "bundle-riesling.png",
+    "alt": "Medalowe Trio",
+    "wines": [1],
+    "boxPrice": 3,
+    "price": 52,
+    "productLink": "/"
+  },
+  {
+    "id": 4,
+    "name": "Skryte czerwone",
+    "years": "",
+    "image": "bundle-box-stick.png",
+    "alt": "Medalowe Trio",
+    "wines": [3],
+    "boxPrice": 5,
+    "price": 44,
+    "productLink": "/"
+  }
+]

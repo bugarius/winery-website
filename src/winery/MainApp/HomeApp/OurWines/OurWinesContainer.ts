@@ -14,7 +14,7 @@ export interface ShopWine
     shopImage: string;
     variety: string;
     year: string;
-    price: string;
+    price: number;
 }
 
 export interface Description

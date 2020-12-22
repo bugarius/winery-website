@@ -1,7 +1,7 @@
 import React from "react";
 import HomeProductsDescription from "./HomeProductsDescription";
-import HomeProductsList from "./HomeProductsList";
-import HomeProductItem from "./HomeProductsList/HomeProductItem";
+import HomeProductsList from "../../../commons/components/home/HomeProductsList";
+import HomeProductItem from "../../../commons/components/home/HomeProductsList/HomeProductItem";
 import {Description, ShopWine} from "./OurWinesContainer";
 import {useScrollContext} from "../ScrollContext";
 
