@@ -11,16 +11,15 @@ interface Props
 {
     imgUrl: string;
     year: string;
-    variety: string;
+    variety?: string;
     description: string;
-    type: string;
-    invert: boolean;
+    type?: string;
     id: number;
     price: number;
-    color: WineColor;
+    color?: WineColor;
 }
 
-export const ProductDetails: React.FC<Props> = ({imgUrl, year, variety, description, type, invert, id, price, color}) => {
+export const ProductDetails: React.FC<Props> = ({imgUrl, year, variety, description, type, id, price, color}) => {
 
     // const handleAddToCart = (quantity: number) => {
     //     console.log(`wine id: ${id}, quantity: ${quantity}`)

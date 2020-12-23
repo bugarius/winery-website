@@ -1,12 +1,12 @@
 import React from "react";
 import {AboutVineyardPage} from "./AboutVineyardPage";
-import {CommonAppWrapper} from "../../commons/components/wrappers/CommonAppWrapper";
+import {AppWrapper} from "../../commons/components/wrappers/AppWrapper";
 
 export const VineyardApp = () => {
 
     return (
-        <CommonAppWrapper title={"Nasza winnica"} fullWideImage={"winnica_bugara.jpg"}>
+        <AppWrapper.Default title={"Nasza winnica"} fullWideImage={"winnica_bugara.jpg"}>
             <AboutVineyardPage/>
-        </CommonAppWrapper>
+        </AppWrapper.Default>
     )
 };

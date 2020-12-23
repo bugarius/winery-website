@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 
-export const ProductDetailsImage: FC<{src: string, alt: string}> = ({src, alt}) => {
+export const ProductDetailsImage: FC<{src: string, alt?: string}> = ({src, alt}) => {
   return (
       <div className="images">
           <img

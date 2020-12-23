@@ -11,7 +11,7 @@ export const Bundles = () => {
 
     return (
         <BundlesContainer render={(bundles, description) => (
-            <HomeRowComponent refTarget={refs.aboutUs}
+            <HomeRowComponent refTarget={refs.gift}
                               rightComponent={<HomeBundlesListComponent bundles={bundles}/>}
                               leftComponent={<HomeBundlesDescriptionComponent description={description}/>}
             />

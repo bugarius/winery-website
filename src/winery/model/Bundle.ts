@@ -11,4 +11,5 @@ export interface Bundle
     boxPrice: number;
     price: number;
     productLink: string;
+    description: string;
 }
