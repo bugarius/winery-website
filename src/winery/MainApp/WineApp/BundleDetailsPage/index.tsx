@@ -18,6 +18,7 @@ export const BundleDetailsPage = () => {
                             key={bundle?.id}
                             id={bundle.id}
                             price={bundle.price}
+                            available={bundle.available}
             />
         </AppWrapper.Product>
     ) : (<ErrorApp/>)

@@ -17,9 +17,19 @@ interface Props
     id: number;
     price: number;
     color?: WineColor;
+    available: boolean;
 }
 
-export const ProductDetails: React.FC<Props> = ({imgUrl, year, variety, description, type, id, price, color}) => {
+export const ProductDetails: React.FC<Props> = ({
+                                                    imgUrl,
+                                                    year,
+                                                    variety,
+                                                    description,
+                                                    type,
+                                                    id,
+                                                    price,
+                                                    color,
+                                                    available}) => {
 
     // const handleAddToCart = (quantity: number) => {
     //     console.log(`wine id: ${id}, quantity: ${quantity}`)
@@ -30,6 +40,7 @@ export const ProductDetails: React.FC<Props> = ({imgUrl, year, variety, descript
             <ProductDetailsImage src={FileUtils.getImage(imgUrl)} alt={variety} />
             <ProductDetailsSummaryWrapper>
                 <Price amount={price}/>
+                {!available && <p className="vc_message_box-outline vc_color-juicy_pink">Produkt niedostępny</p>}
                 <ProductDetailsDescription description={description} />
                 {/*<AddToCart addToCart={handleAddToCart}/>*/}
                 <div className="product_meta">

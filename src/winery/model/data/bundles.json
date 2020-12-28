@@ -9,7 +9,8 @@
     "boxPrice": 5,
     "price": 152,
     "productLink": "/wina/na_prezent/1",
-    "description": ""
+    "description": "",
+    "available": true
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "boxPrice": 3,
     "price": 91,
     "productLink": "/wina/na_prezent/2",
-    "description": ""
+    "description": "",
+    "available": true
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "boxPrice": 3,
     "price": 52,
     "productLink": "/wina/na_prezent/3",
-    "description": ""
+    "description": "",
+    "available": true
   },
   {
     "id": 4,
@@ -45,6 +48,7 @@
     "boxPrice": 5,
     "price": 44,
     "productLink": "/wina/na_prezent/4",
-    "description": ""
+    "description": "",
+    "available": true
   }
 ]

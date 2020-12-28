@@ -12,4 +12,5 @@ export interface Bundle
     price: number;
     productLink: string;
     description: string;
+    available: boolean;
 }

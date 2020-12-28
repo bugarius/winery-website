@@ -29,4 +29,5 @@ export interface Wine
     badge: string;
     detailsImage: string;
     description: string;
+    available: boolean;
 }
