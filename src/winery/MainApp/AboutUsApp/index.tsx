@@ -1,12 +1,12 @@
 import React from "react";
 import {AboutUsPage} from "./AboutUsPage";
-import {CommonAppWrapper} from "../../commons/components/wrappers/CommonAppWrapper";
+import {AppWrapper} from "../../commons/components/wrappers/AppWrapper";
 
 export const AboutUsApp = () => {
 
     return (
-        <CommonAppWrapper title={"Jak tworzymy"}>
+        <AppWrapper.Default title={"Jak tworzymy"}>
             <AboutUsPage/>
-        </CommonAppWrapper>
+        </AppWrapper.Default>
     )
 };

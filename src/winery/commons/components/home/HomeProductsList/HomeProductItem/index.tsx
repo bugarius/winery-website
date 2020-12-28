@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import {FileUtils} from "../../../../../commons/shared/Utils";
-import {Price} from "../../../../WineApp/ProductDetailsPage/ProductDetails/Price";
+import {FileUtils} from "../../../../shared/Utils";
+import {Price} from "../../../../../MainApp/WineApp/ProductDetailsPage/ProductDetails/Price";
 
 export interface HomeProductItem
 {
@@ -11,7 +11,7 @@ export interface HomeProductItem
     addToCardLink: string,
     badge?: boolean | string
     alt?: string;
-    price: string;
+    price: number;
     year: string;
 }
 

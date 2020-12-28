@@ -14,6 +14,7 @@ interface RefObject
 {
     contact: Ref<any>;
     home: Ref<any>;
+    gift: Ref<any>;
     aboutUs: Ref<any>;
     aboutPlace: Ref<any>;
     wines: Ref<any>;
@@ -23,6 +24,7 @@ const defaultState: ScrollContextInterface = {
     refs: {
         contact: React.createRef(),
         home: React.createRef(),
+        gift: React.createRef(),
         aboutUs: React.createRef(),
         aboutPlace: React.createRef(),
         wines: React.createRef()

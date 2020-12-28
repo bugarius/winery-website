@@ -11,16 +11,27 @@ interface Props
 {
     imgUrl: string;
     year: string;
-    variety: string;
+    variety?: string;
     description: string;
-    type: string;
-    invert: boolean;
-    id: number;
-    price: string;
-    color: WineColor;
+    type?: string;
+    id: number | string;
+    price: number;
+    color?: WineColor;
+    available: boolean;
+    category?: string;
 }
 
-export const ProductDetails: React.FC<Props> = ({imgUrl, year, variety, description, type, invert, id, price, color}) => {
+export const ProductDetails: React.FC<Props> = ({
+                                                    imgUrl,
+                                                    year,
+                                                    variety,
+                                                    description,
+                                                    type,
+                                                    id,
+                                                    price,
+                                                    color,
+                                                    available,
+                                                    category}) => {
 
     // const handleAddToCart = (quantity: number) => {
     //     console.log(`wine id: ${id}, quantity: ${quantity}`)
@@ -31,12 +42,13 @@ export const ProductDetails: React.FC<Props> = ({imgUrl, year, variety, descript
             <ProductDetailsImage src={FileUtils.getImage(imgUrl)} alt={variety} />
             <ProductDetailsSummaryWrapper>
                 <Price amount={price}/>
+                {!available && <p className="vc_message_box-outline vc_color-juicy_pink">Produkt niedostępny</p>}
                 <ProductDetailsDescription description={description} />
                 {/*<AddToCart addToCart={handleAddToCart}/>*/}
                 <div className="product_meta">
                     <span className="posted_in">
                         Kategoria:{" "}<span
-                        style={{color: "orange", fontWeight: "bold"}}>{color}, {type}</span>
+                        style={{color: "orange", fontWeight: "bold"}}>{category ? category : `${color}, ${type}`}</span>
                     </span>
                     <span className="tagged_as">
                         Rok:{" "}<span style={{color: "orange", fontWeight: "bold"}}>{year}</span>

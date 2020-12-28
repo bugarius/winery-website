@@ -1,12 +1,12 @@
 import React from "react";
 import {HowToBuyWinePage} from "./HowToByWinePage";
-import {CommonAppWrapper} from "../../commons/components/wrappers/CommonAppWrapper";
+import {AppWrapper} from "../../commons/components/wrappers/AppWrapper";
 
 export const HowToBuyApp = () => {
 
     return (
-        <CommonAppWrapper title={"Sprzedaż"} fullWideImage={"shop-winnica-bugara.jpg"}>
+        <AppWrapper.Default title={"Sprzedaż"} fullWideImage={"shop-winnica-bugara.jpg"}>
             <HowToBuyWinePage/>
-        </CommonAppWrapper>
+        </AppWrapper.Default>
     )
 };

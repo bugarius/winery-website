@@ -8,6 +8,7 @@ import {AboutUsApp} from "./AboutUsApp";
 import {HowToBuyApp} from "./HowToBuyApp";
 import {ContactApp} from "./ContactApp";
 import {ErrorApp} from "./ErrorApp";
+import {BundleDetailsPage} from "./WineApp/BundleDetailsPage";
 
 const MainApp = () => {
 
@@ -23,6 +24,7 @@ const MainApp = () => {
             <Route path="/winnica" component={VineyardApp}/>
             <Route path="/wina/sprzedaz" component={HowToBuyApp}/>
             <Route path="/wina/karta_win/:id" component={ProductDetailsPage}/>
+            <Route path="/wina/na_prezent/:id" component={BundleDetailsPage}/>
             <Route path="/wina/karta_win" component={WineApp}/>
             <Route exact path="/" component={HomeApp}/>
             <Route path={"/404"} component={ErrorApp}/>
