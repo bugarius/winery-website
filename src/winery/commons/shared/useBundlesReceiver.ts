@@ -9,13 +9,12 @@ interface ReturnProps {
     bundle?: Bundle;
 }
 
-export const useBundlesReceiver = (id?: number): ReturnProps => {
+export const useBundlesReceiver = (id?: string): ReturnProps => {
 
     const [bundles, setBundles] = useState<Bundle[]>([]);
     const [bundle, setBundle] = useState<Bundle>();
 
     useEffect(() => {
-        console.log("useBundlesReceiver")
         const getBundleWines = (bundleWines: number[], allWines: Wine[]): (Wine | undefined)[] => {
             return bundleWines.map(wine => {
                 return allWines.find(w => w.id === wine);

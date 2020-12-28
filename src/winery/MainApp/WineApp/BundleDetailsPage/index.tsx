@@ -8,17 +8,18 @@ import {AppWrapper} from "../../../commons/components/wrappers/AppWrapper";
 export const BundleDetailsPage = () => {
     const {id} = useParams();
 
-    const {bundle} = useBundlesReceiver(parseInt(id));
+    const {bundle} = useBundlesReceiver(id);
 
     return bundle ? (
         <AppWrapper.Product title={"Na prezent"} >
-            <ProductDetails imgUrl={bundle?.image}
+            <ProductDetails imgUrl={bundle?.detailsImage}
                             year={bundle?.years}
                             description={bundle?.description}
                             key={bundle?.id}
                             id={bundle.id}
                             price={bundle.price}
                             available={bundle.available}
+                            category={"Zestawy prezentowe"}
             />
         </AppWrapper.Product>
     ) : (<ErrorApp/>)

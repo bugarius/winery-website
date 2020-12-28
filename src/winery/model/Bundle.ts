@@ -2,10 +2,11 @@ import {Wine} from "./Wine";
 
 export interface Bundle
 {
-    id: number;
+    id: string;
     name: string;
     years: string;
     image: string;
+    detailsImage: string;
     alt: string;
     wines: Partial<Wine[]>;
     boxPrice: number;

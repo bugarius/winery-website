@@ -14,10 +14,11 @@ interface Props
     variety?: string;
     description: string;
     type?: string;
-    id: number;
+    id: number | string;
     price: number;
     color?: WineColor;
     available: boolean;
+    category?: string;
 }
 
 export const ProductDetails: React.FC<Props> = ({
@@ -29,7 +30,8 @@ export const ProductDetails: React.FC<Props> = ({
                                                     id,
                                                     price,
                                                     color,
-                                                    available}) => {
+                                                    available,
+                                                    category}) => {
 
     // const handleAddToCart = (quantity: number) => {
     //     console.log(`wine id: ${id}, quantity: ${quantity}`)
@@ -46,7 +48,7 @@ export const ProductDetails: React.FC<Props> = ({
                 <div className="product_meta">
                     <span className="posted_in">
                         Kategoria:{" "}<span
-                        style={{color: "orange", fontWeight: "bold"}}>{color}, {type}</span>
+                        style={{color: "orange", fontWeight: "bold"}}>{category ? category : `${color}, ${type}`}</span>
                     </span>
                     <span className="tagged_as">
                         Rok:{" "}<span style={{color: "orange", fontWeight: "bold"}}>{year}</span>
