@@ -11,6 +11,7 @@ import PageWrapper from "../../commons/components/wrappers/PageWrapper";
 import AboutPlace from "./AboutPlace";
 import {BodyClassNames, useResponsiveContext} from "./ResponsiveContext";
 import Badges from "../../commons/components/Badges";
+import {Bundles} from "./Bundles";
 
 const HomeApp = () => {
     const {modifyBodyClassName} = useResponsiveContext();
@@ -36,6 +37,7 @@ const HomeApp = () => {
             <Menu/>
             <ContentWrapper>
                 <VineyardTopComponent showPopupDots />
+                <Bundles/>
                 <AboutPlace/>
                 <AboutWine title={"Najwyższa jakość wina"}
                            subTitle={"Produkujemy wino z myślą o naszych klientach, dlatego też dbamy o jakość na każdym etapie produkcji..."}

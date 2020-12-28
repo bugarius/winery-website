@@ -1,12 +1,12 @@
 import React from "react";
 import {ContactPage} from "./ContactPage";
-import {CommonAppWrapper} from "../../commons/components/wrappers/CommonAppWrapper";
+import {AppWrapper} from "../../commons/components/wrappers/AppWrapper";
 
 export const ContactApp = () => {
 
     return (
-        <CommonAppWrapper title={"Kontakt"}>
+        <AppWrapper.Default title={"Kontakt"}>
             <ContactPage/>
-        </CommonAppWrapper>
+        </AppWrapper.Default>
     )
 };

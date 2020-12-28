@@ -7,12 +7,13 @@
     "type": "DRY",
     "color": "WHITE",
     "year": "2015",
-    "price": "49",
+    "price": 49,
     "shopImage": "Bugara_Riesling_2015_wytrawne.png",
     "badge": "SREBRNY MEDAL",
     "productLink": "",
     "detailsImage": "Riesling_2015_wytrawne_lista.jpg",
-    "description": "Wyjątkowy, mineralny smak z wyczuwalną morelą i cytrusami.\n\nNagradzane srebrnymi medalami na polskich i zagranicznych konkursach winiarskich."
+    "description": "Wyjątkowy, mineralny smak z wyczuwalną morelą i cytrusami.\n\nNagradzane srebrnymi medalami na polskich i zagranicznych konkursach winiarskich.",
+    "available": true
   },
   {
     "id": 2,
@@ -22,12 +23,13 @@
     "type": "DRY",
     "color": "WHITE",
     "year": "2018",
-    "price": "39",
+    "price": 39,
     "shopImage": "Bugara_Solaris_2018.png",
     "badge": "",
     "productLink": "",
     "detailsImage": "Solaris_2018_wytrawne_lista.jpg",
-    "description": "Łagodne wino o owocowym, niezwykle wyrazistym aromacie gruszek, brzoskwiń, grapefruita i nut miodu."
+    "description": "Łagodne wino o owocowym, niezwykle wyrazistym aromacie gruszek, brzoskwiń, grapefruita i nut miodu.",
+    "available": true
   },
   {
     "id": 3,
@@ -37,12 +39,13 @@
     "type": "SEMI_DRY",
     "color": "ROSE",
     "year": "2018",
-    "price": "39",
+    "price": 39,
     "shopImage": "Bugara_Regent_Rose_2018.png",
     "badge": "",
     "productLink": "",
     "detailsImage": "Regent_Rose_2018_wytrawne_lista.jpg",
-    "description": "Delikatne, lekkie różowe wino z wyczuwalną nutą truskawek, poziomek i czereśni."
+    "description": "Delikatne, lekkie różowe wino z wyczuwalną nutą truskawek, poziomek i czereśni.",
+    "available": true
   },
   {
     "id": 4,
@@ -52,12 +55,13 @@
     "type": "DRY",
     "color": "WHITE",
     "year": "2018",
-    "price": "39",
+    "price": 39,
     "shopImage": "Bugara_Riesling_2018.png",
     "badge": "",
     "productLink": "",
     "detailsImage": "Riesling_2018_wytrawne_lista.jpg",
-    "description": "Wino charakteryzujące się wyraźnym aromatem mineralnym, zbalansowaną kwasowością i wyczuwalnymi owocami cyrusowymi."
+    "description": "Wino charakteryzujące się wyraźnym aromatem mineralnym, zbalansowaną kwasowością i wyczuwalnymi owocami cyrusowymi.",
+    "available": true
   },
   {
     "id": 5,
@@ -67,12 +71,13 @@
     "type": "DRY",
     "color": "WHITE",
     "year": "2019",
-    "price": "49",
+    "price": 49,
     "shopImage": "Bugara_Riesling_2019.png",
     "badge": "SREBRNY MEDAL",
     "productLink": "",
     "detailsImage": "Riesling_2019_wytrawne_lista.jpg",
-    "description": "Wino z nutą owoców cytrusowych, z wyraźnym akcentem mineralnym. W ustach świeże, czyste i z orzeźwiającą kwasowością.\n\nNagrodzone srebrnym medalem na VII Konkursie Polskich Win w Jaśle."
+    "description": "Wino z nutą owoców cytrusowych, z wyraźnym akcentem mineralnym. W ustach świeże, czyste i z orzeźwiającą kwasowością.\n\nNagrodzone srebrnym medalem na VII Konkursie Polskich Win w Jaśle.",
+    "available": true
   },
   {
     "id": 6,
@@ -82,12 +87,13 @@
     "type": "SEMI_SWEET",
     "color": "WHITE",
     "year": "2019",
-    "price": "49",
+    "price": 49,
     "shopImage": "Bugara_Solaris_2019.png",
     "badge": "SREBRNY MEDAL",
     "productLink": "",
     "detailsImage": "Solaris_2019_polslodkie_lista.jpg",
-    "description": "Aromatyczne i świeże wino o nutach ananasa, gruszki, marakui i liczi.\n\nNagrodzone srebrnym medalem na VII Konkursie Polskich Win w Jaśle."
+    "description": "Aromatyczne i świeże wino o nutach ananasa, gruszki, marakui i liczi.\n\nNagrodzone srebrnym medalem na VII Konkursie Polskich Win w Jaśle.",
+    "available": true
   },
   {
     "id": 7,
@@ -97,12 +103,13 @@
     "type": "DRY",
     "color": "RED",
     "year": "2019",
-    "price": "39",
+    "price": 39,
     "shopImage": "Bugara_CabernetCortis_2019.png",
     "badge": "",
     "productLink": "",
     "detailsImage": "Cabernet_Cortis_2019_wytrawne_lista.jpg",
-    "description": "Wino o ładnym smaku z wyczuwalną nutą owoców leśnych. W nosie dojrzała czarna porzeczka, jeżyny, śliwki i wiśnie."
+    "description": "Wino o ładnym smaku z wyczuwalną nutą owoców leśnych. W nosie dojrzała czarna porzeczka, jeżyny, śliwki i wiśnie.",
+    "available": true
   },
   {
     "id": 8,
@@ -112,12 +119,13 @@
     "type": "DRY",
     "color": "RED",
     "year": "2019",
-    "price": "39",
+    "price": 39,
     "shopImage": "Bugara_Regent_2019.png",
     "badge": "",
     "productLink": "",
     "detailsImage": "Regent_2019_wytrawne_lista.jpg",
-    "description": "Bardzo przyjemne i łatwe w spożyciu wino. Umiarkowane, miękkie taniny. Wyczuwalne aromaty młodych, czerwonych owoców."
+    "description": "Bardzo przyjemne i łatwe w spożyciu wino. Umiarkowane, miękkie taniny. Wyczuwalne aromaty młodych, czerwonych owoców.",
+    "available": true
   },
   {
     "id": 9,
@@ -127,12 +135,14 @@
     "type": "DRY",
     "color": "ROSE",
     "year": "2019",
-    "price": "39",
+    "price": 39,
     "shopImage": "Bugara_CabernetCortisRose_2019.png",
     "badge": "",
     "productLink": "",
     "detailsImage": "Cabernet_Cortis_Rose_2019_wytrawne_lista.jpg",
-    "description": "Wino o aromacie czerwonych owoców, poziomek, truskawek i czerwonych śliwek z wyczuwalną kwasowością."  },
+    "description": "Wino o aromacie czerwonych owoców, poziomek, truskawek i czerwonych śliwek z wyczuwalną kwasowością.",
+    "available": true
+  },
   {
     "id": 10,
     "alt": "Bugara_Solaris_2019",
@@ -141,11 +151,12 @@
     "type": "DRY",
     "color": "ORANGE",
     "year": "2019",
-    "price": "55",
+    "price": 55,
     "shopImage": "Bugara_Solaris_pomaranczowy_2019.png",
     "badge": "",
     "productLink": "",
     "detailsImage": "Solaris_pomaranczowe_2019_wytrawne_lista.jpg",
-    "description": "Pomarańczowe wino produkowane z białej odmiany winorośli. Charakteryzuje się czystą, brzoskwiniową nutą, białymi porzeczkami i morelą."
+    "description": "Pomarańczowe wino produkowane z białej odmiany winorośli. Charakteryzuje się czystą, brzoskwiniową nutą, białymi porzeczkami i morelą.",
+    "available": false
   }
 ]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "B1",
+    "name": "Medalowe Trio",
+    "years": "2015, 2019, 2019",
+    "image": "bundle-silver-medals.png",
+    "detailsImage": "bundle-silver-medals-details.jpg",
+    "alt": "Medalowe Trio",
+    "wines": [1, 5, 6],
+    "boxPrice": 5,
+    "price": 152,
+    "productLink": "/wina/na_prezent/B1",
+    "description": "Zestaw trzech wyjątkowych win, które zostały nagrodzone śrebrnymi medalami na konkursach winiarskich. W skład zestawu wchodzą wytrawne Rieslingi z 2015 i 2019 roku oraz półsłodki Solaris z 2019 roku.",
+    "available": true
+  },
+  {
+    "id": "B2",
+    "name": "Dwie twarze Solarisa",
+    "years": "2018, 2019",
+    "image": "bundle-solaris.png",
+    "detailsImage": "bundle-solaris-details.jpg",
+    "alt": "Dwie twarze Solarisa",
+    "wines": [2, 6],
+    "boxPrice": 3,
+    "price": 91,
+    "productLink": "/wina/na_prezent/B2",
+    "description": "Aromatyczne wino z odmiany Solaris w dwóch wersjach - wytrawnej z 2018 roku oraz półsłodkiej z 2019 roku, która została nagrodzona srebrnym medalem na konkursie winiarksim.",
+    "available": true
+  },
+  {
+    "id": "B3",
+    "name": "5-letni Riesling",
+    "years": "2015",
+    "image": "bundle-riesling.png",
+    "detailsImage": "bundle-riesling-details.jpg",
+    "alt": "Medalowe Trio",
+    "wines": [1],
+    "boxPrice": 3,
+    "price": 52,
+    "productLink": "/wina/na_prezent/B3",
+    "description": "Wytrawny Riesling z 2015 roku - wielokrotnie nagradzany i doceniany przez ekspertów branży winiarskiej. Idealny dla kogoś, kto potrafi docenić dojrzałość tego wina.",
+    "available": true
+  },
+  {
+    "id": "B4",
+    "name": "Skryte czerwone",
+    "years": "2019",
+    "image": "bundle-box-stick.png",
+    "detailsImage": "bundle-box-stick-details.jpg",
+    "alt": "Medalowe Trio",
+    "wines": [3],
+    "boxPrice": 5,
+    "price": 44,
+    "productLink": "/wina/na_prezent/B4",
+    "description": "Cabernet Cortis z 2019 roku skryty w estatycznym pudełku. Łagodne czerwone wino z wyczuwalną nutą owoców leśnych.",
+    "available": true
+  }
+]

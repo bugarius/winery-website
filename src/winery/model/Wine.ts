@@ -22,11 +22,12 @@ export interface Wine
     year: string;
     type: WineType;
     color: WineColor;
-    price: string;
+    price: number;
     shopImage: string;
     alt: string;
     productLink: string;
     badge: string;
     detailsImage: string;
     description: string;
+    available: boolean;
 }

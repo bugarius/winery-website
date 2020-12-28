@@ -1,13 +1,13 @@
 import React from "react";
-import {CommonAppWrapper} from "../../commons/components/wrappers/CommonAppWrapper";
 import {ErrorPage} from "./ErrorPage";
+import {AppWrapper} from "../../commons/components/wrappers/AppWrapper";
 
 
 export const ErrorApp = () => {
 
     return (
-        <CommonAppWrapper>
+        <AppWrapper.Default>
             <ErrorPage/>
-        </CommonAppWrapper>
+        </AppWrapper.Default>
     )
 };

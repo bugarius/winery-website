@@ -83,7 +83,7 @@ const Header: React.FC<Props> = ({
     }
     return (
         <header className="top_panel top_panel_style_1 without_bg_image scheme_default">
-            <NavLink to={""} className="menu_mobile_button google-drive-opener" onClick={e => {
+            <NavLink to={""} className="menu_mobile_button google-drive-opener light_colors" onClick={e => {
                 toggleOpenMenu();
                 e.preventDefault()
             }}/>

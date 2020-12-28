@@ -1,12 +1,12 @@
 import React from "react";
 import {WineList} from "./WineList";
-import {CommonAppWrapper} from "../../commons/components/wrappers/CommonAppWrapper";
+import {AppWrapper} from "../../commons/components/wrappers/AppWrapper";
 
 export const WineApp = () => {
 
     return (
-        <CommonAppWrapper title={"Karta win"}>
+        <AppWrapper.Default title={"Karta win"}>
             <WineList/>
-        </CommonAppWrapper>
+        </AppWrapper.Default>
     )
 };

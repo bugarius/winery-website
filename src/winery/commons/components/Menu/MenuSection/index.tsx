@@ -21,6 +21,8 @@ const MenuSection: React.FC<{}> = ({children}) => {
                         <NavLink className="menu_mobile_button menu_mobile_button_text" to={""}
                                  onClick={e => e.preventDefault()}>MENU</NavLink>
                         <TocMenuSection show={isHomePage}>
+                            <TocMenuItem description={"Na prezent"} scrollToRef={() => scrollToRef(refs.gift)}
+                                         link={"/"} active={activeRef === refs.gift}/>
                             <TocMenuItem description={"Winnica"} scrollToRef={() => scrollToRef(refs.aboutPlace)}
                                          link={"/"} active={activeRef === refs.aboutPlace}/>
                             <TocMenuItem description={"Jak tworzymy"} scrollToRef={() => scrollToRef(refs.aboutUs)}

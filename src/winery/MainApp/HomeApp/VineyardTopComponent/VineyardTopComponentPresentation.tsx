@@ -25,7 +25,8 @@ const VineyardTopComponentPresentation: React.FC<DotPopupsProps> = ({
 
     return (
         <div ref={refs.home}
-             className={"row row-no-padding vc_custom_1469089433188 row-o-columns-middle" + (window.innerWidth < 768 ? "" : " row-o-full-height")}>
+             className={"row row-no-padding vc_custom_1469089433188 row-o-columns-middle custom-home-image " + (window.innerWidth < 768 ? "row-o-full-height" : " row-o-full-height")}
+        >
             <DotSection showPopupDots={showPopupDots}>
                 {winesInDots?.[0] &&
                 <DotComponent position={{top: 60, left: 20}}
@@ -38,7 +39,7 @@ const VineyardTopComponentPresentation: React.FC<DotPopupsProps> = ({
                 />
                 }
             </DotSection>
-            <CenterSection text={"RODZINNA PRODUKCJA NAJWYŻSZEJ JAKOŚCI WIN Z WŁASNYCH UPRAW"}/>
+            <CenterSection text={"SPRAW SOBIE LUB SWOIM BLISKIM WYJĄTKOWY PREZENT"} textColor={"darkgray"}/>
             <DotSection showPopupDots={showPopupDots}>
                 {winesInDots?.[2] &&
                 <DotComponent position={{top: 35, left: 10}}
