@@ -12,7 +12,7 @@ const OurWines = () => {
 
     return (
         <OurWinesContainer render={(wines, description) => (
-            <HomeRowComponent refTarget={refs.gift}
+            <HomeRowComponent refTarget={refs.wines}
                               rightComponent={<HomeWinesDescriptionComponent description={description}/>}
                               leftComponent={<HomeWinesListComponent randomWines={wines}/>}
             />
