@@ -39,7 +39,7 @@ const VineyardTopComponentPresentation: React.FC<DotPopupsProps> = ({
                 />
                 }
             </DotSection>
-            <CenterSection text={"SPRAW SOBIE LUB SWOIM BLISKIM WYJĄTKOWY PREZENT"} textColor={"darkgray"}/>
+            <CenterSection text={"WINO Z CZĘSTOCHOWSKIEJ ZIEMI!"} textColor={"white"}/>
             <DotSection showPopupDots={showPopupDots}>
                 {winesInDots?.[2] &&
                 <DotComponent position={{top: 35, left: 10}}
