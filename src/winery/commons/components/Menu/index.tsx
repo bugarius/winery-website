@@ -16,6 +16,7 @@ const Menu: FC<{show?: boolean}> = ({show = true}) => {
             <MenuItem title={"WINA"} hasChildren>
                 <MenuItem title={"KARTA WIN"} link={"/wina/karta_win"}/>
                 <MenuItem title={"SPRZEDAŻ"} link={"/wina/sprzedaz"}/>
+                <MenuItem title={"DEGUSTACJA I ZWIEDZANIE"} link={"/wina/degustacja"}/>
             </MenuItem>
             <MenuItem title={"KONTAKT"} link={"/kontakt"}/>
         </MenuSection>

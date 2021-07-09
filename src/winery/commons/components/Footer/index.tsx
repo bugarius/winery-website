@@ -39,6 +39,7 @@ const Footer: React.FC<PageElement> = () => {
                             <li><NavLink to={"/o_nas"} onClick={() => scrollToTop()}><span>Jak tworzymy</span></NavLink></li>
                             <li><NavLink to={"/wina/karta_win"} onClick={() => scrollToTop()}><span>Wina</span></NavLink></li>
                             <li><NavLink to={"/wina/sprzedaz"} onClick={() => scrollToTop()}><span>Sprzedaż</span></NavLink></li>
+                            <li><NavLink to={"/wina/degustacja"} onClick={() => scrollToTop()}><span>Degustacja i zwiedzanie</span></NavLink></li>
                             <li><NavLink to={"/kontakt"} onClick={() => scrollToTop()}><span>Kontakt</span></NavLink></li>
                         </ul>
                     </nav>

@@ -13,6 +13,7 @@ const HorizontalMenu: FC<{ show: boolean }> = ({show}) => {
             <HorizontalMenuItem link={"/wina"} text={"Wina"}>
                 <HorizontalMenuItem link={"/wina/karta_win"} text={"Karta win"}/>
                 <HorizontalMenuItem link={"/wina/sprzedaz"} text={"Sprzedaż"}/>
+                <HorizontalMenuItem link={"/wina/degustacja"} text={"Degustacja i zwiedzanie"}/>
             </HorizontalMenuItem>
             <HorizontalMenuItem link={"/kontakt"} text={"Kontakt"}/>
         </HorizontalMenuSection>

@@ -10,6 +10,7 @@ import {HowToBuyApp} from "./HowToBuyApp";
 import {ContactApp} from "./ContactApp";
 import {ErrorApp} from "./ErrorApp";
 import {BundleDetailsPage} from "./WineApp/BundleDetailsPage";
+import {WineTastingApp} from "./WineTastingApp";
 
 const MainApp = () => {
 
@@ -25,6 +26,7 @@ const MainApp = () => {
             <Route path="/winnica" component={VineyardApp}/>
             <Route path="/szlakwinny" component={WineTrailApp}/>
             <Route path="/wina/sprzedaz" component={HowToBuyApp}/>
+            <Route path="/wina/degustacja" component={WineTastingApp}/>
             <Route path="/wina/karta_win/:id" component={ProductDetailsPage}/>
             <Route path="/wina/na_prezent/:id" component={BundleDetailsPage}/>
             <Route path="/wina/karta_win" component={WineApp}/>
