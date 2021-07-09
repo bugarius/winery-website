@@ -11,6 +11,7 @@ const Menu: FC<{show?: boolean}> = ({show = true}) => {
         <MenuSection>
             <MenuItem title={"START"} link={"/"} scrollToRef={() => scrollToRef(refs.home)}/>
             <MenuItem title={"WINNICA"} link={"/winnica"}/>
+            <MenuItem title={"SZLAK WINNY"} link={"/szlakwinny"}/>
             <MenuItem title={"JAK TWORZYMY"} link={"/o_nas"}/>
             <MenuItem title={"WINA"} hasChildren>
                 <MenuItem title={"KARTA WIN"} link={"/wina/karta_win"}/>
