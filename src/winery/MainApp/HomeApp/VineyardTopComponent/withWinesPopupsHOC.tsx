@@ -9,11 +9,12 @@ import {WineList} from "../../WineApp/WineList";
 import {DotPopupsProps} from "./VineyardTopComponentPresentation";
 import {Event} from "../../../commons/Tracking";
 import {ListUtils} from "../../../commons/shared/Utils";
+import {pageSettings} from "../../../../pageConfig";
 
 export const withWinesPopupsHOC = <T extends DotPopupsProps>(WrappedComponent: React.ComponentType<T>) => (ownProps: Omit<T, keyof DotPopupsProps>) => {
     const {wrapperRef} = useClickOutside(() => closePopup())
     const wineInLists = useWineConcat<WineInList>(wines as Wine[], wineList as WineList[]);
-    const winesInDots = ListUtils.getListById(wineInLists, [3, 5, 7, 10]);
+    const winesInDots = ListUtils.getListById(wineInLists, pageSettings.dotComponent.wines);
 
     const [position, setPosition] = useState<{ x: number, y: number }>();
 

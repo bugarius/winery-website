@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Riesling 2019",
+    "name": "Riesling 2015",
     "alt": "Bugara_Riesling_2015_wytrawne",
     "variety": "Riesling",
     "type": "DRY",
@@ -12,7 +12,7 @@
     "badge": "SREBRNY MEDAL",
     "productLink": "",
     "detailsImage": "Riesling_2015_wytrawne_lista.jpg",
-    "description": "Wyjątkowy, mineralny smak z wyczuwalną morelą i cytrusami.\n\nNagradzane srebrnymi medalami na polskich i zagranicznych konkursach winiarskich.",
+    "description": "Wyjątkowy, mineralny smak z wyczuwalną morelą i cytrusami.\n\nChampion, złoty oraz srebrny medalista na polskich i zagranicznych konkursach winiarskich.",
     "available": true
   },
   {
@@ -76,7 +76,7 @@
     "badge": "SREBRNY MEDAL",
     "productLink": "",
     "detailsImage": "Riesling_2019_wytrawne_lista.jpg",
-    "description": "Wino z nutą owoców cytrusowych, z wyraźnym akcentem mineralnym. W ustach świeże, czyste i z orzeźwiającą kwasowością.\n\nNagrodzone srebrnym medalem na VII Konkursie Polskich Win w Jaśle.",
+    "description": "Wino z nutą owoców cytrusowych, z wyraźnym akcentem mineralnym. W ustach świeże, czyste i z orzeźwiającą kwasowością.\n\nNagrodzone srebrnymi medalami na Konkursie Polskich Win w Jaśle oraz w Poznaniu.",
     "available": true
   },
   {
