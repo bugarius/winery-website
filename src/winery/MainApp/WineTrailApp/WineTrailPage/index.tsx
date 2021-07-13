@@ -24,7 +24,7 @@ export const WineTrailPage = () => {
                                 "Oczywiście możesz również kupić butelkę na wynos w naszym sklepie."
                             ]}
                 />
-                <FullWideImage image={"jakosc.jpg"} padding={{paddingBottom: "50px"}} />
+                <FullWideImage image={"szlakwinny-altana.jpg"} padding={{paddingBottom: "50px"}} />
                 <RowContent icon={"icon-grape-leafs"}
                             title={"Dostępność"}
                             subtitle={"Z przejścia przez winnicę może korzystać każdy, kto chce skorzystać z naszej oferty."}
