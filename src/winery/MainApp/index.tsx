@@ -11,6 +11,7 @@ import {ContactApp} from "./ContactApp";
 import {ErrorApp} from "./ErrorApp";
 import {BundleDetailsPage} from "./WineApp/BundleDetailsPage";
 import {WineTastingApp} from "./WineTastingApp";
+import {AwardsApp} from "./AwardsApp";
 
 const MainApp = () => {
 
@@ -25,6 +26,7 @@ const MainApp = () => {
             <Route path="/o_nas" component={AboutUsApp}/>
             <Route path="/winnica" component={VineyardApp}/>
             <Route path="/szlakwinny" component={WineTrailApp}/>
+            <Route path="/wina/nagrody" component={AwardsApp}/>
             <Route path="/wina/sprzedaz" component={HowToBuyApp}/>
             <Route path="/wina/degustacja" component={WineTastingApp}/>
             <Route path="/wina/karta_win/:id" component={ProductDetailsPage}/>

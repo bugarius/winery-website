@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {ArrowButton} from "../../../../commons/components/ArrowButton";
 
 interface Props
 {
@@ -18,7 +18,8 @@ export const ProductInList: React.FC<Props> = ({imgUrl, year, variety, descripti
         backgroundImage: `url(${imgUrl})`,
     }
     return (
-        <div className={"row row-o-columns-stretch row-o-equal-height" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height ")}>
+        <div
+            className={"row row-o-columns-stretch row-o-equal-height" + (window.innerWidth > 768 && window.innerWidth < 1024 ? "" : " row-o-full-height ")}>
             <div className="wpb_column vc_column_container column-12_12">
                 <div className="vc_column-inner ">
                     <div className="wpb_wrapper">
@@ -28,10 +29,12 @@ export const ProductInList: React.FC<Props> = ({imgUrl, year, variety, descripti
                                  style={(invert ? {...style, left: 0} : {...style, right: 0})}/>
                             <div className="sc_promo_text trx_addons_stretch_height"
                                  style={{width: '50%', float: (invert ? 'right' : 'left')}}>
-                                <div className="sc_promo_text_inner sc_align_center" style={{width: "100%", paddingLeft: "0", paddingRight: "0"}}>
+                                <div className="sc_promo_text_inner sc_align_center"
+                                     style={{width: "100%", paddingLeft: "0", paddingRight: "0"}}>
                                     <h2 className="sc_item_title sc_promo_title">
                                         <small>{year}</small><br/>{variety}</h2>
-                                    <h5 className="sc_item_subtitle sc_promo_subtitle" style={{paddingLeft: "20px", paddingRight: "20px"}}>{description}</h5>
+                                    <h5 className="sc_item_subtitle sc_promo_subtitle"
+                                        style={{paddingLeft: "20px", paddingRight: "20px"}}>{description}</h5>
                                     <div className="sc_promo_content sc_item_content">
                                         <div className="wpb_text_column wpb_content_element ">
                                             <div className="wpb_wrapper">
@@ -42,16 +45,7 @@ export const ProductInList: React.FC<Props> = ({imgUrl, year, variety, descripti
                                             </div>
                                         </div>
                                     </div>
-                                    <div
-                                        className="sc_item_button sc_promo_button sc_button_wrap">
-                                        <NavLink to={`/wina/karta_win/${id}`}
-                                            className="sc_button sc_button_simple sc_button_size_normal
-                                            sc_button_icon_top"><span
-                                            className="sc_button_icon"><span
-                                            className="icon-down-big"/></span><span
-                                            className="sc_button_text"><span
-                                            className="sc_button_title">Odkryj to wino</span></span>
-                                        </NavLink></div>
+                                    <ArrowButton path={`/wina/karta_win/${id}`} label={'Odkryj to wino'}/>
                                 </div>
                             </div>
                         </div>
