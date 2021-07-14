@@ -21,14 +21,16 @@ const Badges = () => {
                             <div
                                 className="sc_icons_columns sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
                                 <div className="trx_addons_column-1_3">
-                                    <div className="sc_icons_item sc_icons_item_linked">
-                                        <div className="sc_icons_image"><img src={FileUtils.getImage("icon-01.png")}
-                                                                             alt="" width={276}
-                                                                             height={276}/></div>
-                                        <h4 className="sc_icons_title"><span>Nagrody</span></h4>
-                                        <div className="sc_icons_description"><span>Nasze wina zdobywają nagrody na polskich i międzynarodowych konkursach winiarskich</span>
+                                    <NavLink to={'/wina/nagrody'} onClick={() => handleOnClick("nagrody")}>
+                                        <div className="sc_icons_item sc_icons_item_linked">
+                                            <div className="sc_icons_image"><img src={FileUtils.getImage("icon-01.png")}
+                                                                                 alt="" width={276}
+                                                                                 height={276}/></div>
+                                            <h4 className="sc_icons_title"><span>Nagrody</span></h4>
+                                            <div className="sc_icons_description"><span>Nasze wina zdobywają nagrody na polskich i międzynarodowych konkursach winiarskich</span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </NavLink>
                                 </div>
                                 <div className="trx_addons_column-1_3">
                                     <NavLink to={'/wina/sprzedaz'} onClick={() => handleOnClick("sprzedaż")}>
