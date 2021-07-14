@@ -1,8 +1,14 @@
 import React from "react";
 import {FileUtils} from "../../shared/Utils";
 import {NavLink} from "react-router-dom";
+import {Event} from "../../Tracking";
 
 const Badges = () => {
+
+    const handleOnClick = (badgeName: string) => {
+        Event("Badge", `Click on badge: ${badgeName}`, "Badges")
+    }
+
     return (
         <div
             className={"row row-no-padding row-o-columns-middle" + (window.innerWidth > 768 ? "" : " row-o-full-height")}>
@@ -25,7 +31,7 @@ const Badges = () => {
                                     </div>
                                 </div>
                                 <div className="trx_addons_column-1_3">
-                                    <NavLink to={'/wina/sprzedaz'}>
+                                    <NavLink to={'/wina/sprzedaz'} onClick={() => handleOnClick("sprzedaż")}>
                                         <div className="sc_icons_item sc_icons_item_linked">
                                             <div className="sc_icons_image"><img src={FileUtils.getImage("icon-02.png")}
                                                                                  alt="" width={276}
@@ -37,7 +43,7 @@ const Badges = () => {
                                     </NavLink>
                                 </div>
                                 <div className="trx_addons_column-1_3">
-                                    <NavLink to={'/wina/degustacja'}>
+                                    <NavLink to={'/wina/degustacja'} onClick={() => handleOnClick("degustacja")}>
                                         <div className="sc_icons_item sc_icons_item_linked">
                                             <div className="sc_icons_image"><img src={FileUtils.getImage("icon-03.png")}
                                                                                  alt="" width={276}

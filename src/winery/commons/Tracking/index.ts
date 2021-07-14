@@ -2,7 +2,10 @@ import ReactGA from "react-ga";
 import {Location} from "history";
 
 export const initGA = (trackingID: string) => {
-    ReactGA.initialize(trackingID);
+    if (isProduction())
+    {
+        ReactGA.initialize(trackingID);
+    }
 }
 
 const getPathFromHash = (hash: string) => {
@@ -10,14 +13,24 @@ const getPathFromHash = (hash: string) => {
 }
 
 export const PageView = (location: Location) => {
-    ReactGA.set({page: getPathFromHash(location.hash) || location.pathname}); // Update the user's current page
-    ReactGA.pageview(getPathFromHash(location.hash) || location.pathname);  // Record a pageview for the given page
+    if (isProduction())
+    {
+        ReactGA.set({page: getPathFromHash(location.hash) || location.pathname}); // Update the user's current page
+        ReactGA.pageview(getPathFromHash(location.hash) || location.pathname);  // Record a pageview for the given page
+    }
 }
 
 export const Event = (category: string, action: string, label: string) => {
-    ReactGA.event({
-        category: category,
-        action: action,
-        label: label
-    });
+    if (isProduction())
+    {
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
 };
+
+const isProduction = () => {
+    return process.env.NODE_ENV === "production"
+}

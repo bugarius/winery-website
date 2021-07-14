@@ -5,14 +5,13 @@ import {WineInList} from "../../../commons/shared/useWineConcat";
 import {DotSection} from "./DotSection/DotSection";
 import {CenterSection} from "./CenterSection/CenterSection";
 import {useScrollContext} from "../ScrollContext";
-import {Event} from "../../../commons/Tracking";
 import {FileUtils} from "../../../commons/shared/Utils";
 import {pageStyle} from "../../../../pageConfig";
 
 export interface DotPopupsProps
 {
     showPopupDots?: boolean;
-    onDotClick: (event: Event, wineId: number) => void;
+    onDotClick: (event: React.MouseEvent<HTMLElement>, wineId: number) => void;
     winesInDots: WineInList[]
     popupProps: PopupProps;
 }
