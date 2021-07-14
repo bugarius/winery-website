@@ -2,6 +2,7 @@ import React, {ChangeEvent, FC, useCallback, useReducer, useState} from "react";
 import {useEmailService} from "./useEmailService";
 import {EmailState} from "./EmailFormPresentation";
 import {FormValidator} from "../forms/validators/FormValidator";
+import {Event} from "../../Tracking";
 
 const reducer = (state: EmailState, action: { type: string, value?: any }) => {
     switch (action.type)
@@ -53,7 +54,7 @@ export const SendingEmailContainer: FC<Props> = ({render}) => {
     }, []);
 
     const handleSubmit = useCallback((e: React.MouseEvent<HTMLElement>) => {
-
+        Event("Email", `Click on Send Email Button`, "EmailForm")
         e.preventDefault();
         const isFormValid = FormValidator.notAllBlank([state.name, state.email, state.message]) && FormValidator.isEmailValid(state.email);
         dispatch({type: "triggerSend", value: true});
@@ -72,6 +73,7 @@ export const SendingEmailContainer: FC<Props> = ({render}) => {
     }, [sendEmail, state]);
 
     const handleSendEmail = () => {
+        Event("Email", `Email successfully sent`, "EmailForm")
         dispatch({type: "triggerSend", value: false});
         dispatch({type: "submitMessage", value: {isValid: true, message: "Wiadomość wysłana!"}});
         dispatch({type: "reset"});
@@ -79,6 +81,7 @@ export const SendingEmailContainer: FC<Props> = ({render}) => {
     }
 
     const handleError = () => {
+        Event("Email", `Email not sent - error`, "EmailForm")
         dispatch({type: "triggerSend", value: false});
         dispatch({
             type: "submitMessage",

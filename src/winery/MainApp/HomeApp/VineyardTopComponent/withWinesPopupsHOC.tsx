@@ -7,13 +7,14 @@ import wineList from "../../WineApp/WineList/data/wine-list.json"
 import wines from "../../../model/data/wines.json"
 import {WineList} from "../../WineApp/WineList";
 import {DotPopupsProps} from "./VineyardTopComponentPresentation";
-import {Event} from "../../../commons/Tracking";
 import {ListUtils} from "../../../commons/shared/Utils";
+import {pageSettings} from "../../../../pageConfig";
+import {Event} from "../../../commons/Tracking";
 
 export const withWinesPopupsHOC = <T extends DotPopupsProps>(WrappedComponent: React.ComponentType<T>) => (ownProps: Omit<T, keyof DotPopupsProps>) => {
     const {wrapperRef} = useClickOutside(() => closePopup())
     const wineInLists = useWineConcat<WineInList>(wines as Wine[], wineList as WineList[]);
-    const winesInDots = ListUtils.getListById(wineInLists, [3, 5, 7, 10]);
+    const winesInDots = ListUtils.getListById(wineInLists, pageSettings.dotComponent.wines);
 
     const [position, setPosition] = useState<{ x: number, y: number }>();
 
@@ -29,7 +30,7 @@ export const withWinesPopupsHOC = <T extends DotPopupsProps>(WrappedComponent: R
     const selectedWineRef = useRef(selectedWine);
     selectedWineRef.current = selectedWine;
 
-    const onDotClick = (e: any, wineId: number) => {
+    const onDotClick = (e: React.MouseEvent<HTMLElement>, wineId: number) => {
         Event("Exploring", `Click on DotComponent, wineId: #${wineId}`, "HOME_PAGE")
 
         if (prevWineId !== undefined && prevWineId !== selectedWineRef.current?.id)

@@ -5,12 +5,13 @@ import {WineInList} from "../../../commons/shared/useWineConcat";
 import {DotSection} from "./DotSection/DotSection";
 import {CenterSection} from "./CenterSection/CenterSection";
 import {useScrollContext} from "../ScrollContext";
-import {Event} from "../../../commons/Tracking";
+import {FileUtils} from "../../../commons/shared/Utils";
+import {pageStyle} from "../../../../pageConfig";
 
 export interface DotPopupsProps
 {
     showPopupDots?: boolean;
-    onDotClick: (event: Event, wineId: number) => void;
+    onDotClick: (event: React.MouseEvent<HTMLElement>, wineId: number) => void;
     winesInDots: WineInList[]
     popupProps: PopupProps;
 }
@@ -26,6 +27,7 @@ const VineyardTopComponentPresentation: React.FC<DotPopupsProps> = ({
     return (
         <div ref={refs.home}
              className={"row row-no-padding vc_custom_1469089433188 row-o-columns-middle custom-home-image " + (window.innerWidth < 768 ? "row-o-full-height" : " row-o-full-height")}
+             style={{backgroundImage: `url(${FileUtils.getImage(pageStyle.home.mainImage)})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', verticalAlign: 'middle', paddingTop: '5rem'}}
         >
             <DotSection showPopupDots={showPopupDots}>
                 {winesInDots?.[0] &&

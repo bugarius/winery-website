@@ -25,5 +25,25 @@
   "CONTACT_US.RETAIL.P2.1": "Zachęcamy również, do zamawiania wina przez telefon, formularz kontaktowy lub facebook'a. Po potwierdzeniu przez nas zamówienia, zapakowane wino będzie czekało na Ciebie o ustalonej godzinie.",
   "CONTACT_US.RETAIL.P2.2": "Aktualnie pracujemy nad możliwością zamawiania wina prosto z naszej strony internetowej.",
   "CONTACT_US.RETAIL.T3": "Skontaktuj się",
-  "CONTACT_US.RETAIL.SBT3": "Jeśli masz pytania odnoście naszych win, degustacji, zwiedzania, zakupów zapraszamy do kontaktu"
+  "CONTACT_US.RETAIL.SBT3": "Jeśli masz pytania odnoście naszych win, degustacji, zwiedzania, zakupów zapraszamy do kontaktu",
+
+  "WINE_TASTING.T1": "Zwiedzanie z degustacją",
+  "WINE_TASTING.SBT1": "Jedną z opcji, którą można wybrać jest zwiedzanie winnicy i winiarni oraz degustacja wybranych win w towarzystwie naszej rodziny (właścicieli winnicy).",
+  "WINE_TASTING.P1": "Podczas takiego spotkania opowiadamy historię tego miejsca, opisujemy etapy produkcji naszego wina, próbujemy przekazać naszą pasje dalej i odpowiadamy na wszelkie pytania. Zazwyczaj jest dużo konkretów oraz humoru ;)",
+  "WINE_TASTING.T2": "Swobodne zwiedzanie",
+  "WINE_TASTING.SBT2": "Kolejna opcja, to samodzielny spacer po winnicy z lampką wybranego wina.",
+  "WINE_TASTING.P2": "W naszej winiarni możesz kupić wino na lampki i spacerować po winnicy i okolicach. Możesz usiąść w przygotowanych do tego miejscach lub zabrać nasz leżak i wygodnie zdegustować nasze wino w dowonym miejscu na winnicy.",
+  "WINE_TASTING.T3": "Sesje plenerowe",
+  "WINE_TASTING.SBT3": "Jeżeli szukasz fajnego miejca na wyjątkową sesję zdjęciową, to trafiłeś idealnie. Każda pora roku niesie ze sobą unikalny klimat, który można odpowiednio wykorzystać.",
+  "WINE_TASTING.P3": "Zapraszamy wszystkich artystów i pasjonatów, którzy są zainteresowani winnym krajobrazem, jednocześnie dziękując wszystkim tym, którzy docenili nasze tereny potwierdzając to w swoich pracach.",
+  "AWARDS.TITLE": "Nagrodzone wina",
+  "AWARDS.RIESLING2015.SUBTITLE": "Champion, złoty i srebrny medalista",
+  "AWARDS.RIESLING2015.PARAGRAPH.1": "V Międzynarodowy Konkurs Win GALICJA VITIS 2017 r. - wersja wytrawna i półsłodka zdobyła srebrną pozycję medalową uzyskując odpowiednio 84,67 i 82,33 pkt.",
+  "AWARDS.RIESLING2015.PARAGRAPH.2": "VII Konkurs Polskich Win w Jaśle 2020 r. - srebrny medal",
+  "AWARDS.RIESLING2015.PARAGRAPH.3": "Konkurs Polskich Win w Poznaniu 2021 r. - Champion oraz złoty medal",
+  "AWARDS.SOLARIS2019.SUBTITLE": "Srebrny medalista",
+  "AWARDS.SOLARIS2019.PARAGRAPH.1": "VII Konkurs Polskich Win w Jaśle 2020 r. - srebrny medal",
+  "AWARDS.RIESLING2019.SUBTITLE": "Podwójny sredbry medalista",
+  "AWARDS.RIESLING2019.PARAGRAPH.1": "VII Konkurs Polskich Win w Jaśle 2020 r. - srebrny medal",
+  "AWARDS.RIESLING2019.PARAGRAPH.2": "Konkurs Polskich Win w Poznaniu 2021 r. - srebrny medal"
 }
