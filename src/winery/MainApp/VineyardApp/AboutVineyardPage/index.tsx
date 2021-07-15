@@ -13,8 +13,8 @@ export const AboutVineyardPage = () => {
                             title={"Winnica"}
                             subtitle={"Winnica położona jest na peryferiach Częstochowy, tuż przy północnym krańcu Jury Krakowsko-Częstochowskiej."}
                             paragraphs={[
-                                "Początki winnicy sięgają 2008 roku, kiedy to posadziliśmy pierwsze sadzonki Rieslinga. W kolejnych latach sukcesywnie powiększaliśmy nasz areał o inne odmiany winorośli, takie jak Solaris, Regent czy Cabernet Cortis.",
-                                "W 2020 roku nasza winnica zajmowała już  powierzchnię 2 ha."
+                                "Początki winnicy sięgają 2008 roku, kiedy to posadziliśmy pierwsze sadzonki Rieslinga. W kolejnych latach sukcesywnie powiększaliśmy nasz areał o inne odmiany winorośli, takie jak Solaris, Regent czy Cabernet Cortis, a ostatnio również o Hibernal, Pinot Gris oraz Chardonnay.",
+                                "Aktualnie nasza winnica zajmuje powierzchnię 2 ha."
                             ]}
                 />
                 <div className="row vc_column-gap-30">
@@ -100,7 +100,7 @@ export const AboutVineyardPage = () => {
                                 "W naszej winnicy z tej odmiany dostępne bywają białe wina wytrawne i półsłodkie oraz pomarańczowe wina wytrawne."
                             ]}
                 />
-                <FullWideImage image={"winorosl_solaris.jpg"} padding={{paddingBottom: "50px"}} />
+                <FullWideImage image={"winorosl_solaris.jpg"} padding={{paddingBottom: "50px"}}/>
                 <RowContent icon={"icon-grape-leafs"}
                             title={"Regent"}
                             subtitle={"Nasza pierwsza czerwona odmiana winorośli."}
@@ -109,7 +109,7 @@ export const AboutVineyardPage = () => {
                                 "W naszej winnicy z tej odmiany dostępne bywają czerwone wina wytrawne oraz różowe wina półwytrawne."
                             ]}
                 />
-                <FullWideImage image={"winorosl_regent.jpg"} padding={{paddingBottom: "50px"}} />
+                <FullWideImage image={"winorosl_regent.jpg"} padding={{paddingBottom: "50px"}}/>
                 <RowContent icon={"icon-grape-leafs"}
                             title={"Cabernet Cortis"}
                             subtitle={"Nasza druga czerwona odmiana winorośli."}
@@ -118,10 +118,40 @@ export const AboutVineyardPage = () => {
                                 "W naszej winnicy z tej odmiany dostępne bywają czerwone oraz różowe wina wytrawne."
                             ]}
                 />
-                <FullWideImage image={"winorosl_cabernet.jpg"} padding={{paddingBottom: "50px"}} />
+                <FullWideImage image={"winorosl_cabernet.jpg"} padding={{paddingBottom: "50px"}}/>
+                <RowContent icon={"icon-grape-leafs"}
+                            title={"Hibernal"}
+                            subtitle={"Nowa odmiana w naszej winnicy"}
+                            paragraphs={[
+                                "Jest to gatunek hybrydowy, który część cech odziedziczył od swojej odmiany rodzicielskiej - Rieslinga, przy czym dojrzewa kilkanaście dni od niego wcześniej.",
+                                "W naszej winnicy planujemy wykorzystać doświadczenie, które zdobyliśmy przy produkcji Rieslinga i stworzyć łagodniejsze wino w podobnym stylu.",
+                                "Planowane pierwsze zbiory: 2023/2024 rok."
+                            ]}
+                />
+                <FullWideImage image={"winorosl_hibernal.jpg"} padding={{paddingBottom: "50px"}}/>
+                <RowContent icon={"icon-grape-leafs"}
+                            title={"Pinot Gris"}
+                            subtitle={"Nowa odmiana w naszej winnicy"}
+                            paragraphs={[
+                                "Jest to biała odmiana winorośli pochodząca z Francji. Ze względu na kolor gron (różowo-szary), przy zastosowaniu odpowiedniego procesu przetwarzania można otrzymać wino różowe.",
+                                "W naszej winnicy planujemy tworzyć zarówno białe jak i różowe wina z tej odmiany - z większym naciskiem na te pierwsze. Bardzo jesteśmy ciekawi jakie smaki i aromaty uzyska Pinot Gris na naszych mineralnych glebach.",
+                                "Planowane pierwsze zbiory: 2024/2025 rok."
+                            ]}
+                />
+                <FullWideImage image={"winorosl_pinot-gris.jpg"} padding={{paddingBottom: "50px"}}/>
+                <RowContent icon={"icon-grape-leafs"}
+                            title={"Chardonnay"}
+                            subtitle={"Nowa odmiana w naszej winnicy"}
+                            paragraphs={[
+                                "Szczep uprawiany niemal we wszystkich krajach winiarskich, dający wina o różnym, niejednorodnym charakterze.",
+                                "W naszej winnicy ta odmiana nie zajmuje znacznej powierzchni. Planujemy stworzyć z niej wina wytrawne/półwytrawne. Kto wie - może nawet musujące.",
+                                "Planowane pierwsze zbiory: 2023/2024 rok."
+                            ]}
+                />
+                <FullWideImage image={"winorosl_chardonnay.jpg"} padding={{paddingBottom: "50px"}}/>
             </div>
             <Badges/>
-            <FullWideImage image={"image-194137.jpg"} />
+            <FullWideImage image={"image-194137.jpg"}/>
         </div>
     )
 };
