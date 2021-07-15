@@ -13,8 +13,8 @@ export const AboutVineyardPage = () => {
                             title={"Winnica"}
                             subtitle={"Winnica położona jest na peryferiach Częstochowy, tuż przy północnym krańcu Jury Krakowsko-Częstochowskiej."}
                             paragraphs={[
-                                "Początki winnicy sięgają 2008 roku, kiedy to posadziliśmy pierwsze sadzonki Rieslinga. W kolejnych latach sukcesywnie powiększaliśmy nasz areał o inne odmiany winorośli, takie jak Solaris, Regent czy Cabernet Cortis.",
-                                "W 2020 roku nasza winnica zajmowała już  powierzchnię 2 ha."
+                                "Początki winnicy sięgają 2008 roku, kiedy to posadziliśmy pierwsze sadzonki Rieslinga. W kolejnych latach sukcesywnie powiększaliśmy nasz areał o inne odmiany winorośli, takie jak Solaris, Regent czy Cabernet Cortis a ostatnio również o Hibernal, Pinot Gris oraz Chardonnay.",
+                                "Aktualnie nasza winnica zajmuje powierzchnię 2 ha."
                             ]}
                 />
                 <div className="row vc_column-gap-30">
