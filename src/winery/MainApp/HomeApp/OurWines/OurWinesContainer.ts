@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 import winesDescription from "./data/our-wines-description.json"
 import {ListUtils} from "../../../commons/shared/Utils";
 import {Wine} from "../../../model/Wine";
-import allWines from "../../../model/data/wines.json"
+import winesData from "../../../model/data/wines.json"
+import {useTranslation} from "react-i18next";
 
 export interface ShopWine
 {
@@ -30,9 +31,14 @@ interface Props
 }
 
 const OurWinesContainer: React.FC<Props> = ({render}) => {
+
+    const {t} = useTranslation();
+
     const description = winesDescription as Description;
 
     const [randomWines, setRandomWines] = useState<Wine[]>([]);
+
+    const allWines = winesData.filter(wine => wine.available).map(wine => ({...wine, name: `${t("WINE.COLOR." + wine.color)} ${t("WINE.TASTE." + wine.type)}`}));
 
     useEffect(() => {
         if (!randomWines?.length)
@@ -57,7 +63,7 @@ const OurWinesContainer: React.FC<Props> = ({render}) => {
 
             setRandomWines(getRandomWines(allWines as Wine[]));
         }
-    }, [setRandomWines, randomWines])
+    }, [setRandomWines, randomWines, allWines])
 
 
     return render(randomWines, description)

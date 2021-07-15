@@ -13,6 +13,7 @@ export const HomeWinesListComponent: React.FC<{ randomWines: ShopWine[] }> = ({
                 randomWines.map(wine => {
                     return <HomeProductItem imgUrl={wine.shopImage || "/images/bottle.png"}
                                             name={wine.variety}
+                                            name2={wine.name}
                                             productLink={`/wina/karta_win/${wine.id}`}
                                             addToCardLink={""}
                                             key={wine.id}

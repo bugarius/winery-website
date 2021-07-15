@@ -23,9 +23,9 @@ const AboutPlace = () => {
                                         className="icon-grape-3"/></div>
                                     <h2 className="sc_item_title sc_promo_title">Winnica</h2>
                                     <h5 className="sc_item_subtitle sc_promo_subtitle">Winnica położona jest na peryferiach Częstochowy, tuż przy północnym krańcu <strong>Jury Krakowsko-Częstochowskiej</strong>. </h5>
-                                    <div className="sc_item_descr sc_promo_descr">Początki winnicy sięgają <strong>2008</strong> roku, kiedy to posadziliśmy pierwsze sadzonki Rieslinga. W kolejnych latach sukcesywnie powiększaliśmy nasz areał o inne odmiany winorośli, takie jak Solaris, Regent czy Cabernet Cortis.
+                                    <div className="sc_item_descr sc_promo_descr">Początki winnicy sięgają <strong>2008</strong> roku, kiedy to posadziliśmy pierwsze sadzonki <strong>Rieslinga</strong>. W kolejnych latach sukcesywnie powiększaliśmy nasz areał o inne odmiany winorośli, takie jak <strong>Solaris, Regent czy Cabernet Cortis</strong>, a ostatnio również o <strong>Hibernal, Pinot Gris oraz Chardonnay</strong>.
                                     </div>
-                                    <div className="sc_item_descr sc_promo_descr">W 2020 roku nasza winnica zajmowała już  powierzchnię <strong>2 ha</strong>.
+                                    <div className="sc_item_descr sc_promo_descr">Aktualnie nasza winnica zajmuje powierzchnię <strong>2 ha</strong>.
                                     </div>
                                     <div className="sc_item_button sc_promo_button sc_button_wrap">
                                         <NavLink

@@ -41,8 +41,7 @@ export const ProductDetails: React.FC<Props> = ({
         <ProductDetailsWrapper>
             <ProductDetailsImage src={FileUtils.getImage(imgUrl)} alt={variety} />
             <ProductDetailsSummaryWrapper>
-                <Price amount={price}/>
-                {!available && <p className="vc_message_box-outline vc_color-juicy_pink">Produkt niedostępny</p>}
+                <Price amount={price} available={available}/>
                 <ProductDetailsDescription description={description} />
                 {/*<AddToCart addToCart={handleAddToCart}/>*/}
                 <div className="product_meta">
