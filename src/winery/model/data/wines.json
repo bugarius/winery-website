@@ -9,7 +9,7 @@
     "year": "2015",
     "price": 49,
     "shopImage": "Bugara_Riesling_2015_wytrawne.png",
-    "badge": "SREBRNY MEDAL",
+    "badge": "CHAMPION",
     "productLink": "",
     "detailsImage": "Riesling_2015_wytrawne_lista.jpg",
     "description": "Wyjątkowy, mineralny smak z wyczuwalną morelą i cytrusami.\n\nChampion, złoty oraz srebrny medalista na polskich i zagranicznych konkursach winiarskich.",
@@ -45,7 +45,7 @@
     "productLink": "",
     "detailsImage": "Regent_Rose_2018_wytrawne_lista.jpg",
     "description": "Delikatne, lekkie różowe wino z wyczuwalną nutą truskawek, poziomek i czereśni.",
-    "available": true
+    "available": false
   },
   {
     "id": 4,
